@@ -10,6 +10,7 @@
 		9B4CCB1722EADDA6003A465C /* AKGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CCB0D22EADDA6003A465C /* AKGFramework.framework */; };
 		9B4CCB1C22EADDA6003A465C /* AKGFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCB1B22EADDA6003A465C /* AKGFrameworkTests.swift */; };
 		9B4CCB1E22EADDA6003A465C /* AKGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B4CCB1022EADDA6003A465C /* AKGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B4CCB2822EAE1FD003A465C /* AKGFramework.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9B4CCB2722EAE1FD003A465C /* AKGFramework.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9B4CCB1622EADDA6003A465C /* AKGFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AKGFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4CCB1B22EADDA6003A465C /* AKGFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGFrameworkTests.swift; sourceTree = "<group>"; };
 		9B4CCB1D22EADDA6003A465C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4CCB2722EAE1FD003A465C /* AKGFramework.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AKGFramework.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		9B4CCB0322EADDA6003A465C = {
 			isa = PBXGroup;
 			children = (
+				9B4CCB2722EAE1FD003A465C /* AKGFramework.podspec */,
 				9B4CCB0F22EADDA6003A465C /* AKGFramework */,
 				9B4CCB1A22EADDA6003A465C /* AKGFrameworkTests */,
 				9B4CCB0E22EADDA6003A465C /* Products */,
@@ -177,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4CCB2822EAE1FD003A465C /* AKGFramework.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,20 +345,22 @@
 		9B4CCB2222EADDA6003A465C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R7GMW42N3T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AKGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = akg.AKGFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akggames.iosframework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -368,17 +374,19 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R7GMW42N3T;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AKGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = akg.AKGFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akggames.iosframework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
