@@ -40,17 +40,6 @@ public class LoginViewController: BaseViewController, LoginView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
     
     // MARK: - IBActions
     @IBAction func facebookButton(_ sender: Any) {
@@ -63,27 +52,30 @@ public class LoginViewController: BaseViewController, LoginView {
         
     }
     @IBAction func phoneButton(_ sender: Any) {
-        LoginPresenter.sharedInstance.postSendOTPAPI(param: ["phone_number": "0812345678",
-                                                             "auth_provider": "phone",
-                                                             "game_provider": "game",
-                                                             "otp_type": "registration"])
+
+        self.present(PhoneLoginViewController(), animated: true, completion: nil)
+        
+//        LoginPresenter.sharedInstance.postSendOTPAPI(param: ["phone_number": "0812345678",
+//                                                             "auth_provider": "phone",
+//                                                             "game_provider": "game",
+//                                                             "otp_type": "registration"])
     }
     
     
     // MARK: - Presenter Delegate
-    func startLoading() {
+    internal func startLoading() {
         self.showLoadingIndicator()
     }
     
-    func finishLoading() {
+    internal func finishLoading() {
         self.hideLoadingIndicator()
     }
     
-    func sendOTPSuccess() {
+    internal func sendOTPSuccess() {
         self.basicAlertView(title: "SUCCESS", message: "OTP SENT", successBlock: {})
     }
     
-    func setErrorMessageFromAPI(errorMessage: String) {
+    internal func setErrorMessageFromAPI(errorMessage: String) {
         self.basicAlertView(title: "", message: errorMessage, successBlock: {})
     }
     

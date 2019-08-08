@@ -38,13 +38,30 @@ extension NetworkRequest {
                 failureBlock(error?.localizedDescription ?? "Unknown Error")
                 return
             }
-            guard let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
+            guard let json = try? (JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]) else {
                 successBlock([:])
                 failureBlock(error?.localizedDescription ?? "Unknown Error")
                 return
             }
             
-            successBlock(json as! [String : Any])
+            if let status = json["status"] as? Bool? ?? false {
+                if status {
+                    if let data = json["data"] as? [String:Any]? {
+                        successBlock(data ?? [:])
+                    }else{
+                        successBlock([:])
+                    }
+                }else{
+                    if let data = json["data"] as? [String:Any]? {
+                        failureBlock(data!["message"] as? String ?? "Unknown Error")
+                    }else{
+                        failureBlock("Unknown Error")
+                    }
+                }
+            }else{
+                failureBlock("Unknown Error")
+            }
+            
         })
         task.resume()
     }

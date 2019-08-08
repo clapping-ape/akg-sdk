@@ -15,11 +15,9 @@ protocol LoginView: NSObjectProtocol {
     func setErrorMessageFromAPI(errorMessage: String)
 }
 
-class LoginPresenter {
+internal class LoginPresenter {
     
     weak fileprivate var loginView : LoginView?
-    
-    fileprivate var request: AnyObject?
     
     private init() {}
     static let sharedInstance = LoginPresenter()

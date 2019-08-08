@@ -30,6 +30,10 @@
 		9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F3A22FC7EC000308D7F /* NetworkRequest.swift */; };
 		9BFC6F3D22FC8FAC00308D7F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F3C22FC8FAC00308D7F /* Constant.swift */; };
 		9BFC6F3F22FC909900308D7F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F3E22FC909900308D7F /* APIManager.swift */; };
+		9BFC6F4622FC9BF500308D7F /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F4422FC9BF500308D7F /* PhoneLoginViewController.swift */; };
+		9BFC6F4722FC9BF500308D7F /* PhoneLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6F4522FC9BF500308D7F /* PhoneLoginViewController.xib */; };
+		9BFC6F6622FCA7F700308D7F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F6422FCA7F700308D7F /* RegistrationViewController.swift */; };
+		9BFC6F6722FCA7F700308D7F /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6F6522FCA7F700308D7F /* RegistrationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		9BFC6F3A22FC7EC000308D7F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		9BFC6F3C22FC8FAC00308D7F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		9BFC6F3E22FC909900308D7F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9BFC6F4422FC9BF500308D7F /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewController.swift; sourceTree = "<group>"; };
+		9BFC6F4522FC9BF500308D7F /* PhoneLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneLoginViewController.xib; sourceTree = "<group>"; };
+		9BFC6F6422FCA7F700308D7F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		9BFC6F6522FCA7F700308D7F /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +125,9 @@
 				9BFC6F3122FC2D1800308D7F /* Model */,
 				9BFC6F1D22FC0EBD00308D7F /* Base */,
 				9BFC6F1C22FC0EA200308D7F /* Manager */,
-				9B4CCB2922EAE673003A465C /* Login */,
+				9B4CCB2922EAE673003A465C /* Home Login */,
+				9BFC6F4322FC9BD000308D7F /* Phone Login */,
+				9BFC6F6322FCA7DA00308D7F /* Registration */,
 				9B4CCB1022EADDA6003A465C /* AKGFramework.h */,
 				9B4CCB1122EADDA6003A465C /* Info.plist */,
 			);
@@ -133,14 +143,14 @@
 			path = AKGFrameworkTests;
 			sourceTree = "<group>";
 		};
-		9B4CCB2922EAE673003A465C /* Login */ = {
+		9B4CCB2922EAE673003A465C /* Home Login */ = {
 			isa = PBXGroup;
 			children = (
 				9B4CCB5E22EB12F4003A465C /* LoginViewController.xib */,
 				9B4CCB5D22EB12F4003A465C /* LoginViewController.swift */,
 				9BFC6F2D22FC216900308D7F /* LoginPresenter.swift */,
 			);
-			path = Login;
+			path = "Home Login";
 			sourceTree = "<group>";
 		};
 		9BFC6EDF22FC002500308D7F /* Fonts */ = {
@@ -184,6 +194,24 @@
 				9BFC6F3222FC2EB200308D7F /* Meta.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9BFC6F4322FC9BD000308D7F /* Phone Login */ = {
+			isa = PBXGroup;
+			children = (
+				9BFC6F4522FC9BF500308D7F /* PhoneLoginViewController.xib */,
+				9BFC6F4422FC9BF500308D7F /* PhoneLoginViewController.swift */,
+			);
+			path = "Phone Login";
+			sourceTree = "<group>";
+		};
+		9BFC6F6322FCA7DA00308D7F /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				9BFC6F6522FCA7F700308D7F /* RegistrationViewController.xib */,
+				9BFC6F6422FCA7F700308D7F /* RegistrationViewController.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +316,9 @@
 				9BFC6EEB22FC003F00308D7F /* Proxima Nova Black.otf in Resources */,
 				9B4CCB6022EB12F4003A465C /* LoginViewController.xib in Resources */,
 				9BFC6EED22FC003F00308D7F /* Proxima Nova Extrabold.otf in Resources */,
+				9BFC6F6722FCA7F700308D7F /* RegistrationViewController.xib in Resources */,
 				9BFC6EEA22FC003F00308D7F /* ProximaNova-Regular.otf in Resources */,
+				9BFC6F4722FC9BF500308D7F /* PhoneLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,8 +339,10 @@
 				9B4CCB5F22EB12F4003A465C /* LoginViewController.swift in Sources */,
 				9BFC6F3D22FC8FAC00308D7F /* Constant.swift in Sources */,
 				9B4CCB2F22EAEB35003A465C /* BaseView.swift in Sources */,
+				9BFC6F6622FCA7F700308D7F /* RegistrationViewController.swift in Sources */,
 				9BFC6F3F22FC909900308D7F /* APIManager.swift in Sources */,
 				9BFC6F1F22FC0ECD00308D7F /* BaseViewController.swift in Sources */,
+				9BFC6F4622FC9BF500308D7F /* PhoneLoginViewController.swift in Sources */,
 				9BFC6F2122FC0F5800308D7F /* LoadingViewController.swift in Sources */,
 				9BFC6F3322FC2EB200308D7F /* Meta.swift in Sources */,
 				9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */,
