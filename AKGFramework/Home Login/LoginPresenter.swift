@@ -12,7 +12,6 @@ protocol LoginView: NSObjectProtocol {
     func startLoading()
     func finishLoading()
     func loginSuccess()
-    func sendOTPSuccess()
     func setErrorMessageFromAPI(errorMessage: String)
 }
 
@@ -47,23 +46,6 @@ internal class LoginPresenter {
             self.loginView?.setErrorMessageFromAPI(errorMessage: message)
         }
         
-    }
-    
-    func postSendOTPAPI(param: [String:Any]!) {
-        self.loginView?.startLoading()
-        
-        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
-
-            self?.loginView?.finishLoading()
-            self?.loginView?.sendOTPSuccess()
-
-
-        }) { (message) in
-
-            self.loginView?.finishLoading()
-            self.loginView?.setErrorMessageFromAPI(errorMessage: message)
-        }
-
     }
     
 }

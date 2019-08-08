@@ -18,6 +18,8 @@ struct Constant {
     private struct Routes {
         static let Login = "/auth/login"
         static let SendOTP = "/auth/signup/send_otp"
+        static let CheckOTP = "/auth/signup/check_otp"
+        static let SignUp = "/auth/signup"
     }
     
     struct Notification {
@@ -27,7 +29,9 @@ struct Constant {
     static let LocaleIdentifier = "id_ID"
     
     static let BaseURL = Domains.Development
-    static let RouteSendOTP = Routes.SendOTP
     static let RouteLogin = Routes.Login
+    static let RouteSendOTP = Routes.SendOTP
+    static let RouteCheckOTP = Routes.CheckOTP
+    static let RouteSignUp = Routes.SignUp
     
 }

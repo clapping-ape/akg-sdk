@@ -78,10 +78,6 @@ class PhoneLoginViewController: BaseViewController, LoginView {
         self.basicAlertView(title: "SUCCESS", message: "Logged In.", successBlock: {})
     }
     
-    internal func sendOTPSuccess() {
-        
-    }
-    
     internal func setErrorMessageFromAPI(errorMessage: String) {
         self.basicAlertView(title: "", message: errorMessage, successBlock: {})
     }

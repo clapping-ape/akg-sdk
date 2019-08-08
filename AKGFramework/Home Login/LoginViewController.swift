@@ -55,11 +55,6 @@ public class LoginViewController: BaseViewController, LoginView {
     @IBAction func phoneButton(_ sender: Any) {
 
         self.present(PhoneLoginViewController(), animated: true, completion: nil)
-        
-//        LoginPresenter.sharedInstance.postSendOTPAPI(param: ["phone_number": "0812345678",
-//                                                             "auth_provider": "phone",
-//                                                             "game_provider": "game",
-//                                                             "otp_type": "registration"])
     }
     
     
@@ -73,11 +68,6 @@ public class LoginViewController: BaseViewController, LoginView {
     }
     
     internal func loginSuccess() {
-    }
-    
-    
-    internal func sendOTPSuccess() {
-        
     }
     
     internal func setErrorMessageFromAPI(errorMessage: String) {

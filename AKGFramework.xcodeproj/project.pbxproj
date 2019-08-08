@@ -17,6 +17,9 @@
 		9BE667C222FCB48A002F61A2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C122FCB48A002F61A2 /* Login.swift */; };
 		9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C522FCB6B8002F61A2 /* UtilityManager.swift */; };
 		9BE667C822FCB70B002F61A2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C722FCB70B002F61A2 /* DataManager.swift */; };
+		9BE667D322FCBC69002F61A2 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667D222FCBC69002F61A2 /* RegisterPresenter.swift */; };
+		9BE667D622FCBE47002F61A2 /* RegistrationPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667D422FCBE47002F61A2 /* RegistrationPasswordViewController.swift */; };
+		9BE667D722FCBE47002F61A2 /* RegistrationPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE667D522FCBE47002F61A2 /* RegistrationPasswordViewController.xib */; };
 		9BFC6EDE22FBFF0600308D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */; };
 		9BFC6EE822FC003F00308D7F /* Proxima Nova Alt Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE022FC003F00308D7F /* Proxima Nova Alt Bold.otf */; };
 		9BFC6EE922FC003F00308D7F /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE122FC003F00308D7F /* Proxima Nova Alt Light.otf */; };
@@ -63,6 +66,9 @@
 		9BE667C122FCB48A002F61A2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		9BE667C522FCB6B8002F61A2 /* UtilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityManager.swift; sourceTree = "<group>"; };
 		9BE667C722FCB70B002F61A2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9BE667D222FCBC69002F61A2 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		9BE667D422FCBE47002F61A2 /* RegistrationPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPasswordViewController.swift; sourceTree = "<group>"; };
+		9BE667D522FCBE47002F61A2 /* RegistrationPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationPasswordViewController.xib; sourceTree = "<group>"; };
 		9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BFC6EE022FC003F00308D7F /* Proxima Nova Alt Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Bold.otf"; sourceTree = "<group>"; };
 		9BFC6EE122FC003F00308D7F /* Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
@@ -219,6 +225,9 @@
 			children = (
 				9BFC6F6522FCA7F700308D7F /* RegistrationViewController.xib */,
 				9BFC6F6422FCA7F700308D7F /* RegistrationViewController.swift */,
+				9BE667D222FCBC69002F61A2 /* RegisterPresenter.swift */,
+				9BE667D522FCBE47002F61A2 /* RegistrationPasswordViewController.xib */,
+				9BE667D422FCBE47002F61A2 /* RegistrationPasswordViewController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 				9BFC6EEB22FC003F00308D7F /* Proxima Nova Black.otf in Resources */,
 				9B4CCB6022EB12F4003A465C /* LoginViewController.xib in Resources */,
 				9BFC6EED22FC003F00308D7F /* Proxima Nova Extrabold.otf in Resources */,
+				9BE667D722FCBE47002F61A2 /* RegistrationPasswordViewController.xib in Resources */,
 				9BFC6F6722FCA7F700308D7F /* RegistrationViewController.xib in Resources */,
 				9BFC6EEA22FC003F00308D7F /* ProximaNova-Regular.otf in Resources */,
 				9BFC6F4722FC9BF500308D7F /* PhoneLoginViewController.xib in Resources */,
@@ -345,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE667D622FCBE47002F61A2 /* RegistrationPasswordViewController.swift in Sources */,
 				9B4CCB5F22EB12F4003A465C /* LoginViewController.swift in Sources */,
 				9BFC6F3D22FC8FAC00308D7F /* Constant.swift in Sources */,
 				9B4CCB2F22EAEB35003A465C /* BaseView.swift in Sources */,
@@ -355,6 +366,7 @@
 				9BFC6F1F22FC0ECD00308D7F /* BaseViewController.swift in Sources */,
 				9BFC6F4622FC9BF500308D7F /* PhoneLoginViewController.swift in Sources */,
 				9BFC6F2122FC0F5800308D7F /* LoadingViewController.swift in Sources */,
+				9BE667D322FCBC69002F61A2 /* RegisterPresenter.swift in Sources */,
 				9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */,
 				9BFC6F3322FC2EB200308D7F /* Meta.swift in Sources */,
 				9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */,

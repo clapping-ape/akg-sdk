@@ -46,4 +46,36 @@ class APIManager {
         
     }
     
+    func checkOTPAPI(param:[String:Any]!, callBack: @escaping (Meta) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.postAPI(
+            route: Constant.RouteCheckOTP,
+            params: param,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                let meta = Meta.init(data: responseObject)
+                callBack(meta)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
+    func signUpAPI(param:[String:Any]!, callBack: @escaping (Meta) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.postAPI(
+            route: Constant.RouteSignUp,
+            params: param,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                let meta = Meta.init(data: responseObject)
+                callBack(meta)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
 }
