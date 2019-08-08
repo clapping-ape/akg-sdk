@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double AKGFrameworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char AKGFrameworkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AKGFramework/PublicHeader.h>
-
-

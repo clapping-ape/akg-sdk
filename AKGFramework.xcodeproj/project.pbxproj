@@ -11,6 +11,25 @@
 		9B4CCB1C22EADDA6003A465C /* AKGFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCB1B22EADDA6003A465C /* AKGFrameworkTests.swift */; };
 		9B4CCB1E22EADDA6003A465C /* AKGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B4CCB1022EADDA6003A465C /* AKGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B4CCB2822EAE1FD003A465C /* AKGFramework.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9B4CCB2722EAE1FD003A465C /* AKGFramework.podspec */; };
+		9B4CCB2F22EAEB35003A465C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCB2E22EAEB35003A465C /* BaseView.swift */; };
+		9B4CCB5F22EB12F4003A465C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCB5D22EB12F4003A465C /* LoginViewController.swift */; };
+		9B4CCB6022EB12F4003A465C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4CCB5E22EB12F4003A465C /* LoginViewController.xib */; };
+		9BFC6EDE22FBFF0600308D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */; };
+		9BFC6EE822FC003F00308D7F /* Proxima Nova Alt Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE022FC003F00308D7F /* Proxima Nova Alt Bold.otf */; };
+		9BFC6EE922FC003F00308D7F /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE122FC003F00308D7F /* Proxima Nova Alt Light.otf */; };
+		9BFC6EEA22FC003F00308D7F /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE222FC003F00308D7F /* ProximaNova-Regular.otf */; };
+		9BFC6EEB22FC003F00308D7F /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE322FC003F00308D7F /* Proxima Nova Black.otf */; };
+		9BFC6EEC22FC003F00308D7F /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE422FC003F00308D7F /* Proxima Nova Bold.otf */; };
+		9BFC6EED22FC003F00308D7F /* Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE522FC003F00308D7F /* Proxima Nova Extrabold.otf */; };
+		9BFC6EEE22FC003F00308D7F /* Proxima Nova Alt Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE622FC003F00308D7F /* Proxima Nova Alt Thin.otf */; };
+		9BFC6EEF22FC003F00308D7F /* Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE722FC003F00308D7F /* Proxima Nova Thin.otf */; };
+		9BFC6F1F22FC0ECD00308D7F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F1E22FC0ECD00308D7F /* BaseViewController.swift */; };
+		9BFC6F2122FC0F5800308D7F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F2022FC0F5800308D7F /* LoadingViewController.swift */; };
+		9BFC6F2E22FC216900308D7F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F2D22FC216900308D7F /* LoginPresenter.swift */; };
+		9BFC6F3322FC2EB200308D7F /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F3222FC2EB200308D7F /* Meta.swift */; };
+		9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F3A22FC7EC000308D7F /* NetworkRequest.swift */; };
+		9BFC6F3D22FC8FAC00308D7F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F3C22FC8FAC00308D7F /* Constant.swift */; };
+		9BFC6F3F22FC909900308D7F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F3E22FC909900308D7F /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +50,25 @@
 		9B4CCB1B22EADDA6003A465C /* AKGFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGFrameworkTests.swift; sourceTree = "<group>"; };
 		9B4CCB1D22EADDA6003A465C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B4CCB2722EAE1FD003A465C /* AKGFramework.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AKGFramework.podspec; sourceTree = "<group>"; };
+		9B4CCB2E22EAEB35003A465C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		9B4CCB5D22EB12F4003A465C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9B4CCB5E22EB12F4003A465C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BFC6EE022FC003F00308D7F /* Proxima Nova Alt Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Bold.otf"; sourceTree = "<group>"; };
+		9BFC6EE122FC003F00308D7F /* Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
+		9BFC6EE222FC003F00308D7F /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		9BFC6EE322FC003F00308D7F /* Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Black.otf"; sourceTree = "<group>"; };
+		9BFC6EE422FC003F00308D7F /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		9BFC6EE522FC003F00308D7F /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
+		9BFC6EE622FC003F00308D7F /* Proxima Nova Alt Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Thin.otf"; sourceTree = "<group>"; };
+		9BFC6EE722FC003F00308D7F /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Thin.otf"; sourceTree = "<group>"; };
+		9BFC6F1E22FC0ECD00308D7F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9BFC6F2022FC0F5800308D7F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		9BFC6F2D22FC216900308D7F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		9BFC6F3222FC2EB200308D7F /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		9BFC6F3A22FC7EC000308D7F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		9BFC6F3C22FC8FAC00308D7F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		9BFC6F3E22FC909900308D7F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +93,9 @@
 		9B4CCB0322EADDA6003A465C = {
 			isa = PBXGroup;
 			children = (
+				9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */,
 				9B4CCB2722EAE1FD003A465C /* AKGFramework.podspec */,
+				9BFC6EDF22FC002500308D7F /* Fonts */,
 				9B4CCB0F22EADDA6003A465C /* AKGFramework */,
 				9B4CCB1A22EADDA6003A465C /* AKGFrameworkTests */,
 				9B4CCB0E22EADDA6003A465C /* Products */,
@@ -74,6 +114,10 @@
 		9B4CCB0F22EADDA6003A465C /* AKGFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9BFC6F3122FC2D1800308D7F /* Model */,
+				9BFC6F1D22FC0EBD00308D7F /* Base */,
+				9BFC6F1C22FC0EA200308D7F /* Manager */,
+				9B4CCB2922EAE673003A465C /* Login */,
 				9B4CCB1022EADDA6003A465C /* AKGFramework.h */,
 				9B4CCB1122EADDA6003A465C /* Info.plist */,
 			);
@@ -87,6 +131,59 @@
 				9B4CCB1D22EADDA6003A465C /* Info.plist */,
 			);
 			path = AKGFrameworkTests;
+			sourceTree = "<group>";
+		};
+		9B4CCB2922EAE673003A465C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9B4CCB5E22EB12F4003A465C /* LoginViewController.xib */,
+				9B4CCB5D22EB12F4003A465C /* LoginViewController.swift */,
+				9BFC6F2D22FC216900308D7F /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9BFC6EDF22FC002500308D7F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9BFC6EE022FC003F00308D7F /* Proxima Nova Alt Bold.otf */,
+				9BFC6EE122FC003F00308D7F /* Proxima Nova Alt Light.otf */,
+				9BFC6EE622FC003F00308D7F /* Proxima Nova Alt Thin.otf */,
+				9BFC6EE322FC003F00308D7F /* Proxima Nova Black.otf */,
+				9BFC6EE422FC003F00308D7F /* Proxima Nova Bold.otf */,
+				9BFC6EE522FC003F00308D7F /* Proxima Nova Extrabold.otf */,
+				9BFC6EE722FC003F00308D7F /* Proxima Nova Thin.otf */,
+				9BFC6EE222FC003F00308D7F /* ProximaNova-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9BFC6F1C22FC0EA200308D7F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9BFC6F3C22FC8FAC00308D7F /* Constant.swift */,
+				9BFC6F3A22FC7EC000308D7F /* NetworkRequest.swift */,
+				9BFC6F3E22FC909900308D7F /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		9BFC6F1D22FC0EBD00308D7F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9BFC6F1E22FC0ECD00308D7F /* BaseViewController.swift */,
+				9B4CCB2E22EAEB35003A465C /* BaseView.swift */,
+				9BFC6F2022FC0F5800308D7F /* LoadingViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9BFC6F3122FC2D1800308D7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BFC6F3222FC2EB200308D7F /* Meta.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +248,7 @@
 				TargetAttributes = {
 					9B4CCB0C22EADDA6003A465C = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					9B4CCB1522EADDA6003A465C = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -181,6 +279,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4CCB2822EAE1FD003A465C /* AKGFramework.podspec in Resources */,
+				9BFC6EEC22FC003F00308D7F /* Proxima Nova Bold.otf in Resources */,
+				9BFC6EDE22FBFF0600308D7F /* Assets.xcassets in Resources */,
+				9BFC6EE922FC003F00308D7F /* Proxima Nova Alt Light.otf in Resources */,
+				9BFC6EEF22FC003F00308D7F /* Proxima Nova Thin.otf in Resources */,
+				9BFC6EEE22FC003F00308D7F /* Proxima Nova Alt Thin.otf in Resources */,
+				9BFC6EE822FC003F00308D7F /* Proxima Nova Alt Bold.otf in Resources */,
+				9BFC6EEB22FC003F00308D7F /* Proxima Nova Black.otf in Resources */,
+				9B4CCB6022EB12F4003A465C /* LoginViewController.xib in Resources */,
+				9BFC6EED22FC003F00308D7F /* Proxima Nova Extrabold.otf in Resources */,
+				9BFC6EEA22FC003F00308D7F /* ProximaNova-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +306,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4CCB5F22EB12F4003A465C /* LoginViewController.swift in Sources */,
+				9BFC6F3D22FC8FAC00308D7F /* Constant.swift in Sources */,
+				9B4CCB2F22EAEB35003A465C /* BaseView.swift in Sources */,
+				9BFC6F3F22FC909900308D7F /* APIManager.swift in Sources */,
+				9BFC6F1F22FC0ECD00308D7F /* BaseViewController.swift in Sources */,
+				9BFC6F2122FC0F5800308D7F /* LoadingViewController.swift in Sources */,
+				9BFC6F3322FC2EB200308D7F /* Meta.swift in Sources */,
+				9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */,
+				9BFC6F2E22FC216900308D7F /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +462,7 @@
 		9B4CCB2222EADDA6003A465C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -363,14 +481,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.akggames.iosframework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9B4CCB2322EADDA6003A465C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -390,13 +510,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		9B4CCB2522EADDA6003A465C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AKGFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,6 +535,7 @@
 		9B4CCB2622EADDA6003A465C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AKGFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
