@@ -44,23 +44,29 @@ extension NetworkRequest {
                 return
             }
             
-            if let status = json["status"] as? Bool? ?? false {
-                if status {
-                    if let data = json["data"] as? [String:Any]? {
-                        successBlock(data ?? [:])
+            if let meta = json["meta"] as? [String:Any]? ?? [:] {
+                if let status = meta["status"] as? Bool? ?? false {
+                    if status {
+                        if let data = json["data"] as? [String:Any]? {
+                            successBlock(data ?? [:])
+                        }else{
+                            successBlock([:])
+                        }
                     }else{
-                        successBlock([:])
+                        if let data = json["data"] as? [String:Any]? {
+                            failureBlock(data!["message"] as? String ?? "Unknown Error")
+                        }else{
+                            failureBlock("Unknown Error")
+                        }
                     }
                 }else{
-                    if let data = json["data"] as? [String:Any]? {
-                        failureBlock(data!["message"] as? String ?? "Unknown Error")
-                    }else{
-                        failureBlock("Unknown Error")
-                    }
+                    failureBlock("Unknown Error")
                 }
             }else{
                 failureBlock("Unknown Error")
             }
+                
+            
             
         })
         task.resume()

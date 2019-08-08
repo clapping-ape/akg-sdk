@@ -16,6 +16,7 @@ struct Constant {
     }
     
     private struct Routes {
+        static let Login = "/auth/login"
         static let SendOTP = "/auth/signup/send_otp"
     }
     
@@ -27,5 +28,6 @@ struct Constant {
     
     static let BaseURL = Domains.Development
     static let RouteSendOTP = Routes.SendOTP
+    static let RouteLogin = Routes.Login
     
 }

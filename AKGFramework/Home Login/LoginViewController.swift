@@ -9,6 +9,7 @@
 import UIKit
 
 public class LoginViewController: BaseViewController, LoginView {
+    
 
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var googlePlayButton: UIButton!
@@ -71,8 +72,12 @@ public class LoginViewController: BaseViewController, LoginView {
         self.hideLoadingIndicator()
     }
     
+    internal func loginSuccess() {
+    }
+    
+    
     internal func sendOTPSuccess() {
-        self.basicAlertView(title: "SUCCESS", message: "OTP SENT", successBlock: {})
+        
     }
     
     internal func setErrorMessageFromAPI(errorMessage: String) {

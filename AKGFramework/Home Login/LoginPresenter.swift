@@ -11,6 +11,7 @@ import Foundation
 protocol LoginView: NSObjectProtocol {
     func startLoading()
     func finishLoading()
+    func loginSuccess()
     func sendOTPSuccess()
     func setErrorMessageFromAPI(errorMessage: String)
 }
@@ -29,6 +30,23 @@ internal class LoginPresenter {
     
     func detachView() {
         self.loginView = nil
+    }
+    
+    func postLoginAPI(param: [String:Any]!) {
+        self.loginView?.startLoading()
+        
+        APIManager.sharedInstance.loginAPI(param: param!, callBack: { [weak self](login) in
+            
+            self?.loginView?.finishLoading()
+            self?.loginView?.loginSuccess()
+            
+            
+        }) { (message) in
+            
+            self.loginView?.finishLoading()
+            self.loginView?.setErrorMessageFromAPI(errorMessage: message)
+        }
+        
     }
     
     func postSendOTPAPI(param: [String:Any]!) {

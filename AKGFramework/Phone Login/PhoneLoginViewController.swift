@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhoneLoginViewController: BaseViewController {
+class PhoneLoginViewController: BaseViewController, LoginView {
 
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,6 +17,7 @@ class PhoneLoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        LoginPresenter.sharedInstance.attachView(view: self)
         self.phoneButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
     }
     
@@ -36,6 +37,24 @@ class PhoneLoginViewController: BaseViewController {
     }
     
     @IBAction func phoneButton(_ sender: Any) {
+        if self.phoneTextField.text == "" {
+            self.basicAlertView(title: "", message: "Phone can't be blank.", successBlock: {})
+        }
+        else if self.passwordTextField.text == "" {
+            self.basicAlertView(title: "", message: "Password can't be blank.", successBlock: {})
+        }
+        else {
+            LoginPresenter.sharedInstance.postLoginAPI(
+                param:
+                ["phone_number":"0\(self.phoneTextField.text!)",
+                "password": self.passwordTextField.text!,
+                "auth_provider": "phone",
+                "game_provider": "akg",
+                "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
+                "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
+                "operating_systme": "iOS"
+                ])
+        }
     }
     
     @IBAction func registerButton(_ sender: Any) {
@@ -45,14 +64,26 @@ class PhoneLoginViewController: BaseViewController {
     @IBAction func forgotPasswordButton(_ sender: Any) {
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Presenter Delegate
+    internal func startLoading() {
+        self.showLoadingIndicator()
     }
-    */
+    
+    internal func finishLoading() {
+        self.hideLoadingIndicator()
+    }
+    
+    internal func loginSuccess() {
+        self.basicAlertView(title: "SUCCESS", message: "Logged In.", successBlock: {})
+    }
+    
+    internal func sendOTPSuccess() {
+        
+    }
+    
+    internal func setErrorMessageFromAPI(errorMessage: String) {
+        self.basicAlertView(title: "", message: errorMessage, successBlock: {})
+    }
 
 }
