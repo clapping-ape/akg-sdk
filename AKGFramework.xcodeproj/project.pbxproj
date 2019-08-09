@@ -117,9 +117,7 @@
 		9B4CCB0322EADDA6003A465C = {
 			isa = PBXGroup;
 			children = (
-				9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */,
 				9B4CCB2722EAE1FD003A465C /* AKGFramework.podspec */,
-				9BFC6EDF22FC002500308D7F /* Fonts */,
 				9B4CCB0F22EADDA6003A465C /* AKGFramework */,
 				9B4CCB1A22EADDA6003A465C /* AKGFrameworkTests */,
 				9B4CCB0E22EADDA6003A465C /* Products */,
@@ -144,8 +142,10 @@
 				9B4CCB2922EAE673003A465C /* Home Login */,
 				9BFC6F4322FC9BD000308D7F /* Phone Login */,
 				9BFC6F6322FCA7DA00308D7F /* Registration */,
+				9BFC6EDF22FC002500308D7F /* Fonts */,
 				9B4CCB1022EADDA6003A465C /* AKGFramework.h */,
 				9B4CCB1122EADDA6003A465C /* Info.plist */,
+				9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */,
 			);
 			path = AKGFramework;
 			sourceTree = "<group>";
