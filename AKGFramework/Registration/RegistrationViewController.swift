@@ -88,8 +88,9 @@ class RegistrationViewController: BaseViewController, RegisterView {
     }
     
     internal func checkOTPSuccess() {
-        RegistrationPasswordViewController().phoneNumber = self.phoneTextField.text!
-        self.present(RegistrationPasswordViewController(), animated: true, completion: nil)
+        let registrationView = RegistrationPasswordViewController()
+        registrationView.phoneNumber = self.phoneTextField.text!
+        self.present(registrationView, animated: true, completion: nil)
     }
     
     internal func signUpSuccess() {
