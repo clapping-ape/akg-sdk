@@ -95,6 +95,9 @@
                             <state key="normal" title="Resend OTP's Code">
                                 <color key="titleColor" red="0.2156862745" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="resendButton:" destination="-1" eventType="touchUpInside" id="0UC-FD-XXI"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-HL-44O">
                             <rect key="frame" x="94.5" y="209.5" width="113" height="30"/>

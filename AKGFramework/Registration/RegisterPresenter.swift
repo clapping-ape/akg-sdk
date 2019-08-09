@@ -71,7 +71,7 @@ internal class RegisterPresenter {
     func postSignUpAPI(param: [String:Any]!) {
         self.registerView?.startLoading()
         
-        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
+        APIManager.sharedInstance.signUpAPI(param: param!, callBack: { [weak self](meta) in
             
             self?.registerView?.finishLoading()
             self?.registerView?.signUpSuccess()

@@ -68,6 +68,14 @@ class RegistrationViewController: BaseViewController, RegisterView {
         }
     }
     
+    @IBAction func resendButton(_ sender: Any) {
+        
+        RegisterPresenter.sharedInstance.postSendOTPAPI(param: [
+            "phone_number": "0\(self.phoneTextField.text!)",
+            "auth_provider": "phone",
+            "game_provider": "akg",
+            "otp_type": "registration"])
+    }
     
     // MARK: - Presenter Delegate
     internal func startLoading() {

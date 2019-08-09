@@ -57,13 +57,14 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
             }else{
                 
                 RegisterPresenter.sharedInstance.postSignUpAPI(param: [
-                    "phone_number": self.phoneNumber!,
-                    "password": "0\(self.passwordTextField.text!)",
+                    "phone_number": "0\(self.phoneNumber!)",
+                    "password": self.passwordTextField.text!,
                     "auth_provider": "phone",
                     "game_provider": "akg",
                     "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
                     "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
                     "operating_system": "iOS"])
+                
             }
         }
     }
