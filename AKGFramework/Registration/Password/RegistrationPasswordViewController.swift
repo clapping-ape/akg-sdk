@@ -88,9 +88,9 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
     
     internal func signUpSuccess() {
         
-        self.basicAlertView(title: "SUCCESS", message: "Your number successfully registered.", successBlock: {
-            self.dismiss(animated: false, completion: nil)
-        })
+        let successView = RegistrationSuccessViewController()
+        successView.phoneNumber = self.phoneNumber
+        self.present(successView, animated: true, completion: nil)
     }
     
     internal func setErrorMessageFromAPI(errorMessage: String) {

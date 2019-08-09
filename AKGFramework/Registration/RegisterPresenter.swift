@@ -34,54 +34,54 @@ internal class RegisterPresenter {
     }
     
     func postSendOTPAPI(param: [String:Any]!) {
-        self.registerView?.startLoading()
-        
-        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
-        
-            self?.registerView?.finishLoading()
-            self?.registerView?.sendOTPSuccess()
-            
-            
-        }) { (message) in
-    
-            self.registerView?.finishLoading()
-            self.registerView?.setErrorMessageFromAPI(errorMessage: message)
-        }
+//        self.registerView?.startLoading()
+//
+//        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
+//
+//            self?.registerView?.finishLoading()
+            self.registerView?.sendOTPSuccess()
+//
+//
+//        }) { (message) in
+//
+//            self.registerView?.finishLoading()
+//            self.registerView?.setErrorMessageFromAPI(errorMessage: message)
+//        }
     
     }
     
     func postCheckOTPAPI(param: [String:Any]!) {
-        self.registerView?.startLoading()
-        
-        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
-        
-            self?.registerView?.finishLoading()
-            self?.registerView?.checkOTPSuccess()
-            
-            
-        }) { (message) in
-
-            self.registerView?.finishLoading()
-            self.registerView?.setErrorMessageFromAPI(errorMessage: message)
-        }
+//        self.registerView?.startLoading()
+//
+//        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
+//
+//            self?.registerView?.finishLoading()
+            self.registerView?.checkOTPSuccess()
+//
+//
+//        }) { (message) in
+//
+//            self.registerView?.finishLoading()
+//            self.registerView?.setErrorMessageFromAPI(errorMessage: message)
+//        }
     
     }
     
     
     func postSignUpAPI(param: [String:Any]!) {
-        self.registerView?.startLoading()
-        
-        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
-            
-            self?.registerView?.finishLoading()
-            self?.registerView?.signUpSuccess()
-            
-            
-        }) { (message) in
-            
-            self.registerView?.finishLoading()
-            self.registerView?.setErrorMessageFromAPI(errorMessage: message)
-        }
+//        self.registerView?.startLoading()
+//
+//        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
+//
+//            self?.registerView?.finishLoading()
+            self.registerView?.signUpSuccess()
+//
+//
+//        }) { (message) in
+//
+//            self.registerView?.finishLoading()
+//            self.registerView?.setErrorMessageFromAPI(errorMessage: message)
+//        }
         
     }
     
