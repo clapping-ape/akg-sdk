@@ -37,6 +37,10 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
         self.verifyPasswordTextField.resignFirstResponder()
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func nextButton(_ sender: Any) {
         if self.passwordTextField.text == "" {
             self.basicAlertView(title: "", message: "Password can't be blank.", successBlock: {})

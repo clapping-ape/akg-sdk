@@ -39,6 +39,10 @@ class RegistrationViewController: BaseViewController, RegisterView {
         self.otpTextField.resignFirstResponder()
     }
 
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func nextButton(_ sender: Any) {
         if self.otpSendStatus == false {
             if self.phoneTextField.text != "" {

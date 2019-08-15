@@ -82,14 +82,13 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0B-mM-fMB">
-                            <rect key="frame" x="94.5" y="212" width="113" height="30"/>
+                            <rect key="frame" x="157" y="212" width="121" height="30"/>
                             <color key="backgroundColor" red="0.27450980390000002" green="0.6588235294" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="16U-Ln-KcK"/>
-                                <constraint firstAttribute="width" constant="113" id="XKl-FI-ozs"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="10"/>
-                            <state key="normal" title="Phone Login">
+                            <state key="normal" title="Login">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
@@ -102,9 +101,6 @@
                                 <action selector="phoneButton:" destination="-1" eventType="touchUpInside" id="WQr-7G-CrD"/>
                             </connections>
                         </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPhone" translatesAutoresizingMaskIntoConstraints="NO" id="CHt-6r-MLW">
-                            <rect key="frame" x="102.5" y="216" width="26" height="22"/>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-39-GvG">
                             <rect key="frame" x="199" y="171" width="79" height="25"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="10"/>
@@ -115,38 +111,59 @@
                                 <action selector="forgotPasswordButton:" destination="-1" eventType="touchUpInside" id="gPB-Pj-nnx"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89J-3j-maq">
+                            <rect key="frame" x="24" y="212" width="121" height="30"/>
+                            <color key="backgroundColor" red="0.81960784313725488" green="0.16470588235294117" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="tvQ-9I-mfT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="10"/>
+                            <state key="normal" title="Back">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="backButton:" destination="-1" eventType="touchUpInside" id="Egx-FN-Zsh"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="CHt-6r-MLW" firstAttribute="bottom" secondItem="y0B-mM-fMB" secondAttribute="bottom" constant="-4" id="3Al-1X-MJn"/>
                         <constraint firstAttribute="trailing" secondItem="JMY-7o-xgJ" secondAttribute="trailing" constant="24" id="3aa-S3-Ld1"/>
                         <constraint firstItem="nNR-4T-afj" firstAttribute="centerY" secondItem="G5p-Sr-Sp6" secondAttribute="centerY" id="6FC-Dh-MBh"/>
                         <constraint firstItem="mhN-mA-GFI" firstAttribute="leading" secondItem="LPN-e9-3qR" secondAttribute="leading" id="AEZ-bN-Vw3"/>
+                        <constraint firstItem="89J-3j-maq" firstAttribute="leading" secondItem="BVb-Uq-jgs" secondAttribute="leading" id="Ah5-X4-nzt"/>
                         <constraint firstItem="ETz-Z2-aOm" firstAttribute="top" secondItem="G5p-Sr-Sp6" secondAttribute="bottom" constant="8" id="BYk-jC-xfq"/>
-                        <constraint firstItem="CHt-6r-MLW" firstAttribute="leading" secondItem="y0B-mM-fMB" secondAttribute="leading" constant="8" id="CF1-h7-B5b"/>
+                        <constraint firstItem="y0B-mM-fMB" firstAttribute="leading" secondItem="89J-3j-maq" secondAttribute="trailing" constant="12" id="Fup-6Y-gaM"/>
                         <constraint firstItem="iQI-L8-EMu" firstAttribute="top" secondItem="ETz-Z2-aOm" secondAttribute="bottom" constant="16" id="MEa-jm-F3D"/>
                         <constraint firstItem="BVb-Uq-jgs" firstAttribute="top" secondItem="iQI-L8-EMu" secondAttribute="bottom" constant="8" id="MPd-cx-hbh"/>
                         <constraint firstItem="JMY-7o-xgJ" firstAttribute="leading" secondItem="iQI-L8-EMu" secondAttribute="trailing" constant="8" id="MhG-h8-MDy"/>
-                        <constraint firstItem="y0B-mM-fMB" firstAttribute="centerX" secondItem="LPN-e9-3qR" secondAttribute="centerX" id="Rgo-0g-7wM"/>
                         <constraint firstAttribute="width" constant="302" id="TIE-0z-UGL"/>
                         <constraint firstItem="G5p-Sr-Sp6" firstAttribute="leading" secondItem="LPN-e9-3qR" secondAttribute="leading" constant="24" id="Tm7-dH-WeH"/>
                         <constraint firstItem="G5p-Sr-Sp6" firstAttribute="top" secondItem="LPN-e9-3qR" secondAttribute="top" constant="24" id="VFf-5f-K8V"/>
+                        <constraint firstItem="89J-3j-maq" firstAttribute="width" secondItem="y0B-mM-fMB" secondAttribute="width" id="WNp-Wa-3s6"/>
+                        <constraint firstItem="89J-3j-maq" firstAttribute="top" secondItem="y0B-mM-fMB" secondAttribute="top" id="XDd-TS-ktM"/>
                         <constraint firstAttribute="width" secondItem="LPN-e9-3qR" secondAttribute="height" multiplier="1:1" id="YqR-Ru-UFs"/>
                         <constraint firstAttribute="trailing" secondItem="BVb-Uq-jgs" secondAttribute="trailing" constant="24" id="ZWf-3R-r8b"/>
                         <constraint firstItem="BVb-Uq-jgs" firstAttribute="leading" secondItem="LPN-e9-3qR" secondAttribute="leading" constant="24" id="adH-3s-TOG"/>
                         <constraint firstAttribute="bottom" secondItem="mhN-mA-GFI" secondAttribute="bottom" id="egU-oH-cgm"/>
+                        <constraint firstItem="y0B-mM-fMB" firstAttribute="trailing" secondItem="2xr-39-GvG" secondAttribute="trailing" id="iKT-0C-MKg"/>
                         <constraint firstItem="JMY-7o-xgJ" firstAttribute="centerY" secondItem="iQI-L8-EMu" secondAttribute="centerY" id="iQ4-6v-VJf"/>
                         <constraint firstItem="qF7-Pb-2NT" firstAttribute="top" secondItem="BVb-Uq-jgs" secondAttribute="bottom" constant="8" id="llU-nQ-dTO"/>
                         <constraint firstItem="mhN-mA-GFI" firstAttribute="top" secondItem="LPN-e9-3qR" secondAttribute="top" id="njC-OD-KIJ"/>
                         <constraint firstItem="nNR-4T-afj" firstAttribute="leading" secondItem="G5p-Sr-Sp6" secondAttribute="trailing" constant="8" id="oFb-2Z-Mcs"/>
-                        <constraint firstItem="CHt-6r-MLW" firstAttribute="top" secondItem="y0B-mM-fMB" secondAttribute="top" constant="4" id="oNf-f2-dor"/>
                         <constraint firstAttribute="trailing" secondItem="qF7-Pb-2NT" secondAttribute="trailing" constant="24" id="pk1-UJ-TGN"/>
-                        <constraint firstItem="CHt-6r-MLW" firstAttribute="width" secondItem="CHt-6r-MLW" secondAttribute="height" multiplier="1:1" constant="4" id="qJK-Ml-FKO"/>
                         <constraint firstItem="iQI-L8-EMu" firstAttribute="leading" secondItem="ETz-Z2-aOm" secondAttribute="leading" id="rZ3-PJ-9mP"/>
                         <constraint firstItem="ETz-Z2-aOm" firstAttribute="leading" secondItem="G5p-Sr-Sp6" secondAttribute="leading" id="rf3-g4-2uc"/>
                         <constraint firstAttribute="trailing" secondItem="mhN-mA-GFI" secondAttribute="trailing" id="tI0-l2-WKd"/>
                         <constraint firstItem="2xr-39-GvG" firstAttribute="top" secondItem="qF7-Pb-2NT" secondAttribute="bottom" id="tyU-yI-XYX"/>
                         <constraint firstAttribute="trailing" secondItem="2xr-39-GvG" secondAttribute="trailing" constant="24" id="uGQ-rM-0yg"/>
+                        <constraint firstItem="89J-3j-maq" firstAttribute="centerY" secondItem="y0B-mM-fMB" secondAttribute="centerY" id="vhZ-Yq-8MJ"/>
                         <constraint firstItem="y0B-mM-fMB" firstAttribute="top" secondItem="2xr-39-GvG" secondAttribute="bottom" constant="16" id="xCi-nr-6lR"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -178,6 +195,5 @@
     <resources>
         <image name="bg" width="301" height="290"/>
         <image name="icPeople" width="10" height="11"/>
-        <image name="icPhone" width="19" height="18"/>
     </resources>
 </document>

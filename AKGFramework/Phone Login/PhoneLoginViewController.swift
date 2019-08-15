@@ -18,7 +18,7 @@ class PhoneLoginViewController: BaseViewController, LoginView {
         super.viewDidLoad()
 
         LoginPresenter.sharedInstance.attachView(view: self)
-        self.phoneButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
+//        self.phoneButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
     }
     
     init() {
@@ -65,6 +65,9 @@ class PhoneLoginViewController: BaseViewController, LoginView {
         self.present(OTPForgotPasswordViewController(), animated: true, completion: nil)
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     // MARK: - Presenter Delegate
     internal func startLoading() {

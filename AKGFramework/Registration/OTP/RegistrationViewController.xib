@@ -100,11 +100,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-HL-44O">
-                            <rect key="frame" x="94.5" y="209.5" width="113" height="30"/>
+                            <rect key="frame" x="157" y="209.5" width="121" height="30"/>
                             <color key="backgroundColor" red="0.27450980390000002" green="0.6588235294" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="LLi-jW-gSr"/>
-                                <constraint firstAttribute="width" constant="113" id="kJY-yP-7fh"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="10"/>
                             <state key="normal" title="Send OTP">
@@ -120,9 +119,31 @@
                                 <action selector="nextButton:" destination="-1" eventType="touchUpInside" id="LVb-JM-Zyf"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcR-g0-mwg">
+                            <rect key="frame" x="24" y="209.5" width="121" height="30"/>
+                            <color key="backgroundColor" red="0.81960784310000001" green="0.1647058824" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="h4U-gc-4fp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="10"/>
+                            <state key="normal" title="Back">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="backButton:" destination="-1" eventType="touchUpInside" id="M3g-pj-c8O"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="IcR-g0-mwg" firstAttribute="leading" secondItem="8n5-LV-F36" secondAttribute="leading" id="05d-pB-UiO"/>
+                        <constraint firstItem="Vdk-HL-44O" firstAttribute="trailing" secondItem="33s-Fg-iQZ" secondAttribute="trailing" id="0mf-rg-mAI"/>
                         <constraint firstItem="33s-Fg-iQZ" firstAttribute="top" secondItem="U72-3T-kUJ" secondAttribute="bottom" constant="8" id="1eS-H1-qTK"/>
                         <constraint firstAttribute="trailing" secondItem="tAn-WF-tuh" secondAttribute="trailing" constant="24" id="3ll-df-tKL"/>
                         <constraint firstItem="8n5-LV-F36" firstAttribute="trailing" secondItem="AJ8-1j-dC6" secondAttribute="trailing" id="6Xl-Cm-C6E"/>
@@ -135,20 +156,22 @@
                         <constraint firstAttribute="trailing" secondItem="U72-3T-kUJ" secondAttribute="trailing" constant="24" id="IF7-mQ-GOr"/>
                         <constraint firstItem="UY4-sp-ryu" firstAttribute="centerY" secondItem="qmQ-ba-0IJ" secondAttribute="centerY" id="IHV-N3-kLH"/>
                         <constraint firstItem="tAn-WF-tuh" firstAttribute="centerY" secondItem="AJ8-1j-dC6" secondAttribute="centerY" id="IJx-Uv-L59"/>
+                        <constraint firstItem="Vdk-HL-44O" firstAttribute="leading" secondItem="IcR-g0-mwg" secondAttribute="trailing" constant="12" id="Ijw-m2-qbd"/>
                         <constraint firstItem="kvi-wR-iAc" firstAttribute="top" secondItem="Jr5-Wg-I2l" secondAttribute="top" id="JCS-HJ-xrr"/>
                         <constraint firstItem="UY4-sp-ryu" firstAttribute="leading" secondItem="qmQ-ba-0IJ" secondAttribute="trailing" constant="8" id="Kon-ma-Yn3"/>
                         <constraint firstAttribute="width" constant="302" id="Lp3-J4-bVo"/>
                         <constraint firstAttribute="trailing" secondItem="kvi-wR-iAc" secondAttribute="trailing" id="SGg-k7-Roz"/>
+                        <constraint firstItem="IcR-g0-mwg" firstAttribute="top" secondItem="Vdk-HL-44O" secondAttribute="top" id="T2R-Gl-6f0"/>
                         <constraint firstItem="jIy-lW-6rA" firstAttribute="leading" secondItem="qmQ-ba-0IJ" secondAttribute="leading" id="UTL-97-387"/>
                         <constraint firstItem="U72-3T-kUJ" firstAttribute="top" secondItem="WgJ-4R-chs" secondAttribute="bottom" constant="8" id="Vaa-We-g2Q"/>
                         <constraint firstAttribute="trailing" secondItem="WgJ-4R-chs" secondAttribute="trailing" constant="24" id="Z8P-Yo-pLF"/>
+                        <constraint firstItem="IcR-g0-mwg" firstAttribute="width" secondItem="Vdk-HL-44O" secondAttribute="width" id="cjr-Eg-ik7"/>
                         <constraint firstItem="kvi-wR-iAc" firstAttribute="leading" secondItem="Jr5-Wg-I2l" secondAttribute="leading" id="ePu-pH-hgS"/>
                         <constraint firstItem="8n5-LV-F36" firstAttribute="leading" secondItem="AJ8-1j-dC6" secondAttribute="leading" id="ehH-3e-gKz"/>
                         <constraint firstItem="8n5-LV-F36" firstAttribute="centerY" secondItem="U72-3T-kUJ" secondAttribute="centerY" id="fTC-zT-sAy"/>
                         <constraint firstItem="Vdk-HL-44O" firstAttribute="top" secondItem="33s-Fg-iQZ" secondAttribute="bottom" constant="20" id="jH5-YA-KeK"/>
                         <constraint firstItem="AJ8-1j-dC6" firstAttribute="top" secondItem="jIy-lW-6rA" secondAttribute="bottom" constant="16" id="kCG-NC-0D9"/>
                         <constraint firstItem="WgJ-4R-chs" firstAttribute="leading" secondItem="Jr5-Wg-I2l" secondAttribute="leading" constant="24" id="pCZ-eb-FLP"/>
-                        <constraint firstItem="Vdk-HL-44O" firstAttribute="centerX" secondItem="Jr5-Wg-I2l" secondAttribute="centerX" id="uWZ-ID-tjb"/>
                         <constraint firstItem="qmQ-ba-0IJ" firstAttribute="top" secondItem="Jr5-Wg-I2l" secondAttribute="top" constant="24" id="w00-8u-enM"/>
                         <constraint firstItem="AJ8-1j-dC6" firstAttribute="leading" secondItem="jIy-lW-6rA" secondAttribute="leading" id="w8m-iB-J3A"/>
                         <constraint firstAttribute="bottom" secondItem="kvi-wR-iAc" secondAttribute="bottom" id="wWi-Rf-E1N"/>
