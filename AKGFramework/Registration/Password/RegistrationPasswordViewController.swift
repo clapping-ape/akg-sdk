@@ -59,8 +59,8 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
                 RegisterPresenter.sharedInstance.postSignUpAPI(param: [
                     "phone_number": "0\(self.phoneNumber!)",
                     "password": self.passwordTextField.text!,
-                    "auth_provider": "phone",
-                    "game_provider": "akg",
+                    "auth_provider": "akg",
+                    "game_provider": "mobile-legends",
                     "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
                     "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
                     "operating_system": "iOS"])
@@ -89,8 +89,8 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
     
     internal func signUpSuccess() {
         
-        let successView = RegistrationSuccessViewController()
-        successView.phoneNumber = self.phoneNumber
+        let successView = SuccessViewController()
+        successView.textToShow = "Your account with number +62 \(self.phoneNumber!) already been made"
         self.present(successView, animated: true, completion: nil)
     }
     

@@ -78,4 +78,20 @@ class APIManager {
         
     }
     
+    func updatePasswordAPI(param:[String:Any]!, callBack: @escaping (Meta) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.postAPI(
+            route: Constant.RouteUpdatePassword,
+            params: param,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                let meta = Meta.init(data: responseObject)
+                callBack(meta)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
 }

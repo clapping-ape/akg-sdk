@@ -45,8 +45,8 @@ class RegistrationViewController: BaseViewController, RegisterView {
                 
                 RegisterPresenter.sharedInstance.postSendOTPAPI(param: [
                     "phone_number": "0\(self.phoneTextField.text!)",
-                    "auth_provider": "phone",
-                    "game_provider": "akg",
+                    "auth_provider": "akg",
+                    "game_provider": "mobile-legends",
                     "otp_type": "registration"])
             }else{
                 
@@ -57,8 +57,8 @@ class RegistrationViewController: BaseViewController, RegisterView {
                 
                 RegisterPresenter.sharedInstance.postCheckOTPAPI(param: [
                     "phone_number": "0\(self.phoneTextField.text!)",
-                    "auth_provider": "phone",
-                    "game_provider": "akg",
+                    "auth_provider": "akg",
+                    "game_provider": "mobile-legends",
                     "otp_type": "registration",
                     "otp_code": self.otpTextField.text!])
             }else{
@@ -72,8 +72,8 @@ class RegistrationViewController: BaseViewController, RegisterView {
         
         RegisterPresenter.sharedInstance.postSendOTPAPI(param: [
             "phone_number": "0\(self.phoneTextField.text!)",
-            "auth_provider": "phone",
-            "game_provider": "akg",
+            "auth_provider": "akg",
+            "game_provider": "mobile-legends",
             "otp_type": "registration"])
     }
     

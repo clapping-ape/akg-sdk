@@ -48,8 +48,8 @@ class PhoneLoginViewController: BaseViewController, LoginView {
                 param:
                 ["phone_number":"0\(self.phoneTextField.text!)",
                 "password": self.passwordTextField.text!,
-                "auth_provider": "phone",
-                "game_provider": "akg",
+                "auth_provider": "akg",
+                "game_provider": "mobile-legends",
                 "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
                 "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
                 "operating_systme": "iOS"
@@ -62,6 +62,7 @@ class PhoneLoginViewController: BaseViewController, LoginView {
     }
     
     @IBAction func forgotPasswordButton(_ sender: Any) {
+        self.present(OTPForgotPasswordViewController(), animated: true, completion: nil)
     }
     
     

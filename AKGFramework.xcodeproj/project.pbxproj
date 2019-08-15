@@ -14,14 +14,25 @@
 		9B4CCB2F22EAEB35003A465C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCB2E22EAEB35003A465C /* BaseView.swift */; };
 		9B4CCB5F22EB12F4003A465C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCB5D22EB12F4003A465C /* LoginViewController.swift */; };
 		9B4CCB6022EB12F4003A465C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4CCB5E22EB12F4003A465C /* LoginViewController.xib */; };
+		9B54066A23040B2900A28F30 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B54066723040B2900A28F30 /* GoogleSignInDependencies.framework */; };
+		9B54066B23040B2900A28F30 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9B54066823040B2900A28F30 /* GoogleSignIn.bundle */; };
+		9B54066C23040B2900A28F30 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B54066923040B2900A28F30 /* GoogleSignIn.framework */; };
+		9B54066F23040B7A00A28F30 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B54066E23040B7A00A28F30 /* LocalAuthentication.framework */; };
+		9B54067123040B8100A28F30 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B54067023040B8100A28F30 /* SafariServices.framework */; };
+		9B54067323040B8900A28F30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B54067223040B8900A28F30 /* SystemConfiguration.framework */; };
+		9B745492230550E100DBFD77 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B745490230550E100DBFD77 /* ForgotPasswordViewController.swift */; };
+		9B745493230550E100DBFD77 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B745491230550E100DBFD77 /* ForgotPasswordViewController.xib */; };
+		9B7454982305542000DBFD77 /* OTPForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */; };
+		9B7454992305542000DBFD77 /* OTPForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */; };
+		9B74549B2305610000DBFD77 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */; };
 		9BE667C222FCB48A002F61A2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C122FCB48A002F61A2 /* Login.swift */; };
 		9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C522FCB6B8002F61A2 /* UtilityManager.swift */; };
 		9BE667C822FCB70B002F61A2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C722FCB70B002F61A2 /* DataManager.swift */; };
 		9BE667D322FCBC69002F61A2 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667D222FCBC69002F61A2 /* RegisterPresenter.swift */; };
 		9BE667D622FCBE47002F61A2 /* RegistrationPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667D422FCBE47002F61A2 /* RegistrationPasswordViewController.swift */; };
 		9BE667D722FCBE47002F61A2 /* RegistrationPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE667D522FCBE47002F61A2 /* RegistrationPasswordViewController.xib */; };
-		9BEC536722FD1E5E005F2000 /* RegistrationSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC536522FD1E5E005F2000 /* RegistrationSuccessViewController.swift */; };
-		9BEC536822FD1E5E005F2000 /* RegistrationSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BEC536622FD1E5E005F2000 /* RegistrationSuccessViewController.xib */; };
+		9BEC536722FD1E5E005F2000 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC536522FD1E5E005F2000 /* SuccessViewController.swift */; };
+		9BEC536822FD1E5E005F2000 /* SuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BEC536622FD1E5E005F2000 /* SuccessViewController.xib */; };
 		9BFC6EDE22FBFF0600308D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */; };
 		9BFC6EE822FC003F00308D7F /* Proxima Nova Alt Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE022FC003F00308D7F /* Proxima Nova Alt Bold.otf */; };
 		9BFC6EE922FC003F00308D7F /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE122FC003F00308D7F /* Proxima Nova Alt Light.otf */; };
@@ -52,6 +63,13 @@
 			remoteGlobalIDString = 9B4CCB0C22EADDA6003A465C;
 			remoteInfo = AKGFramework;
 		};
+		9B7D565822FD6681004AF814 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B7D565422FD6681004AF814 /* HostFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B4CCB3922EAF03D003A465C;
+			remoteInfo = HostFramework;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -65,14 +83,26 @@
 		9B4CCB2E22EAEB35003A465C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		9B4CCB5D22EB12F4003A465C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9B4CCB5E22EB12F4003A465C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9B54066723040B2900A28F30 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
+		9B54066823040B2900A28F30 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		9B54066923040B2900A28F30 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		9B54066E23040B7A00A28F30 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		9B54067023040B8100A28F30 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		9B54067223040B8900A28F30 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9B745490230550E100DBFD77 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		9B745491230550E100DBFD77 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		9B7D565422FD6681004AF814 /* HostFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HostFramework.xcodeproj; path = ../HostFramework/HostFramework.xcodeproj; sourceTree = "<group>"; };
 		9BE667C122FCB48A002F61A2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		9BE667C522FCB6B8002F61A2 /* UtilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityManager.swift; sourceTree = "<group>"; };
 		9BE667C722FCB70B002F61A2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9BE667D222FCBC69002F61A2 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		9BE667D422FCBE47002F61A2 /* RegistrationPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPasswordViewController.swift; sourceTree = "<group>"; };
 		9BE667D522FCBE47002F61A2 /* RegistrationPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationPasswordViewController.xib; sourceTree = "<group>"; };
-		9BEC536522FD1E5E005F2000 /* RegistrationSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessViewController.swift; sourceTree = "<group>"; };
-		9BEC536622FD1E5E005F2000 /* RegistrationSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationSuccessViewController.xib; sourceTree = "<group>"; };
+		9BEC536522FD1E5E005F2000 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		9BEC536622FD1E5E005F2000 /* SuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessViewController.xib; sourceTree = "<group>"; };
 		9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BFC6EE022FC003F00308D7F /* Proxima Nova Alt Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Bold.otf"; sourceTree = "<group>"; };
 		9BFC6EE122FC003F00308D7F /* Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
@@ -100,6 +130,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B54067323040B8900A28F30 /* SystemConfiguration.framework in Frameworks */,
+				9B54067123040B8100A28F30 /* SafariServices.framework in Frameworks */,
+				9B54066F23040B7A00A28F30 /* LocalAuthentication.framework in Frameworks */,
+				9B54066A23040B2900A28F30 /* GoogleSignInDependencies.framework in Frameworks */,
+				9B54066C23040B2900A28F30 /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +156,8 @@
 				9B4CCB0F22EADDA6003A465C /* AKGFramework */,
 				9B4CCB1A22EADDA6003A465C /* AKGFrameworkTests */,
 				9B4CCB0E22EADDA6003A465C /* Products */,
+				9B7D565422FD6681004AF814 /* HostFramework.xcodeproj */,
+				9B54066D23040B7A00A28F30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,8 +178,11 @@
 				9BFC6F1C22FC0EA200308D7F /* Manager */,
 				9B4CCB2922EAE673003A465C /* Home Login */,
 				9BFC6F4322FC9BD000308D7F /* Phone Login */,
+				9B74548F230550BF00DBFD77 /* Forgot Password */,
 				9BFC6F6322FCA7DA00308D7F /* Registration */,
+				9BEC536422FD1E2F005F2000 /* Success Page */,
 				9BFC6EDF22FC002500308D7F /* Fonts */,
+				9B54066523040B1600A28F30 /* Frameworks */,
 				9B4CCB1022EADDA6003A465C /* AKGFramework.h */,
 				9B4CCB1122EADDA6003A465C /* Info.plist */,
 				9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */,
@@ -169,6 +209,62 @@
 			path = "Home Login";
 			sourceTree = "<group>";
 		};
+		9B54066523040B1600A28F30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B54066823040B2900A28F30 /* GoogleSignIn.bundle */,
+				9B54066923040B2900A28F30 /* GoogleSignIn.framework */,
+				9B54066723040B2900A28F30 /* GoogleSignInDependencies.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B54066D23040B7A00A28F30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B54067223040B8900A28F30 /* SystemConfiguration.framework */,
+				9B54067023040B8100A28F30 /* SafariServices.framework */,
+				9B54066E23040B7A00A28F30 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B74548F230550BF00DBFD77 /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				9B745494230553FD00DBFD77 /* OTP */,
+				9B7454952305540300DBFD77 /* Password */,
+				9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */,
+			);
+			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		9B745494230553FD00DBFD77 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */,
+				9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		9B7454952305540300DBFD77 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				9B745491230550E100DBFD77 /* ForgotPasswordViewController.xib */,
+				9B745490230550E100DBFD77 /* ForgotPasswordViewController.swift */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		9B7D565522FD6681004AF814 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B7D565922FD6681004AF814 /* HostFramework.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9BEC536222FD1E19005F2000 /* OTP */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,8 +286,8 @@
 		9BEC536422FD1E2F005F2000 /* Success Page */ = {
 			isa = PBXGroup;
 			children = (
-				9BEC536622FD1E5E005F2000 /* RegistrationSuccessViewController.xib */,
-				9BEC536522FD1E5E005F2000 /* RegistrationSuccessViewController.swift */,
+				9BEC536622FD1E5E005F2000 /* SuccessViewController.xib */,
+				9BEC536522FD1E5E005F2000 /* SuccessViewController.swift */,
 			);
 			path = "Success Page";
 			sourceTree = "<group>";
@@ -256,7 +352,6 @@
 			children = (
 				9BEC536222FD1E19005F2000 /* OTP */,
 				9BEC536322FD1E21005F2000 /* Password */,
-				9BEC536422FD1E2F005F2000 /* Success Page */,
 				9BE667D222FCBC69002F61A2 /* RegisterPresenter.swift */,
 			);
 			path = Registration;
@@ -341,6 +436,12 @@
 			mainGroup = 9B4CCB0322EADDA6003A465C;
 			productRefGroup = 9B4CCB0E22EADDA6003A465C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9B7D565522FD6681004AF814 /* Products */;
+					ProjectRef = 9B7D565422FD6681004AF814 /* HostFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9B4CCB0C22EADDA6003A465C /* AKGFramework */,
@@ -348,6 +449,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9B7D565922FD6681004AF814 /* HostFramework.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HostFramework.app;
+			remoteRef = 9B7D565822FD6681004AF814 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9B4CCB0B22EADDA6003A465C /* Resources */ = {
@@ -362,13 +473,16 @@
 				9BFC6EEE22FC003F00308D7F /* Proxima Nova Alt Thin.otf in Resources */,
 				9BFC6EE822FC003F00308D7F /* Proxima Nova Alt Bold.otf in Resources */,
 				9BFC6EEB22FC003F00308D7F /* Proxima Nova Black.otf in Resources */,
-				9BEC536822FD1E5E005F2000 /* RegistrationSuccessViewController.xib in Resources */,
+				9BEC536822FD1E5E005F2000 /* SuccessViewController.xib in Resources */,
 				9B4CCB6022EB12F4003A465C /* LoginViewController.xib in Resources */,
+				9B7454992305542000DBFD77 /* OTPForgotPasswordViewController.xib in Resources */,
 				9BFC6EED22FC003F00308D7F /* Proxima Nova Extrabold.otf in Resources */,
 				9BE667D722FCBE47002F61A2 /* RegistrationPasswordViewController.xib in Resources */,
 				9BFC6F6722FCA7F700308D7F /* RegistrationViewController.xib in Resources */,
 				9BFC6EEA22FC003F00308D7F /* ProximaNova-Regular.otf in Resources */,
 				9BFC6F4722FC9BF500308D7F /* PhoneLoginViewController.xib in Resources */,
+				9B54066B23040B2900A28F30 /* GoogleSignIn.bundle in Resources */,
+				9B745493230550E100DBFD77 /* ForgotPasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,12 +508,15 @@
 				9BE667C222FCB48A002F61A2 /* Login.swift in Sources */,
 				9BFC6F6622FCA7F700308D7F /* RegistrationViewController.swift in Sources */,
 				9BFC6F3F22FC909900308D7F /* APIManager.swift in Sources */,
+				9B7454982305542000DBFD77 /* OTPForgotPasswordViewController.swift in Sources */,
 				9BFC6F1F22FC0ECD00308D7F /* BaseViewController.swift in Sources */,
 				9BFC6F4622FC9BF500308D7F /* PhoneLoginViewController.swift in Sources */,
 				9BFC6F2122FC0F5800308D7F /* LoadingViewController.swift in Sources */,
-				9BEC536722FD1E5E005F2000 /* RegistrationSuccessViewController.swift in Sources */,
+				9BEC536722FD1E5E005F2000 /* SuccessViewController.swift in Sources */,
 				9BE667D322FCBC69002F61A2 /* RegisterPresenter.swift in Sources */,
 				9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */,
+				9B745492230550E100DBFD77 /* ForgotPasswordViewController.swift in Sources */,
+				9B74549B2305610000DBFD77 /* ForgotPasswordPresenter.swift in Sources */,
 				9BFC6F3322FC2EB200308D7F /* Meta.swift in Sources */,
 				9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */,
 				9BFC6F2E22FC216900308D7F /* LoginPresenter.swift in Sources */,
@@ -558,6 +675,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AKGFramework/Frameworks",
+				);
 				INFOPLIST_FILE = AKGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -565,6 +686,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.akggames.iosframework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -586,6 +711,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AKGFramework/Frameworks",
+				);
 				INFOPLIST_FILE = AKGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -593,6 +722,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.akggames.iosframework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

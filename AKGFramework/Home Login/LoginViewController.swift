@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-public class LoginViewController: BaseViewController, LoginView {
+public class LoginViewController: BaseViewController, GIDSignInDelegate, GIDSignInUIDelegate, LoginView {
     
 
     @IBOutlet weak var facebookButton: UIButton!
@@ -31,10 +32,24 @@ public class LoginViewController: BaseViewController, LoginView {
     public init() {
         
         super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
+        
         DispatchQueue.main.async {
             self.getTopMostViewController()?.present(self, animated: true, completion: nil)
         }
         
+        
+        
+        
+        GIDSignIn.sharedInstance()?.clientID = "810315591302-licqe3j85mu22s4iqko496l8iiqf0ah2.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        let url = URL(string: "com.googleusercontent.apps.810315591302-licqe3j85mu22s4iqko496l8iiqf0ah2")
+        UIApplication.shared.open(url!) { (result) in
+            if result {
+                // The URL was delivered successfully!
+            }
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,6 +62,7 @@ public class LoginViewController: BaseViewController, LoginView {
         
     }
     @IBAction func googlePlayButton(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
         
     }
     @IBAction func guestButton(_ sender: Any) {
@@ -57,6 +73,39 @@ public class LoginViewController: BaseViewController, LoginView {
         self.present(PhoneLoginViewController(), animated: true, completion: nil)
     }
     
+    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            // Perform any operations on signed in user here.
+            let userId = user.userID                  // For client-side use only!
+            let idToken = user.authentication.idToken // Safe to send to the server
+            let fullName = user.profile.name
+            let givenName = user.profile.givenName
+            let familyName = user.profile.familyName
+            let email = user.profile.email
+            // ...
+        }
+    }
+    
+    
+    public func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
+    
+    }
+    
+    public func sign(_ signIn: GIDSignIn!,
+                     present viewController: UIViewController!) {
+        
+        self.present(viewController, animated: true, completion: nil)
+        
+    }
+    
+    public func sign(_ signIn: GIDSignIn!,
+                     dismiss viewController: UIViewController!) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     
     // MARK: - Presenter Delegate
     internal func startLoading() {
