@@ -27,7 +27,7 @@ public class AKGFrameworkManager {
         DataManager.sharedInstance.setProvider(token: provider)
     }
     
-    public func showSignInView() {
+    public func showLoginView() {
         self.viewController.present(LoginViewController(), animated: true, completion: nil)
     }
     
