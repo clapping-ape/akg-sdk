@@ -13,6 +13,7 @@ class SuccessViewController: BaseViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var successLabel: UILabel!
     
+    var flag: String! = ""
     var textToShow: String! = ""
 
     override func viewDidLoad() {
@@ -35,7 +36,9 @@ class SuccessViewController: BaseViewController {
 
     // MARK: - IBActions
     @IBAction func nextButton(_ sender: Any) {
-        
+        if flag == "forgot-password" {
+            AKGFrameworkManager.sharedInstance.akgDelegate?.didForgotPasswordSuccess()
+        }
         self.remove()
     }
 }

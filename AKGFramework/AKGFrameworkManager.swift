@@ -9,11 +9,16 @@
 import Foundation
 import UIKit
 
+public protocol AKGDelegate{
+    func didLoginSuccess()
+    func didForgotPasswordSuccess()
+}
+
 public class AKGFrameworkManager {
     
     public static let sharedInstance = AKGFrameworkManager()
-    public var delegate: UIApplicationDelegate?
-    public var signInDelegate: AKGSignInDelegate?
+    public var applicationDelegate: UIApplicationDelegate?
+    public var akgDelegate: AKGDelegate?
     public var viewController: UIViewController!
     
     public init() {}
@@ -24,12 +29,6 @@ public class AKGFrameworkManager {
     
     public func showSignInView() {
         self.viewController.present(LoginViewController(), animated: true, completion: nil)
-    }
-    
-    func removeAllView() {
-        for v in viewController.view.subviews{
-            v.removeFromSuperview()
-        }
     }
     
 }

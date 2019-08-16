@@ -94,7 +94,7 @@ class ForgotPasswordViewController: BaseViewController, ForgotPasswordView {
         
         let successView = SuccessViewController()
         successView.textToShow = "Your password already been changed"
-        
+        successView.flag = "forgot-password"
         self.remove()
         self.getTopMostViewController()?.add(successView)
     }

@@ -8,10 +8,6 @@
 
 import UIKit
 
-public protocol AKGSignInDelegate{
-    func didSignInSuccess()
-}
-
 class PhoneLoginViewController: BaseViewController, LoginView {
 
     @IBOutlet weak var phoneTextField: UITextField!
@@ -88,7 +84,7 @@ class PhoneLoginViewController: BaseViewController, LoginView {
     }
     
     internal func loginSuccess() {
-        AKGFrameworkManager.sharedInstance.signInDelegate?.didSignInSuccess()
+        AKGFrameworkManager.sharedInstance.akgDelegate?.didLoginSuccess()
         self.remove()
     }
     
