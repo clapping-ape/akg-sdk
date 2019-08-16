@@ -25,6 +25,8 @@ class ForgotPasswordViewController: BaseViewController, ForgotPasswordView {
     init() {
         super.init(nibName: "ForgotPasswordViewController", bundle: Bundle(for: ForgotPasswordViewController.self))
         
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,7 +40,7 @@ class ForgotPasswordViewController: BaseViewController, ForgotPasswordView {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.remove()
     }
     
     @IBAction func nextButton(_ sender: Any) {
@@ -64,10 +66,7 @@ class ForgotPasswordViewController: BaseViewController, ForgotPasswordView {
                     "phone_number": "0\(self.phoneNumber!)",
                     "password": self.passwordTextField.text!,
                     "auth_provider": "akg",
-                    "game_provider": "mobile-legends",
-                    "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
-                    "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
-                    "operating_system": "iOS"])
+                    "game_provider": "mobile-legends"])
                 
             }
         }
@@ -95,7 +94,9 @@ class ForgotPasswordViewController: BaseViewController, ForgotPasswordView {
         
         let successView = SuccessViewController()
         successView.textToShow = "Your password already been changed"
-        self.present(successView, animated: true, completion: nil)
+        
+        self.remove()
+        self.getTopMostViewController()?.add(successView)
     }
     
     internal func setErrorMessageFromAPI(errorMessage: String) {

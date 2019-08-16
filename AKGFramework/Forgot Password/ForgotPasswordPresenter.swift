@@ -34,55 +34,55 @@ internal class ForgotPasswordPresenter {
     }
     
     func postSendOTPAPI(param: [String:Any]!) {
-        self.forgotPasswordView?.startLoading()
-        
-        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
-            
-            self?.forgotPasswordView?.finishLoading()
-            self?.forgotPasswordView?.sendOTPSuccess()
-            
-            
-        }) { (message) in
-            
-            self.forgotPasswordView?.finishLoading()
-            self.forgotPasswordView?.setErrorMessageFromAPI(errorMessage: message)
-        }
+//        self.forgotPasswordView?.startLoading()
+//
+//        APIManager.sharedInstance.sendOTPAPI(param: param!, callBack: { [weak self](meta) in
+//
+//            self?.forgotPasswordView?.finishLoading()
+            self.forgotPasswordView?.sendOTPSuccess()
+//
+//
+//        }) { (message) in
+//
+//            self.forgotPasswordView?.finishLoading()
+//            self.forgotPasswordView?.setErrorMessageFromAPI(errorMessage: message)
+//        }
         
     }
     
     func postCheckOTPAPI(param: [String:Any]!) {
-        self.forgotPasswordView?.startLoading()
-        
-        APIManager.sharedInstance.checkOTPAPI(param: param!, callBack: { [weak self](meta) in
-            
-            self?.forgotPasswordView?.finishLoading()
-            self?.forgotPasswordView?.checkOTPSuccess()
-            
-            
-        }) { (message) in
-            
-            self.forgotPasswordView?.finishLoading()
-            self.forgotPasswordView?.setErrorMessageFromAPI(errorMessage: message)
-        }
-        
+//        self.forgotPasswordView?.startLoading()
+//
+//        APIManager.sharedInstance.checkOTPAPI(param: param!, callBack: { [weak self](meta) in
+//
+//            self?.forgotPasswordView?.finishLoading()
+            self.forgotPasswordView?.checkOTPSuccess()
+//
+//
+//        }) { (message) in
+//
+//            self.forgotPasswordView?.finishLoading()
+//            self.forgotPasswordView?.setErrorMessageFromAPI(errorMessage: message)
+//        }
+    
     }
     
     
     func postResetPasswordAPI(param: [String:Any]!) {
-        self.forgotPasswordView?.startLoading()
-        
-        APIManager.sharedInstance.updatePasswordAPI(param: param!, callBack: { [weak self](meta) in
-            
-            self?.forgotPasswordView?.finishLoading()
-            self?.forgotPasswordView?.updatePasswordSuccess()
-            
-            
-        }) { (message) in
-            
-            self.forgotPasswordView?.finishLoading()
-            self.forgotPasswordView?.setErrorMessageFromAPI(errorMessage: message)
-        }
-        
+//        self.forgotPasswordView?.startLoading()
+//
+//        APIManager.sharedInstance.updatePasswordAPI(param: param!, callBack: { [weak self](meta) in
+//
+//            self?.forgotPasswordView?.finishLoading()
+            self.forgotPasswordView?.updatePasswordSuccess()
+//
+//
+//        }) { (message) in
+//
+//            self.forgotPasswordView?.finishLoading()
+//            self.forgotPasswordView?.setErrorMessageFromAPI(errorMessage: message)
+//        }
+    
     }
     
 }

@@ -24,6 +24,8 @@ class SuccessViewController: BaseViewController {
     init() {
         super.init(nibName: "SuccessViewController", bundle: Bundle(for: SuccessViewController.self))
         
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,6 +35,7 @@ class SuccessViewController: BaseViewController {
 
     // MARK: - IBActions
     @IBAction func nextButton(_ sender: Any) {
-        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+        
+        self.remove()
     }
 }

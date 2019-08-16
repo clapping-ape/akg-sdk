@@ -27,6 +27,8 @@ class OTPForgotPasswordViewController: BaseViewController, ForgotPasswordView {
     init() {
         super.init(nibName: "OTPForgotPasswordViewController", bundle: Bundle(for: OTPForgotPasswordViewController.self))
         
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,7 +42,7 @@ class OTPForgotPasswordViewController: BaseViewController, ForgotPasswordView {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.remove()
     }
     
     @IBAction func nextButton(_ sender: Any) {
@@ -102,7 +104,9 @@ class OTPForgotPasswordViewController: BaseViewController, ForgotPasswordView {
     internal func checkOTPSuccess() {
         let updatePasswordView = ForgotPasswordViewController()
         updatePasswordView.phoneNumber = self.phoneTextField.text!
-        self.present(updatePasswordView, animated: true, completion: nil)
+        
+        self.remove()
+        self.getTopMostViewController()?.add(updatePasswordView)
     }
     
     internal func updatePasswordSuccess() {

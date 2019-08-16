@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationSuccessViewController" customModule="AKGFramework" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuccessViewController" customModule="AKGFramework" customModuleProvider="target">
             <connections>
                 <outlet property="nextButton" destination="QIq-v5-PVg" id="qm0-Vt-lYW"/>
                 <outlet property="successLabel" destination="wGx-li-Ep3" id="hGY-xg-792"/>

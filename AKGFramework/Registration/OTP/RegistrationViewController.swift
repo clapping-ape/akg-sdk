@@ -27,6 +27,8 @@ class RegistrationViewController: BaseViewController, RegisterView {
     init() {
         super.init(nibName: "RegistrationViewController", bundle: Bundle(for: RegistrationViewController.self))
         
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,7 +42,7 @@ class RegistrationViewController: BaseViewController, RegisterView {
     }
 
     @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.remove()
     }
     
     @IBAction func nextButton(_ sender: Any) {
@@ -102,7 +104,9 @@ class RegistrationViewController: BaseViewController, RegisterView {
     internal func checkOTPSuccess() {
         let registrationView = RegistrationPasswordViewController()
         registrationView.phoneNumber = self.phoneTextField.text!
-        self.present(registrationView, animated: true, completion: nil)
+        
+        self.remove()
+        self.getTopMostViewController()?.add(registrationView)
     }
     
     internal func signUpSuccess() {

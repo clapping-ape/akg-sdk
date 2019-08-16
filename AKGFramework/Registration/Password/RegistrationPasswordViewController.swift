@@ -25,6 +25,8 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
     init() {
         super.init(nibName: "RegistrationPasswordViewController", bundle: Bundle(for: RegistrationPasswordViewController.self))
         
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,7 +40,7 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.remove()
     }
     
     @IBAction func nextButton(_ sender: Any) {
@@ -95,7 +97,9 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
         
         let successView = SuccessViewController()
         successView.textToShow = "Your account with number +62 \(self.phoneNumber!) already been made"
-        self.present(successView, animated: true, completion: nil)
+        
+        self.remove()
+        self.getTopMostViewController()?.add(successView)
     }
     
     internal func setErrorMessageFromAPI(errorMessage: String) {

@@ -9,7 +9,7 @@
 import UIKit
 import GoogleSignIn
 
-public class LoginViewController: BaseViewController, GIDSignInDelegate, GIDSignInUIDelegate, LoginView {
+public class LoginViewController: BaseViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
 
     @IBOutlet weak var facebookButton: UIButton!
@@ -20,8 +20,6 @@ public class LoginViewController: BaseViewController, GIDSignInDelegate, GIDSign
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
-        LoginPresenter.sharedInstance.attachView(view: self)
 
         self.facebookButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 32, bottom: 4, right: 4)
         self.googlePlayButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 32, bottom: 4, right: 4)
@@ -33,23 +31,22 @@ public class LoginViewController: BaseViewController, GIDSignInDelegate, GIDSign
         
         super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
         
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
         DispatchQueue.main.async {
-            self.getTopMostViewController()?.present(self, animated: true, completion: nil)
+            self.getTopMostViewController()?.add(self)
         }
         
-        
-        
-        
-        GIDSignIn.sharedInstance()?.clientID = "810315591302-licqe3j85mu22s4iqko496l8iiqf0ah2.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
-        
-        let url = URL(string: "com.googleusercontent.apps.810315591302-licqe3j85mu22s4iqko496l8iiqf0ah2")
-        UIApplication.shared.open(url!) { (result) in
-            if result {
-                // The URL was delivered successfully!
-            }
-        }
+//        GIDSignIn.sharedInstance()?.clientID = "810315591302-licqe3j85mu22s4iqko496l8iiqf0ah2.apps.googleusercontent.com"
+//        GIDSignIn.sharedInstance().delegate = self
+//        GIDSignIn.sharedInstance().uiDelegate = self
+//
+//        let url = URL(string: "com.googleusercontent.apps.810315591302-licqe3j85mu22s4iqko496l8iiqf0ah2")
+//        UIApplication.shared.open(url!) { (result) in
+//            if result {
+//                // The URL was delivered successfully!
+//            }
+//        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -70,7 +67,10 @@ public class LoginViewController: BaseViewController, GIDSignInDelegate, GIDSign
     }
     @IBAction func phoneButton(_ sender: Any) {
 
-        self.present(PhoneLoginViewController(), animated: true, completion: nil)
+        self.remove()
+        self.getTopMostViewController()?.add(PhoneLoginViewController())
+        
+//        self.present(PhoneLoginViewController(), animated: true, completion: nil)
     }
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,

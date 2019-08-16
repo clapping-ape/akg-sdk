@@ -8,6 +8,10 @@
 
 import UIKit
 
+public protocol AKGSignInDelegate{
+    func didSignInSuccess()
+}
+
 class PhoneLoginViewController: BaseViewController, LoginView {
 
     @IBOutlet weak var phoneTextField: UITextField!
@@ -18,11 +22,11 @@ class PhoneLoginViewController: BaseViewController, LoginView {
         super.viewDidLoad()
 
         LoginPresenter.sharedInstance.attachView(view: self)
-//        self.phoneButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
     }
     
     init() {
         super.init(nibName: "PhoneLoginViewController", bundle: Bundle(for: PhoneLoginViewController.self))
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
 
     }
 
@@ -49,7 +53,7 @@ class PhoneLoginViewController: BaseViewController, LoginView {
                 ["phone_number":"0\(self.phoneTextField.text!)",
                 "password": self.passwordTextField.text!,
                 "auth_provider": "akg",
-                "game_provider": "mobile-legends",
+                "game_provider": DataManager.sharedInstance.getProvider(),
                 "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
                 "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
                 "operating_systme": "iOS"
@@ -58,15 +62,20 @@ class PhoneLoginViewController: BaseViewController, LoginView {
     }
     
     @IBAction func registerButton(_ sender: Any) {
-        self.present(RegistrationViewController(), animated: true, completion: nil)
+        self.remove()
+        self.getTopMostViewController()?.add(RegistrationViewController())
+        
     }
     
     @IBAction func forgotPasswordButton(_ sender: Any) {
-        self.present(OTPForgotPasswordViewController(), animated: true, completion: nil)
+        self.remove()
+        self.getTopMostViewController()?.add(OTPForgotPasswordViewController())
+        
     }
     
     @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.remove()
+        self.getTopMostViewController()?.add(LoginViewController())
     }
     
     // MARK: - Presenter Delegate
@@ -79,7 +88,8 @@ class PhoneLoginViewController: BaseViewController, LoginView {
     }
     
     internal func loginSuccess() {
-        self.basicAlertView(title: "SUCCESS", message: "Logged In.", successBlock: {})
+        AKGFrameworkManager.sharedInstance.signInDelegate?.didSignInSuccess()
+        self.remove()
     }
     
     internal func setErrorMessageFromAPI(errorMessage: String) {

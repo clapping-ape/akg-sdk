@@ -32,6 +32,9 @@ extension NetworkRequest {
         request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
+        print("URL: ", Constant.BaseURL+route)
+        print("Body: ", params)
+        
         let task = session.dataTask(with: request, completionHandler: { [weak self] (data: Data?, response: URLResponse?, error: Error?) -> Void in
             guard let data = data else {
                 successBlock([:])
@@ -43,6 +46,9 @@ extension NetworkRequest {
                 failureBlock(error?.localizedDescription ?? "Unknown Error")
                 return
             }
+            
+            
+            print("Response: ", json)
             
             if let meta = json["meta"] as? [String:Any]? ?? [:] {
                 if let status = meta["status"] as? Bool? ?? false {
