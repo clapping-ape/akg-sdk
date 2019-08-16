@@ -37,7 +37,10 @@ class SuccessViewController: BaseViewController {
     // MARK: - IBActions
     @IBAction func nextButton(_ sender: Any) {
         if flag == "forgot-password" {
-            AKGFrameworkManager.sharedInstance.akgDelegate?.didForgotPasswordSuccess()
+            AKGFrameworkManager.sharedInstance.akgDelegate?.akgForgotPasswordSuccess!()
+        }
+        if flag == "register" {
+            AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed()
         }
         self.remove()
     }

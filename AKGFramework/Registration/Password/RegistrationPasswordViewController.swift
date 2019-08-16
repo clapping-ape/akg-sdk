@@ -97,7 +97,7 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
         
         let successView = SuccessViewController()
         successView.textToShow = "Your account with number +62 \(self.phoneNumber!) already been made"
-        
+        successView.flag = "register"
         self.remove()
         self.getTopMostViewController()?.add(successView)
     }
