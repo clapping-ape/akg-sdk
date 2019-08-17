@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0D5181230861A4008BA060 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D517F230861A4008BA060 /* FloatingButtonViewController.swift */; };
+		9B0D5182230861A4008BA060 /* FloatingButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0D5180230861A4008BA060 /* FloatingButtonViewController.xib */; };
+		9B0D518923086F41008BA060 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0D518823086F41008BA060 /* MenuView.xib */; };
+		9B0D518B23087179008BA060 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D518A23087179008BA060 /* MenuCollectionViewCell.swift */; };
+		9B0D518D23087755008BA060 /* AKGFontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D518C23087755008BA060 /* AKGFontManager.swift */; };
 		9B43497A2306B4C600A19E6B /* AKGFrameworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */; };
 		9B4349912306DFF300A19E6B /* AKGDelegateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */; };
 		9B4CCB1722EADDA6003A465C /* AKGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CCB0D22EADDA6003A465C /* AKGFramework.framework */; };
@@ -75,6 +80,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B0D517F230861A4008BA060 /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
+		9B0D5180230861A4008BA060 /* FloatingButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingButtonViewController.xib; sourceTree = "<group>"; };
+		9B0D518823086F41008BA060 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		9B0D518A23087179008BA060 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B0D518C23087755008BA060 /* AKGFontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGFontManager.swift; sourceTree = "<group>"; };
 		9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGFrameworkManager.swift; sourceTree = "<group>"; };
 		9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGDelegateManager.swift; sourceTree = "<group>"; };
 		9B4CCB0D22EADDA6003A465C /* AKGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AKGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +163,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0D517723085D6A008BA060 /* Floating Button */ = {
+			isa = PBXGroup;
+			children = (
+				9B0D5180230861A4008BA060 /* FloatingButtonViewController.xib */,
+				9B0D517F230861A4008BA060 /* FloatingButtonViewController.swift */,
+				9B0D518823086F41008BA060 /* MenuView.xib */,
+				9B0D518A23087179008BA060 /* MenuCollectionViewCell.swift */,
+			);
+			path = "Floating Button";
+			sourceTree = "<group>";
+		};
 		9B4CCB0322EADDA6003A465C = {
 			isa = PBXGroup;
 			children = (
@@ -177,19 +198,21 @@
 		9B4CCB0F22EADDA6003A465C /* AKGFramework */ = {
 			isa = PBXGroup;
 			children = (
-				9BFC6F3122FC2D1800308D7F /* Model */,
-				9BFC6F1D22FC0EBD00308D7F /* Base */,
-				9BFC6F1C22FC0EA200308D7F /* Manager */,
 				9B4CCB2922EAE673003A465C /* Home Login */,
 				9BFC6F4322FC9BD000308D7F /* Phone Login */,
 				9B74548F230550BF00DBFD77 /* Forgot Password */,
 				9BFC6F6322FCA7DA00308D7F /* Registration */,
 				9BEC536422FD1E2F005F2000 /* Success Page */,
+				9B0D517723085D6A008BA060 /* Floating Button */,
 				9BFC6EDF22FC002500308D7F /* Fonts */,
 				9B54066523040B1600A28F30 /* Frameworks */,
+				9BFC6F3122FC2D1800308D7F /* Model */,
+				9BFC6F1D22FC0EBD00308D7F /* Base */,
+				9BFC6F1C22FC0EA200308D7F /* Manager */,
 				9B4CCB1022EADDA6003A465C /* AKGFramework.h */,
 				9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */,
 				9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */,
+				9B0D518C23087755008BA060 /* AKGFontManager.swift */,
 				9B4CCB1122EADDA6003A465C /* Info.plist */,
 				9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */,
 			);
@@ -478,6 +501,7 @@
 				9BFC6EEF22FC003F00308D7F /* Proxima Nova Thin.otf in Resources */,
 				9BFC6EEE22FC003F00308D7F /* Proxima Nova Alt Thin.otf in Resources */,
 				9BFC6EE822FC003F00308D7F /* Proxima Nova Alt Bold.otf in Resources */,
+				9B0D5182230861A4008BA060 /* FloatingButtonViewController.xib in Resources */,
 				9BFC6EEB22FC003F00308D7F /* Proxima Nova Black.otf in Resources */,
 				9BEC536822FD1E5E005F2000 /* SuccessViewController.xib in Resources */,
 				9B4CCB6022EB12F4003A465C /* LoginViewController.xib in Resources */,
@@ -487,6 +511,7 @@
 				9BFC6F6722FCA7F700308D7F /* RegistrationViewController.xib in Resources */,
 				9BFC6EEA22FC003F00308D7F /* ProximaNova-Regular.otf in Resources */,
 				9BFC6F4722FC9BF500308D7F /* PhoneLoginViewController.xib in Resources */,
+				9B0D518923086F41008BA060 /* MenuView.xib in Resources */,
 				9B54066B23040B2900A28F30 /* GoogleSignIn.bundle in Resources */,
 				9B745493230550E100DBFD77 /* ForgotPasswordViewController.xib in Resources */,
 			);
@@ -509,6 +534,7 @@
 				9BE667D622FCBE47002F61A2 /* RegistrationPasswordViewController.swift in Sources */,
 				9B43497A2306B4C600A19E6B /* AKGFrameworkManager.swift in Sources */,
 				9B4CCB5F22EB12F4003A465C /* LoginViewController.swift in Sources */,
+				9B0D5181230861A4008BA060 /* FloatingButtonViewController.swift in Sources */,
 				9BFC6F3D22FC8FAC00308D7F /* Constant.swift in Sources */,
 				9B4CCB2F22EAEB35003A465C /* BaseView.swift in Sources */,
 				9BE667C822FCB70B002F61A2 /* DataManager.swift in Sources */,
@@ -516,6 +542,7 @@
 				9BFC6F6622FCA7F700308D7F /* RegistrationViewController.swift in Sources */,
 				9BFC6F3F22FC909900308D7F /* APIManager.swift in Sources */,
 				9B7454982305542000DBFD77 /* OTPForgotPasswordViewController.swift in Sources */,
+				9B0D518B23087179008BA060 /* MenuCollectionViewCell.swift in Sources */,
 				9BFC6F1F22FC0ECD00308D7F /* BaseViewController.swift in Sources */,
 				9BFC6F4622FC9BF500308D7F /* PhoneLoginViewController.swift in Sources */,
 				9BFC6F2122FC0F5800308D7F /* LoadingViewController.swift in Sources */,
@@ -524,6 +551,7 @@
 				9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */,
 				9B745492230550E100DBFD77 /* ForgotPasswordViewController.swift in Sources */,
 				9B74549B2305610000DBFD77 /* ForgotPasswordPresenter.swift in Sources */,
+				9B0D518D23087755008BA060 /* AKGFontManager.swift in Sources */,
 				9B4349912306DFF300A19E6B /* AKGDelegateManager.swift in Sources */,
 				9BFC6F3322FC2EB200308D7F /* Meta.swift in Sources */,
 				9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */,
