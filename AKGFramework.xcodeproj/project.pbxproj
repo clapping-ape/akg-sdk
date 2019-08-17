@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B43497A2306B4C600A19E6B /* AKGFrameworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */; };
+		9B4349912306DFF300A19E6B /* AKGDelegateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */; };
 		9B4CCB1722EADDA6003A465C /* AKGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CCB0D22EADDA6003A465C /* AKGFramework.framework */; };
 		9B4CCB1C22EADDA6003A465C /* AKGFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCB1B22EADDA6003A465C /* AKGFrameworkTests.swift */; };
 		9B4CCB1E22EADDA6003A465C /* AKGFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B4CCB1022EADDA6003A465C /* AKGFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGFrameworkManager.swift; sourceTree = "<group>"; };
+		9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGDelegateManager.swift; sourceTree = "<group>"; };
 		9B4CCB0D22EADDA6003A465C /* AKGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AKGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4CCB1022EADDA6003A465C /* AKGFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKGFramework.h; sourceTree = "<group>"; };
 		9B4CCB1122EADDA6003A465C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				9B54066523040B1600A28F30 /* Frameworks */,
 				9B4CCB1022EADDA6003A465C /* AKGFramework.h */,
 				9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */,
+				9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */,
 				9B4CCB1122EADDA6003A465C /* Info.plist */,
 				9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */,
 			);
@@ -521,6 +524,7 @@
 				9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */,
 				9B745492230550E100DBFD77 /* ForgotPasswordViewController.swift in Sources */,
 				9B74549B2305610000DBFD77 /* ForgotPasswordPresenter.swift in Sources */,
+				9B4349912306DFF300A19E6B /* AKGDelegateManager.swift in Sources */,
 				9BFC6F3322FC2EB200308D7F /* Meta.swift in Sources */,
 				9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */,
 				9BFC6F2E22FC216900308D7F /* LoginPresenter.swift in Sources */,

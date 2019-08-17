@@ -41,6 +41,7 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
     
     @IBAction func backButton(_ sender: Any) {
         self.remove()
+        self.getTopMostViewController()?.add(RegistrationViewController())
     }
     
     @IBAction func nextButton(_ sender: Any) {

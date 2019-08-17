@@ -31,8 +31,8 @@ class DataManager {
         return UserDefaults.standard.value(forKey: "AUTH_TOKEN_USERDEFAULTS") as! String
     }
     
-    func setProvider(token: String) {
-        UserDefaults.standard.set(token, forKey: "GAME_PROVIDER_USERDEFAULTS")
+    func setProvider(provider: String) {
+        UserDefaults.standard.set(provider, forKey: "GAME_PROVIDER_USERDEFAULTS")
     }
     
     func getProvider() -> String {

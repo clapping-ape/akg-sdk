@@ -17,18 +17,14 @@ import UIKit
 public class AKGFrameworkManager {
     
     public static let sharedInstance = AKGFrameworkManager()
-    public var applicationDelegate: UIApplicationDelegate?
     public var akgDelegate: AKGDelegate?
     public var viewController: UIViewController!
     
     public init() {}
     
-    public func setProvider(provider: String!) {
-        DataManager.sharedInstance.setProvider(token: provider)
-    }
-    
     public func showLoginView() {
-        self.viewController.present(LoginViewController(), animated: true, completion: nil)
+//        self.viewController.present(LoginViewController(), animated: true, completion: nil)
+        self.viewController.add(LoginViewController())
     }
     
 }

@@ -43,6 +43,7 @@ class OTPForgotPasswordViewController: BaseViewController, ForgotPasswordView {
     
     @IBAction func backButton(_ sender: Any) {
         self.remove()
+        self.getTopMostViewController()?.add(PhoneLoginViewController())
     }
     
     @IBAction func nextButton(_ sender: Any) {

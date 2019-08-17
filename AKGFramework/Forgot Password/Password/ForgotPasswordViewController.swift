@@ -41,6 +41,7 @@ class ForgotPasswordViewController: BaseViewController, ForgotPasswordView {
     
     @IBAction func backButton(_ sender: Any) {
         self.remove()
+        self.getTopMostViewController()?.add(OTPForgotPasswordViewController())
     }
     
     @IBAction func nextButton(_ sender: Any) {

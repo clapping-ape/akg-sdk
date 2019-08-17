@@ -21,6 +21,10 @@ public class BaseViewController: UIViewController {
     public func getTopMostViewController() -> UIViewController? {
         var topMostViewController = UIApplication.shared.keyWindow?.rootViewController
         
+        while let navigationController = topMostViewController as? UINavigationController {
+            topMostViewController = navigationController.viewControllers.first
+        }
+        
         while let presentedViewController = topMostViewController?.presentedViewController {
             topMostViewController = presentedViewController
         }
