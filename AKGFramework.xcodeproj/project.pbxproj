@@ -62,6 +62,8 @@
 		9BFC6F4722FC9BF500308D7F /* PhoneLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6F4522FC9BF500308D7F /* PhoneLoginViewController.xib */; };
 		9BFC6F6622FCA7F700308D7F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC6F6422FCA7F700308D7F /* RegistrationViewController.swift */; };
 		9BFC6F6722FCA7F700308D7F /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6F6522FCA7F700308D7F /* RegistrationViewController.xib */; };
+		9BFE116D230D71EE00379A36 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE116B230D71EE00379A36 /* LogoutViewController.swift */; };
+		9BFE116E230D71EE00379A36 /* LogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFE116C230D71EE00379A36 /* LogoutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,8 @@
 		9BFC6F4522FC9BF500308D7F /* PhoneLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneLoginViewController.xib; sourceTree = "<group>"; };
 		9BFC6F6422FCA7F700308D7F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		9BFC6F6522FCA7F700308D7F /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		9BFE116B230D71EE00379A36 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		9BFE116C230D71EE00379A36 /* LogoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +307,8 @@
 			children = (
 				9B94C650230D6214009BAB3C /* PopUpViewController.xib */,
 				9B94C64F230D6214009BAB3C /* PopUpViewController.swift */,
+				9BFE116C230D71EE00379A36 /* LogoutViewController.xib */,
+				9BFE116B230D71EE00379A36 /* LogoutViewController.swift */,
 			);
 			path = "Pop Up in Game";
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 				9B0D518923086F41008BA060 /* MenuView.xib in Resources */,
 				9B94C652230D6214009BAB3C /* PopUpViewController.xib in Resources */,
 				9B54066B23040B2900A28F30 /* GoogleSignIn.bundle in Resources */,
+				9BFE116E230D71EE00379A36 /* LogoutViewController.xib in Resources */,
 				9B745493230550E100DBFD77 /* ForgotPasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +569,7 @@
 				9BFC6F1F22FC0ECD00308D7F /* BaseViewController.swift in Sources */,
 				9BFC6F4622FC9BF500308D7F /* PhoneLoginViewController.swift in Sources */,
 				9BFC6F2122FC0F5800308D7F /* LoadingViewController.swift in Sources */,
+				9BFE116D230D71EE00379A36 /* LogoutViewController.swift in Sources */,
 				9BEC536722FD1E5E005F2000 /* SuccessViewController.swift in Sources */,
 				9BE667D322FCBC69002F61A2 /* RegisterPresenter.swift in Sources */,
 				9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */,

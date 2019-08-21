@@ -84,7 +84,7 @@ class PhoneLoginViewController: BaseViewController, LoginView {
     }
     
     internal func loginSuccess() {
-        AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed()
+        AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
         self.remove()
     }
     

@@ -40,7 +40,7 @@ class SuccessViewController: BaseViewController {
             AKGFrameworkManager.sharedInstance.akgDelegate?.akgForgotPasswordSuccess!()
         }
         if flag == "register" {
-            AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed()
+            AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
         }
         self.remove()
     }

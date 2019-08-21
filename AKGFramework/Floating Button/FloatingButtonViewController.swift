@@ -135,7 +135,9 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
             break
         case 4: // Log Out
             
-
+            let logoutView = LogoutViewController()
+            self.getTopMostViewController()?.add(logoutView)
+            
             break
         case 5: // Eula
 

@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 @objc public protocol AKGDelegate:class {
-    func akgUserDidAllowed()
+    @objc optional func akgUserDidAllowed()
     @objc optional func akgForgotPasswordSuccess()
+    @objc optional func akgUserDidLoggedOut()
 }
 
 public class AKGFrameworkManager {

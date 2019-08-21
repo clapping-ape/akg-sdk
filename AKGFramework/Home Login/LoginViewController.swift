@@ -67,7 +67,7 @@ public class LoginViewController: BaseViewController {
         self.basicAlertView(title: "Sorry", message: "This feature is not yet ready.", successBlock: {})
     }
     @IBAction func guestButton(_ sender: Any) {
-        AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed()
+        AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
     }
     @IBAction func phoneButton(_ sender: Any) {
 
