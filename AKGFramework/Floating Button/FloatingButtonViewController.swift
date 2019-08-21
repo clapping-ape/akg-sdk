@@ -11,7 +11,11 @@ import UIKit
 class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var akgButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    private var showAKGMenu = false
+    private var menuWidth: CGFloat!
+    
     
     private let menus = ["btnContactUs", "btnSdkVersion", "btnBindAccount", "btnVerifyAccount", "btnLogOut", "btnEula", "btnFb"]
     private let titles = ["Contact Us", "SDK Version", "Bind Account", "Info Account", "Log out", "Eula", "FB Fanpage"]
@@ -26,17 +30,41 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
         super.init(nibName: "FloatingButtonViewController", bundle: Bundle(for: FloatingButtonViewController.self))
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
         
-        let width = self.akgButton.bounds.size.width + self.collectionView.bounds.size.width
-        let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: width+16, height: 44)
+        self.menuWidth = (self.akgButton.bounds.size.width + self.collectionView.bounds.size.width)+32
+        let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: self.menuWidth!, height: 64)
         self.view.frame = akgButtonFrame
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    @IBAction func tapButton(_ sender: Any) {
-        self.basicAlertView(title: "", message: "TAP", successBlock: {})
+    
+    
+    // MARK: - IBActions
+    @IBAction func akgButton(_ sender: Any) {
+        if self.showAKGMenu {
+            self.collectionView.isHidden = false
+            self.closeButton.isHidden = false
+            self.showAKGMenu = false
+            
+            let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: self.menuWidth!, height: 44)
+            self.view.frame = akgButtonFrame
+        }else{
+            self.collectionView.isHidden = true
+            self.closeButton.isHidden = true
+            self.showAKGMenu = true
+            
+            let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: self.akgButton.bounds.size.width, height: 44)
+            self.view.frame = akgButtonFrame
+        }
+    }
+    
+//    @IBAction func tapButton(_ sender: Any) {
+//        self.basicAlertView(title: "", message: "TAP", successBlock: {})
+//    }
+    
+    @IBAction func closeButton(_ sender: Any) {
+        self.remove()
     }
     
     // MARK: - UICollectionViewDataSource
@@ -72,7 +100,53 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        switch indexPath.row {
+        case 0: // Contact Us
+            
+            let popupView = PopUpViewController()
+            
+            popupView.titleLabel.text = "Contact Us"
+            popupView.contentLabel.text = "Contact us to our email admin@akggames.com"
+
+            self.getTopMostViewController()?.add(popupView)
+
+            break
+        case 1: // SDK Version
+            
+            let popupView = PopUpViewController()
+            popupView.titleLabel.text = "SDK VERSION"
+            
+            
+            let nsObject: AnyObject? = Bundle(for: FloatingButtonViewController.self).infoDictionary?["CFBundleShortVersionString"] as AnyObject?
+            let version = nsObject as! String
+            
+            popupView.contentLabel.text = "Your SDK’s Version is \(version)"
+            
+            self.getTopMostViewController()?.add(popupView)
+
+            break
+        case 2: // Bind Account
+            
+
+            break
+        case 3: // Info Account
+            
+
+            break
+        case 4: // Log Out
+            
+
+            break
+        case 5: // Eula
+
+            break
+        case 6: // FB Fanpage
+
+            break
+            
+        default:
+            return
+        }
     }
     
     /*

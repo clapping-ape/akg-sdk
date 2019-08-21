@@ -32,6 +32,8 @@
 		9B7454982305542000DBFD77 /* OTPForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */; };
 		9B7454992305542000DBFD77 /* OTPForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */; };
 		9B74549B2305610000DBFD77 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */; };
+		9B94C651230D6214009BAB3C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94C64F230D6214009BAB3C /* PopUpViewController.swift */; };
+		9B94C652230D6214009BAB3C /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B94C650230D6214009BAB3C /* PopUpViewController.xib */; };
 		9BE667C222FCB48A002F61A2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C122FCB48A002F61A2 /* Login.swift */; };
 		9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C522FCB6B8002F61A2 /* UtilityManager.swift */; };
 		9BE667C822FCB70B002F61A2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C722FCB70B002F61A2 /* DataManager.swift */; };
@@ -109,6 +111,8 @@
 		9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		9B7D565422FD6681004AF814 /* HostFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HostFramework.xcodeproj; path = ../HostFramework/HostFramework.xcodeproj; sourceTree = "<group>"; };
+		9B94C64F230D6214009BAB3C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		9B94C650230D6214009BAB3C /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		9BE667C122FCB48A002F61A2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		9BE667C522FCB6B8002F61A2 /* UtilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityManager.swift; sourceTree = "<group>"; };
 		9BE667C722FCB70B002F61A2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 		9B4CCB0F22EADDA6003A465C /* AKGFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9B94C64D230D61FA009BAB3C /* Pop Up in Game */,
 				9B4CCB2922EAE673003A465C /* Home Login */,
 				9BFC6F4322FC9BD000308D7F /* Phone Login */,
 				9B74548F230550BF00DBFD77 /* Forgot Password */,
@@ -291,6 +296,15 @@
 				9B7D565922FD6681004AF814 /* HostFramework.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9B94C64D230D61FA009BAB3C /* Pop Up in Game */ = {
+			isa = PBXGroup;
+			children = (
+				9B94C650230D6214009BAB3C /* PopUpViewController.xib */,
+				9B94C64F230D6214009BAB3C /* PopUpViewController.swift */,
+			);
+			path = "Pop Up in Game";
 			sourceTree = "<group>";
 		};
 		9BEC536222FD1E19005F2000 /* OTP */ = {
@@ -512,6 +526,7 @@
 				9BFC6EEA22FC003F00308D7F /* ProximaNova-Regular.otf in Resources */,
 				9BFC6F4722FC9BF500308D7F /* PhoneLoginViewController.xib in Resources */,
 				9B0D518923086F41008BA060 /* MenuView.xib in Resources */,
+				9B94C652230D6214009BAB3C /* PopUpViewController.xib in Resources */,
 				9B54066B23040B2900A28F30 /* GoogleSignIn.bundle in Resources */,
 				9B745493230550E100DBFD77 /* ForgotPasswordViewController.xib in Resources */,
 			);
@@ -538,6 +553,7 @@
 				9BFC6F3D22FC8FAC00308D7F /* Constant.swift in Sources */,
 				9B4CCB2F22EAEB35003A465C /* BaseView.swift in Sources */,
 				9BE667C822FCB70B002F61A2 /* DataManager.swift in Sources */,
+				9B94C651230D6214009BAB3C /* PopUpViewController.swift in Sources */,
 				9BE667C222FCB48A002F61A2 /* Login.swift in Sources */,
 				9BFC6F6622FCA7F700308D7F /* RegistrationViewController.swift in Sources */,
 				9BFC6F3F22FC909900308D7F /* APIManager.swift in Sources */,
