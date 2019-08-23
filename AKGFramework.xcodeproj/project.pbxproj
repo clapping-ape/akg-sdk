@@ -27,6 +27,11 @@
 		9B54066F23040B7A00A28F30 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B54066E23040B7A00A28F30 /* LocalAuthentication.framework */; };
 		9B54067123040B8100A28F30 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B54067023040B8100A28F30 /* SafariServices.framework */; };
 		9B54067323040B8900A28F30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B54067223040B8900A28F30 /* SystemConfiguration.framework */; };
+		9B658D00230FAE9B00F99942 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B658CFF230FAE9B00F99942 /* AuthenticationServices.framework */; };
+		9B658D04230FB24E00F99942 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B658D03230FB24E00F99942 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9B658D06230FB25600F99942 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B658D05230FB25600F99942 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9B658D08230FB25F00F99942 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B658D07230FB25F00F99942 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9B658D0A230FD2F900F99942 /* AdjustSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B658D09230FD2F900F99942 /* AdjustSdk.framework */; };
 		9B745492230550E100DBFD77 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B745490230550E100DBFD77 /* ForgotPasswordViewController.swift */; };
 		9B745493230550E100DBFD77 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B745491230550E100DBFD77 /* ForgotPasswordViewController.xib */; };
 		9B7454982305542000DBFD77 /* OTPForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */; };
@@ -74,9 +79,9 @@
 			remoteGlobalIDString = 9B4CCB0C22EADDA6003A465C;
 			remoteInfo = AKGFramework;
 		};
-		9B7D565822FD6681004AF814 /* PBXContainerItemProxy */ = {
+		9B658CF6230EA38600F99942 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9B7D565422FD6681004AF814 /* HostFramework.xcodeproj */;
+			containerPortal = 9B658CF2230EA38600F99942 /* HostFramework.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9B4CCB3922EAF03D003A465C;
 			remoteInfo = HostFramework;
@@ -107,12 +112,17 @@
 		9B54066E23040B7A00A28F30 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		9B54067023040B8100A28F30 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		9B54067223040B8900A28F30 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9B658CF2230EA38600F99942 /* HostFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HostFramework.xcodeproj; path = ../HostFramework/HostFramework.xcodeproj; sourceTree = "<group>"; };
+		9B658CFF230FAE9B00F99942 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		9B658D03230FB24E00F99942 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9B658D05230FB25600F99942 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		9B658D07230FB25F00F99942 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		9B658D09230FD2F900F99942 /* AdjustSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdjustSdk.framework; sourceTree = "<group>"; };
 		9B745490230550E100DBFD77 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9B745491230550E100DBFD77 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
-		9B7D565422FD6681004AF814 /* HostFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HostFramework.xcodeproj; path = ../HostFramework/HostFramework.xcodeproj; sourceTree = "<group>"; };
 		9B94C64F230D6214009BAB3C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		9B94C650230D6214009BAB3C /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		9BE667C122FCB48A002F61A2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -152,6 +162,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B658D08230FB25F00F99942 /* CoreTelephony.framework in Frameworks */,
+				9B658D06230FB25600F99942 /* iAd.framework in Frameworks */,
+				9B658D0A230FD2F900F99942 /* AdjustSdk.framework in Frameworks */,
+				9B658D04230FB24E00F99942 /* AdSupport.framework in Frameworks */,
+				9B658D00230FAE9B00F99942 /* AuthenticationServices.framework in Frameworks */,
 				9B54067323040B8900A28F30 /* SystemConfiguration.framework in Frameworks */,
 				9B54067123040B8100A28F30 /* SafariServices.framework in Frameworks */,
 				9B54066F23040B7A00A28F30 /* LocalAuthentication.framework in Frameworks */,
@@ -185,11 +200,11 @@
 		9B4CCB0322EADDA6003A465C = {
 			isa = PBXGroup;
 			children = (
-				9B4CCB2722EAE1FD003A465C /* AKGFramework.podspec */,
 				9B4CCB0F22EADDA6003A465C /* AKGFramework */,
+				9B658CF2230EA38600F99942 /* HostFramework.xcodeproj */,
+				9B4CCB2722EAE1FD003A465C /* AKGFramework.podspec */,
 				9B4CCB1A22EADDA6003A465C /* AKGFrameworkTests */,
 				9B4CCB0E22EADDA6003A465C /* Products */,
-				9B7D565422FD6681004AF814 /* HostFramework.xcodeproj */,
 				9B54066D23040B7A00A28F30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -249,9 +264,8 @@
 		9B54066523040B1600A28F30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B54066823040B2900A28F30 /* GoogleSignIn.bundle */,
-				9B54066923040B2900A28F30 /* GoogleSignIn.framework */,
-				9B54066723040B2900A28F30 /* GoogleSignInDependencies.framework */,
+				9B658CFC230EA51C00F99942 /* Adjust */,
+				9B658CFB230EA51100F99942 /* Google */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -259,11 +273,41 @@
 		9B54066D23040B7A00A28F30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B658D07230FB25F00F99942 /* CoreTelephony.framework */,
+				9B658D05230FB25600F99942 /* iAd.framework */,
+				9B658D03230FB24E00F99942 /* AdSupport.framework */,
+				9B658CFF230FAE9B00F99942 /* AuthenticationServices.framework */,
 				9B54067223040B8900A28F30 /* SystemConfiguration.framework */,
 				9B54067023040B8100A28F30 /* SafariServices.framework */,
 				9B54066E23040B7A00A28F30 /* LocalAuthentication.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B658CF3230EA38600F99942 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B658CF7230EA38600F99942 /* HostFramework.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B658CFB230EA51100F99942 /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				9B54066823040B2900A28F30 /* GoogleSignIn.bundle */,
+				9B54066923040B2900A28F30 /* GoogleSignIn.framework */,
+				9B54066723040B2900A28F30 /* GoogleSignInDependencies.framework */,
+			);
+			path = Google;
+			sourceTree = "<group>";
+		};
+		9B658CFC230EA51C00F99942 /* Adjust */ = {
+			isa = PBXGroup;
+			children = (
+				9B658D09230FD2F900F99942 /* AdjustSdk.framework */,
+			);
+			path = Adjust;
 			sourceTree = "<group>";
 		};
 		9B74548F230550BF00DBFD77 /* Forgot Password */ = {
@@ -292,14 +336,6 @@
 				9B745490230550E100DBFD77 /* ForgotPasswordViewController.swift */,
 			);
 			path = Password;
-			sourceTree = "<group>";
-		};
-		9B7D565522FD6681004AF814 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9B7D565922FD6681004AF814 /* HostFramework.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		9B94C64D230D61FA009BAB3C /* Pop Up in Game */ = {
@@ -487,8 +523,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9B7D565522FD6681004AF814 /* Products */;
-					ProjectRef = 9B7D565422FD6681004AF814 /* HostFramework.xcodeproj */;
+					ProductGroup = 9B658CF3230EA38600F99942 /* Products */;
+					ProjectRef = 9B658CF2230EA38600F99942 /* HostFramework.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -500,11 +536,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9B7D565922FD6681004AF814 /* HostFramework.app */ = {
+		9B658CF7230EA38600F99942 /* HostFramework.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = HostFramework.app;
-			remoteRef = 9B7D565822FD6681004AF814 /* PBXContainerItemProxy */;
+			remoteRef = 9B658CF6230EA38600F99942 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -738,6 +774,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AKGFramework/Frameworks",
+					"$(PROJECT_DIR)/AKGFramework/Frameworks/Adjust",
+					"$(PROJECT_DIR)/AKGFramework/Frameworks/Google",
 				);
 				INFOPLIST_FILE = AKGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -753,7 +791,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.akggames.iosframework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -774,6 +812,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AKGFramework/Frameworks",
+					"$(PROJECT_DIR)/AKGFramework/Frameworks/Adjust",
+					"$(PROJECT_DIR)/AKGFramework/Frameworks/Google",
 				);
 				INFOPLIST_FILE = AKGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -789,7 +829,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.akggames.iosframework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

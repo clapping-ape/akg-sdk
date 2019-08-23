@@ -76,8 +76,16 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="LTN-k0-qPi" appends="YES" id="yH8-RR-m3C"/>
+            </connections>
             <point key="canvasLocation" x="384.78260869565219" y="385.37946428571428"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="LTN-k0-qPi">
+            <connections>
+                <action selector="panGesture:" destination="-1" id="ftb-II-Ydy"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="btnAkgLogo" width="56" height="56"/>

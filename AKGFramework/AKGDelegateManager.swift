@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import GoogleSignIn
-
+import AdjustSdk
 
 public class AKGDelegateManager: NSObject, GIDSignInDelegate {
     
@@ -24,6 +24,10 @@ public class AKGDelegateManager: NSObject, GIDSignInDelegate {
         
         self.applicationDelegate = delegate
         DataManager.sharedInstance.setProvider(provider: provider)
+        
+        
+        let adjustConfig = ADJConfig.init(appToken: "y1t3z228xxj4", environment: ADJEnvironmentSandbox)
+        Adjust.appDidLaunch(adjustConfig)
         
     }
     

@@ -17,8 +17,8 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     private var menuWidth: CGFloat!
     
     
-    private let menus = ["btnContactUs", "btnSdkVersion", "btnBindAccount", "btnVerifyAccount", "btnLogOut", "btnEula", "btnFb"]
-    private let titles = ["Contact Us", "SDK Version", "Bind Account", "Info Account", "Log out", "Eula", "FB Fanpage"]
+    private let menus = ["btnVerifyAccount", "btnFb", "btnEula", "btnContactUs", "btnSdkVersion", "btnLogOut", "btnBindAccount"]
+    private let titles = ["Info Account", "FB Fanpage", "Eula", "Contact Us", "SDK Version", "Log out", "Bind Account"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,14 +47,14 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
             self.closeButton.isHidden = false
             self.showAKGMenu = false
             
-            let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: self.menuWidth!, height: 44)
+            let akgButtonFrame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.menuWidth!, height: self.view.frame.size.height)
             self.view.frame = akgButtonFrame
         }else{
             self.collectionView.isHidden = true
             self.closeButton.isHidden = true
             self.showAKGMenu = true
             
-            let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: self.akgButton.bounds.size.width, height: 44)
+            let akgButtonFrame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.akgButton.bounds.size.width, height: self.view.frame.size.height)
             self.view.frame = akgButtonFrame
         }
     }
@@ -65,6 +65,14 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     
     @IBAction func closeButton(_ sender: Any) {
         self.remove()
+    }
+    
+    @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
+        
+        self.getTopMostViewController()?.view.bringSubviewToFront(self.view)
+        let translation = sender.translation(in: self.view)
+        self.view.center = CGPoint(x: self.view.center.x + translation.x, y: self.view.center.y + translation.y)
+        sender.setTranslation(CGPoint.zero, in: self.view)
     }
     
     // MARK: - UICollectionViewDataSource
@@ -101,17 +109,28 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0: // Contact Us
+        case 0: // Info Account
+
+            break
+        case 1: // FB Fanpage
+
+            break
+        case 2: // Eula
+            
+
+            break
+        case 3: // Contact Us
             
             let popupView = PopUpViewController()
             
             popupView.titleLabel.text = "Contact Us"
             popupView.contentLabel.text = "Contact us to our email admin@akggames.com"
-
+            
             self.getTopMostViewController()?.add(popupView)
+            
 
             break
-        case 1: // SDK Version
+        case 4: // SDK Version
             
             let popupView = PopUpViewController()
             popupView.titleLabel.text = "SDK VERSION"
@@ -123,26 +142,15 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
             popupView.contentLabel.text = "Your SDK’s Version is \(version)"
             
             self.getTopMostViewController()?.add(popupView)
-
-            break
-        case 2: // Bind Account
             
-
             break
-        case 3: // Info Account
-            
-
-            break
-        case 4: // Log Out
+        case 5: // Logout
             
             let logoutView = LogoutViewController()
             self.getTopMostViewController()?.add(logoutView)
-            
-            break
-        case 5: // Eula
 
             break
-        case 6: // FB Fanpage
+        case 6: // Bind Account
 
             break
             
