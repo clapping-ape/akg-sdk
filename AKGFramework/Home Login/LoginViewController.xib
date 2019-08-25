@@ -217,8 +217,8 @@
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="0Qc-6k-d7O" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="URb-Ym-40P"/>
-                <constraint firstItem="0Qc-6k-d7O" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="UbT-c1-zxa"/>
+                <constraint firstItem="0Qc-6k-d7O" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="0ID-wB-Msv"/>
+                <constraint firstItem="0Qc-6k-d7O" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="a3d-bv-nxi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="100.00000000000001" y="154.6875"/>

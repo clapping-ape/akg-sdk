@@ -6,8 +6,23 @@
 	<dict>
 		<key>AKGFramework.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9B4CCB0C22EADDA6003A465C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9B4CCB1522EADDA6003A465C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-public class LoginViewController: BaseViewController {
+public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
 
     @IBOutlet weak var facebookButton: UIButton!
@@ -19,7 +20,7 @@ public class LoginViewController: BaseViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.facebookButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 32, bottom: 4, right: 4)
         self.googlePlayButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 32, bottom: 4, right: 4)
         self.guestButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
@@ -35,21 +36,31 @@ public class LoginViewController: BaseViewController {
 //            self.getTopMostViewController()?.add(self)
 //        }
         
-        
-//        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
     
+    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        let userId = user.userID                  // For client-side use only!
+        let idToken = user.authentication.idToken // Safe to send to the server
+        let fullName = user.profile.name
+        let givenName = user.profile.givenName
+        let familyName = user.profile.familyName
+        let email = user.profile.email
+        
+        print("masuk: ", idToken)
+    }
     
-//    private func signIn(signIn: GIDSignIn!,
-//                presentViewController viewController: UIViewController!) {
-//        self.present(viewController, animated: true, completion: nil)
-//    }
+    private func signIn(signIn: GIDSignIn!,
+                presentViewController viewController: UIViewController!) {
+        self.present(viewController, animated: true, completion: nil)
+    }
     
     // Dismiss the "Sign in with Google" view
-//    private func signIn(signIn: GIDSignIn!,
-//                dismissViewController viewController: UIViewController!) {
-//        self.dismiss(animated: true, completion: nil)
-//    }
+    private func signIn(signIn: GIDSignIn!,
+                dismissViewController viewController: UIViewController!) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -62,9 +73,9 @@ public class LoginViewController: BaseViewController {
         self.basicAlertView(title: "Sorry", message: "This feature is not yet ready.", successBlock: {})
     }
     @IBAction func googlePlayButton(_ sender: Any) {
-//        GIDSignIn.sharedInstance().signIn()
+        GIDSignIn.sharedInstance().signIn()
         
-        self.basicAlertView(title: "Sorry", message: "This feature is not yet ready.", successBlock: {})
+//        self.basicAlertView(title: "Sorry", message: "This feature is not yet ready.", successBlock: {})
     }
     @IBAction func guestButton(_ sender: Any) {
         AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
