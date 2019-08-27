@@ -50,7 +50,7 @@ public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSi
         let familyName = user.profile.familyName
         let email = user.profile.email
         
-        print("masuk: ", idToken)
+//        print("masuk: ", idToken)
     }
     
     private func signIn(signIn: GIDSignIn!,
@@ -74,16 +74,18 @@ public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSi
         FBSDKLoginManager.init().logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result: FBSDKLoginManagerLoginResult!, error: Error!) in
             
         }
-//        self.basicAlertView(title: "Sorry", message: "This feature is not yet ready.", successBlock: {})
+        
     }
+    
     @IBAction func googlePlayButton(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
         
-//        self.basicAlertView(title: "Sorry", message: "This feature is not yet ready.", successBlock: {})
     }
+    
     @IBAction func guestButton(_ sender: Any) {
         AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
     }
+    
     @IBAction func phoneButton(_ sender: Any) {
 
         self.remove()

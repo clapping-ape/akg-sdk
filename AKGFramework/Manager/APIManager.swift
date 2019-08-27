@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AdjustSdk
 
 class APIManager {
     
@@ -20,6 +21,8 @@ class APIManager {
             route: Constant.RouteLogin,
             params: param,
             successBlock: { (responseObject: [String : Any]) in
+                
+                Adjust.trackEvent(ADJEvent.init(eventToken: "gxl8cb"))
                 
                 let login = Login.init(data: responseObject)
                 callBack(login)
@@ -69,10 +72,15 @@ class APIManager {
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
+                Adjust.trackEvent(ADJEvent.init(eventToken: "7gzpmk"))
+                
                 let meta = Meta.init(data: responseObject)
                 callBack(meta)
                 
         }) { (errorMessage: String) in
+            
+            Adjust.trackEvent(ADJEvent.init(eventToken: "nr3ny5"))
+            
             message(errorMessage)
         }
         

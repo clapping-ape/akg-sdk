@@ -35,6 +35,6 @@ public class AKGDelegateManager: NSObject, GIDSignInDelegate {
     }
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-//        print("masuk: ", user)
+        
     }
 }
