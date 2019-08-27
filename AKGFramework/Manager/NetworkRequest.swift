@@ -71,8 +71,6 @@ extension NetworkRequest {
             }else{
                 failureBlock("Unknown Error")
             }
-                
-            
             
         })
         task.resume()

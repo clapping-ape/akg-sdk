@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import FBSDKLoginKit
 
 public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
@@ -41,6 +42,7 @@ public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSi
     }
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
         let userId = user.userID                  // For client-side use only!
         let idToken = user.authentication.idToken // Safe to send to the server
         let fullName = user.profile.name
@@ -69,8 +71,10 @@ public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSi
     
     // MARK: - IBActions
     @IBAction func facebookButton(_ sender: Any) {
-        
-        self.basicAlertView(title: "Sorry", message: "This feature is not yet ready.", successBlock: {})
+        FBSDKLoginManager.init().logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result: FBSDKLoginManagerLoginResult!, error: Error!) in
+            
+        }
+//        self.basicAlertView(title: "Sorry", message: "This feature is not yet ready.", successBlock: {})
     }
     @IBAction func googlePlayButton(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()

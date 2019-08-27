@@ -37,6 +37,9 @@
 		9B7454982305542000DBFD77 /* OTPForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */; };
 		9B7454992305542000DBFD77 /* OTPForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */; };
 		9B74549B2305610000DBFD77 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */; };
+		9B8BD0A523150C08000A28A8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8BD0A123150C07000A28A8 /* Bolts.framework */; };
+		9B8BD0A623150C08000A28A8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8BD0A323150C07000A28A8 /* FBSDKLoginKit.framework */; };
+		9B8BD0A723150C08000A28A8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8BD0A423150C08000A28A8 /* FBSDKCoreKit.framework */; };
 		9B94C651230D6214009BAB3C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94C64F230D6214009BAB3C /* PopUpViewController.swift */; };
 		9B94C652230D6214009BAB3C /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B94C650230D6214009BAB3C /* PopUpViewController.xib */; };
 		9BE667C222FCB48A002F61A2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C122FCB48A002F61A2 /* Login.swift */; };
@@ -123,6 +126,9 @@
 		9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		9B8BD0A123150C07000A28A8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		9B8BD0A323150C07000A28A8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		9B8BD0A423150C08000A28A8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		9B94C64F230D6214009BAB3C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		9B94C650230D6214009BAB3C /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		9BE667C122FCB48A002F61A2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -164,12 +170,15 @@
 			files = (
 				9B658D08230FB25F00F99942 /* CoreTelephony.framework in Frameworks */,
 				9B658D06230FB25600F99942 /* iAd.framework in Frameworks */,
+				9B8BD0A623150C08000A28A8 /* FBSDKLoginKit.framework in Frameworks */,
 				9B658D0A230FD2F900F99942 /* AdjustSdk.framework in Frameworks */,
 				9B658D04230FB24E00F99942 /* AdSupport.framework in Frameworks */,
 				9B658D00230FAE9B00F99942 /* AuthenticationServices.framework in Frameworks */,
 				9B54067323040B8900A28F30 /* SystemConfiguration.framework in Frameworks */,
 				9B54067123040B8100A28F30 /* SafariServices.framework in Frameworks */,
+				9B8BD0A723150C08000A28A8 /* FBSDKCoreKit.framework in Frameworks */,
 				9B54066F23040B7A00A28F30 /* LocalAuthentication.framework in Frameworks */,
+				9B8BD0A523150C08000A28A8 /* Bolts.framework in Frameworks */,
 				9B54066A23040B2900A28F30 /* GoogleSignInDependencies.framework in Frameworks */,
 				9B54066C23040B2900A28F30 /* GoogleSignIn.framework in Frameworks */,
 			);
@@ -186,6 +195,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0BE3942313A96600998D1E /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				9B8BD0A123150C07000A28A8 /* Bolts.framework */,
+				9B8BD0A423150C08000A28A8 /* FBSDKCoreKit.framework */,
+				9B8BD0A323150C07000A28A8 /* FBSDKLoginKit.framework */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
 		9B0D517723085D6A008BA060 /* Floating Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +283,7 @@
 		9B54066523040B1600A28F30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B0BE3942313A96600998D1E /* Facebook */,
 				9B658CFC230EA51C00F99942 /* Adjust */,
 				9B658CFB230EA51100F99942 /* Google */,
 			);
@@ -776,6 +796,7 @@
 					"$(PROJECT_DIR)/AKGFramework/Frameworks",
 					"$(PROJECT_DIR)/AKGFramework/Frameworks/Adjust",
 					"$(PROJECT_DIR)/AKGFramework/Frameworks/Google",
+					"$(PROJECT_DIR)/AKGFramework/Frameworks/Facebook",
 				);
 				INFOPLIST_FILE = AKGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -814,6 +835,7 @@
 					"$(PROJECT_DIR)/AKGFramework/Frameworks",
 					"$(PROJECT_DIR)/AKGFramework/Frameworks/Adjust",
 					"$(PROJECT_DIR)/AKGFramework/Frameworks/Google",
+					"$(PROJECT_DIR)/AKGFramework/Frameworks/Facebook",
 				);
 				INFOPLIST_FILE = AKGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
