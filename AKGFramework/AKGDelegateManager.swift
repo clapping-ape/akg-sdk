@@ -20,7 +20,7 @@ public class AKGDelegateManager: NSObject, GIDSignInDelegate {
     @discardableResult public init(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?, delegate: UIApplicationDelegate, provider: String) {
         super.init()
         
-        GIDSignIn.sharedInstance()?.clientID = "810315591302-licqe3j85mu22s4iqko496l8iiqf0ah2.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance()?.clientID = "138197356819-tstivvjlmv6jk7q8e4jm7l1661eqlrme.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         
         FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)

@@ -33,6 +33,24 @@ class APIManager {
         
     }
     
+    func socialMediaLoginAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.postAPI(
+            route: Constant.RouteSocMedLogin,
+            params: param,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                Adjust.trackEvent(ADJEvent.init(eventToken: "gxl8cb"))
+                
+                let login = Login.init(data: responseObject)
+                callBack(login)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
     func sendOTPAPI(param:[String:Any]!, callBack: @escaping (Meta) -> Void, message: @escaping (String) -> Void) {
         
         NetworkRequest.sharedInstance.postAPI(

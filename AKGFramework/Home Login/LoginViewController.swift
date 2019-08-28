@@ -10,7 +10,7 @@ import UIKit
 import GoogleSignIn
 import FBSDKLoginKit
 
-public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSignInDelegate {
+public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDelegate, GIDSignInDelegate {
     
 
     @IBOutlet weak var facebookButton: UIButton!
@@ -26,6 +26,9 @@ public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSi
         self.googlePlayButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 32, bottom: 4, right: 4)
         self.guestButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
         self.phoneButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
+        
+        LoginPresenter.sharedInstance.attachView(view: self)
+        
     }
 
     public init() {
@@ -43,14 +46,23 @@ public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSi
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
-        let userId = user.userID                  // For client-side use only!
-        let idToken = user.authentication.idToken // Safe to send to the server
-        let fullName = user.profile.name
-        let givenName = user.profile.givenName
-        let familyName = user.profile.familyName
-        let email = user.profile.email
+//        let userId = user.userID                  // For client-side use only!
+//        let idToken = user.authentication.idToken // Safe to send to the server
+//        let fullName = user.profile.name
+//        let givenName = user.profile.givenName
+//        let familyName = user.profile.familyName
+//        let email = user.profile.email
         
-//        print("masuk: ", idToken)
+        
+        LoginPresenter.sharedInstance.postSocialMediaLoginAPI(
+            param:
+            ["access_token": user.authentication.idToken!,
+             "auth_provider": "google",
+             "game_provider": DataManager.sharedInstance.getProvider(),
+             "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
+             "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
+             "operating_system": Constant.OperatingSystem
+            ])
     }
     
     private func signIn(signIn: GIDSignIn!,
@@ -72,6 +84,22 @@ public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSi
     // MARK: - IBActions
     @IBAction func facebookButton(_ sender: Any) {
         FBSDKLoginManager.init().logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result: FBSDKLoginManagerLoginResult!, error: Error!) in
+
+            if FBSDKAccessToken.current() != nil {
+                print("FACEBOOK TOKEN", FBSDKAccessToken.current()!.tokenString!)
+                
+                LoginPresenter.sharedInstance.postSocialMediaLoginAPI(
+                    param:
+                    ["access_token": FBSDKAccessToken.current()!.tokenString!,
+                     "auth_provider": "facebook",
+                     "game_provider": DataManager.sharedInstance.getProvider(),
+                     "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
+                     "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
+                     "operating_system": Constant.OperatingSystem
+                    ])
+            }
+            
+            
             
         }
         
@@ -79,7 +107,6 @@ public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSi
     
     @IBAction func googlePlayButton(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
-        
     }
     
     @IBAction func guestButton(_ sender: Any) {
@@ -103,6 +130,8 @@ public class LoginViewController: BaseViewController, GIDSignInUIDelegate, GIDSi
     }
     
     internal func loginSuccess() {
+        AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
+        self.remove()
     }
     
     internal func setErrorMessageFromAPI(errorMessage: String) {

@@ -52,7 +52,7 @@ class PhoneLoginViewController: BaseViewController, LoginView {
                 "game_provider": DataManager.sharedInstance.getProvider(),
                 "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
                 "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
-                "operating_systme": "iOS"
+                "operating_system": Constant.OperatingSystem
                 ])
         }
     }
