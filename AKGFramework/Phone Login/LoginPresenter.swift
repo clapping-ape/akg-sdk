@@ -36,6 +36,10 @@ internal class LoginPresenter {
 
         APIManager.sharedInstance.loginAPI(param: param!, callBack: { [weak self](login) in
 
+            AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
+            
+            DataManager.sharedInstance.setAuthToken(token: login.token!)
+            
             self?.loginView?.finishLoading()
             self?.loginView?.loginSuccess()
             
@@ -52,6 +56,31 @@ internal class LoginPresenter {
         self.loginView?.startLoading()
         
         APIManager.sharedInstance.socialMediaLoginAPI(param: param!, callBack: { [weak self](login) in
+            
+            AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
+            
+            DataManager.sharedInstance.setAuthToken(token: login.token!)
+            
+            self?.loginView?.finishLoading()
+            self?.loginView?.loginSuccess()
+            
+            
+        }) { (message) in
+            
+            self.loginView?.finishLoading()
+            self.loginView?.setErrorMessageFromAPI(errorMessage: message)
+        }
+        
+    }
+    
+    func postGuestLoginAPI(param: [String:Any]!) {
+        self.loginView?.startLoading()
+        
+        APIManager.sharedInstance.guestLoginAPI(param: param!, callBack: { [weak self](login) in
+            
+            AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
+            
+            DataManager.sharedInstance.setAuthToken(token: login.token!)
             
             self?.loginView?.finishLoading()
             self?.loginView?.loginSuccess()

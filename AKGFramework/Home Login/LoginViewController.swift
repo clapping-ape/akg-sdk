@@ -18,6 +18,7 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
     @IBOutlet weak var guestButton: UIButton!
     @IBOutlet weak var phoneButton: UIButton!
     
+    private var authProvider: String! = ""
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +55,11 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
 //        let email = user.profile.email
         
         
+        self.authProvider = "google"
         LoginPresenter.sharedInstance.postSocialMediaLoginAPI(
             param:
             ["access_token": user.authentication.idToken!,
-             "auth_provider": "google",
+             "auth_provider": self.authProvider!,
              "game_provider": DataManager.sharedInstance.getProvider(),
              "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
              "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
@@ -88,10 +90,11 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
             if FBSDKAccessToken.current() != nil {
                 print("FACEBOOK TOKEN", FBSDKAccessToken.current()!.tokenString!)
                 
+                self.authProvider = "facebook"
                 LoginPresenter.sharedInstance.postSocialMediaLoginAPI(
                     param:
                     ["access_token": FBSDKAccessToken.current()!.tokenString!,
-                     "auth_provider": "facebook",
+                     "auth_provider": self.authProvider!,
                      "game_provider": DataManager.sharedInstance.getProvider(),
                      "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
                      "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
@@ -110,7 +113,15 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
     }
     
     @IBAction func guestButton(_ sender: Any) {
-        AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
+        self.authProvider = "guest"
+        LoginPresenter.sharedInstance.postGuestLoginAPI(
+            param:
+            ["auth_provider": self.authProvider!,
+             "game_provider": DataManager.sharedInstance.getProvider(),
+             "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
+             "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
+             "operating_system": Constant.OperatingSystem
+            ])
     }
     
     @IBAction func phoneButton(_ sender: Any) {
@@ -130,7 +141,7 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
     }
     
     internal func loginSuccess() {
-        AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
+        DataManager.sharedInstance.setAuthProvider(provider: self.authProvider!)
         self.remove()
     }
     

@@ -19,6 +19,7 @@ class APIManager {
         
         NetworkRequest.sharedInstance.postAPI(
             route: Constant.RouteLogin,
+            withAuthorization: false,
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
@@ -37,6 +38,41 @@ class APIManager {
         
         NetworkRequest.sharedInstance.postAPI(
             route: Constant.RouteSocMedLogin,
+            withAuthorization: false,
+            params: param,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                Adjust.trackEvent(ADJEvent.init(eventToken: "gxl8cb"))
+                
+                let login = Login.init(data: responseObject)
+                callBack(login)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
+    func currentUserAPI(callBack: @escaping (User) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.getAPI(
+            route: Constant.RouteCurrentUser,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                let user = User.init(data: responseObject)
+                callBack(user)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
+    func guestLoginAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.postAPI(
+            route: Constant.RouteGuestLogin,
+            withAuthorization: false,
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
@@ -55,6 +91,7 @@ class APIManager {
         
         NetworkRequest.sharedInstance.postAPI(
             route: Constant.RouteSendOTP,
+            withAuthorization: false,
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
@@ -71,6 +108,7 @@ class APIManager {
         
         NetworkRequest.sharedInstance.postAPI(
             route: Constant.RouteCheckOTP,
+            withAuthorization: false,
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
@@ -87,6 +125,7 @@ class APIManager {
         
         NetworkRequest.sharedInstance.postAPI(
             route: Constant.RouteSignUp,
+            withAuthorization: false,
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
@@ -108,6 +147,7 @@ class APIManager {
         
         NetworkRequest.sharedInstance.postAPI(
             route: Constant.RouteUpdatePassword,
+            withAuthorization: false,
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
@@ -120,4 +160,20 @@ class APIManager {
         
     }
     
+    func bindAccountAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.postAPI(
+            route: Constant.RouteBindAccount,
+            withAuthorization: true,
+            params: param,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                let login = Login.init(data: responseObject)
+                callBack(login)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
 }

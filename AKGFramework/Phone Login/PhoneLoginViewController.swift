@@ -14,6 +14,8 @@ class PhoneLoginViewController: BaseViewController, LoginView {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var phoneButton: UIButton!
     
+    private var authProvider: String! = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,11 +46,12 @@ class PhoneLoginViewController: BaseViewController, LoginView {
             self.basicAlertView(title: "", message: "Password can't be blank.", successBlock: {})
         }
         else {
+            self.authProvider = "akg"
             LoginPresenter.sharedInstance.postLoginAPI(
                 param:
                 ["phone_number":"0\(self.phoneTextField.text!)",
                 "password": self.passwordTextField.text!,
-                "auth_provider": "akg",
+                "auth_provider": self.authProvider!,
                 "game_provider": DataManager.sharedInstance.getProvider(),
                 "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
                 "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
@@ -84,7 +87,7 @@ class PhoneLoginViewController: BaseViewController, LoginView {
     }
     
     internal func loginSuccess() {
-        AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidAllowed?()
+        DataManager.sharedInstance.setAuthProvider(provider: self.authProvider!)
         self.remove()
     }
     

@@ -28,7 +28,7 @@ class DataManager {
     }
     
     func getAuthToken() -> String {
-        return UserDefaults.standard.value(forKey: "AUTH_TOKEN_USERDEFAULTS") as! String
+        return UserDefaults.standard.value(forKey: "AUTH_TOKEN_USERDEFAULTS") as? String ?? ""
     }
     
     func setProvider(provider: String) {
@@ -36,7 +36,15 @@ class DataManager {
     }
     
     func getProvider() -> String {
-        return UserDefaults.standard.value(forKey: "GAME_PROVIDER_USERDEFAULTS") as! String
+        return UserDefaults.standard.value(forKey: "GAME_PROVIDER_USERDEFAULTS") as? String ?? ""
+    }
+    
+    func setAuthProvider(provider: String) {
+        UserDefaults.standard.set(provider, forKey: "AUTH_PROVIDER_USERDEFAULTS")
+    }
+    
+    func getAuthProvider() -> String {
+        return UserDefaults.standard.value(forKey: "AUTH_PROVIDER_USERDEFAULTS") as? String ?? ""
     }
     
 }

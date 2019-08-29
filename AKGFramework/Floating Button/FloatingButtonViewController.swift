@@ -16,14 +16,20 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     private var showAKGMenu = false
     private var menuWidth: CGFloat!
     
-    
-    private let menus = ["btnVerifyAccount", "btnFb", "btnEula", "btnContactUs", "btnSdkVersion", "btnLogOut", "btnBindAccount"]
-    private let titles = ["Info Account", "FB Fanpage", "Eula", "Contact Us", "SDK Version", "Log out", "Bind Account"]
+    private var menus = ["btnVerifyAccount", "btnFb", "btnEula", "btnContactUs", "btnSdkVersion", "btnLogOut", "btnBindAccount"]
+    private var titles = ["Info Account", "FB Fanpage", "Eula", "Contact Us", "SDK Version", "Log out", "Bind Account"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.collectionView.register(UINib.init(nibName: "MenuView", bundle: Bundle(for: MenuCollectionViewCell.self)), forCellWithReuseIdentifier: "MenuCell")
+        
+//        if DataManager.sharedInstance.getAuthProvider() == "guest" {
+//            self.menus = ["btnFb", "btnEula", "btnContactUs", "btnSdkVersion", "btnLogOut", "btnBindAccount"]
+//            self.titles = ["FB Fanpage", "Eula", "Contact Us", "SDK Version", "Log out", "Bind Account"]
+//            
+//            self.collectionView.reloadData()
+//        }
     }
     
     init() {
@@ -110,6 +116,9 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0: // Info Account
+            
+            let accountView = InfoAccountViewController()
+            self.getTopMostViewController()?.add(accountView)
 
             break
         case 1: // FB Fanpage
@@ -151,9 +160,11 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
 
             break
         case 6: // Bind Account
-
-            break
             
+            let bindView = BindAccountViewController()
+            self.getTopMostViewController()?.add(bindView)
+            
+            break
         default:
             return
         }
