@@ -37,6 +37,8 @@ class LogoutViewController: BaseViewController {
     }
     
     @IBAction func logoutButton(_ sender: Any) {
+        
+        DataManager.sharedInstance.clearAllSession()
         AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidLoggedOut!()
         self.remove()
     }

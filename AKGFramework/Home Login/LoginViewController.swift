@@ -30,6 +30,12 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
         
         LoginPresenter.sharedInstance.attachView(view: self)
         
+//        if DataManager.sharedInstance.isLogin() {
+//            
+//            self.remove()
+//            self.getTopMostViewController()?.add(FloatingButtonViewController())
+//        }
+        
     }
 
     public init() {

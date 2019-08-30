@@ -24,7 +24,7 @@ public class AKGDelegateManager: NSObject, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate = self
         
         FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
-        FBSDKSettings.setAppID("719653488459380")
+        FBSDKSettings.setAppID("2116421908480837")
         FBSDKSettings.setDisplayName("AKG Frameworks")
         
         self.applicationDelegate = delegate

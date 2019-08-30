@@ -21,6 +21,7 @@ class DataManager {
     func clearAllSession() {
         UserDefaults.standard.removeObject(forKey: "AUTH_TOKEN_USERDEFAULTS")
         UserDefaults.standard.removeObject(forKey: "GAME_PROVIDER_USERDEFAULTS")
+        UserDefaults.standard.removeObject(forKey: "AUTH_PROVIDER_USERDEFAULTS")
     }
     
     func setAuthToken(token: String) {

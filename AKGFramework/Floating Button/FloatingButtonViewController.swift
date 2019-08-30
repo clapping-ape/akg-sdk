@@ -27,7 +27,7 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
 //        if DataManager.sharedInstance.getAuthProvider() == "guest" {
 //            self.menus = ["btnFb", "btnEula", "btnContactUs", "btnSdkVersion", "btnLogOut", "btnBindAccount"]
 //            self.titles = ["FB Fanpage", "Eula", "Contact Us", "SDK Version", "Log out", "Bind Account"]
-//            
+//
 //            self.collectionView.reloadData()
 //        }
     }
@@ -64,10 +64,6 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
             self.view.frame = akgButtonFrame
         }
     }
-    
-//    @IBAction func tapButton(_ sender: Any) {
-//        self.basicAlertView(title: "", message: "TAP", successBlock: {})
-//    }
     
     @IBAction func closeButton(_ sender: Any) {
         self.remove()
