@@ -12,7 +12,7 @@ import GoogleSignIn
 import AdjustSdk
 import FBSDKCoreKit
 
-public class AKGDelegateManager: NSObject, GIDSignInDelegate {
+public class AKGDelegateManager: NSObject {
     
     
     public var applicationDelegate: UIApplicationDelegate?
@@ -21,7 +21,6 @@ public class AKGDelegateManager: NSObject, GIDSignInDelegate {
         super.init()
         
         GIDSignIn.sharedInstance()?.clientID = "138197356819-tstivvjlmv6jk7q8e4jm7l1661eqlrme.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
         
         FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
         FBSDKSettings.setAppID("2116421908480837")
@@ -32,9 +31,5 @@ public class AKGDelegateManager: NSObject, GIDSignInDelegate {
         
         let adjustConfig = ADJConfig.init(appToken: "y1t3z228xxj4", environment: ADJEnvironmentSandbox)
         Adjust.appDidLaunch(adjustConfig)
-    }
-    
-    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        
     }
 }

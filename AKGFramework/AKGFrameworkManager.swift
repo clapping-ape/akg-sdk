@@ -19,13 +19,14 @@ public class AKGFrameworkManager {
     
     public static let sharedInstance = AKGFrameworkManager()
     public var akgDelegate: AKGDelegate?
+    public var isTokenActive: Bool
     
     public init() {
         AKGFontManager.init()
+        self.isTokenActive = DataManager.sharedInstance.isLogin()
     }
     
     public func showLoginView(viewController: UIViewController!) {
-//        self.viewController.present(LoginViewController(), animated: true, completion: nil)
         viewController.add(LoginViewController())
     }
     

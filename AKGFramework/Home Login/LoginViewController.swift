@@ -30,22 +30,13 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
         
         LoginPresenter.sharedInstance.attachView(view: self)
         
-//        if DataManager.sharedInstance.isLogin() {
-//            
-//            self.remove()
-//            self.getTopMostViewController()?.add(FloatingButtonViewController())
-//        }
-        
     }
 
     public init() {
         
         super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        
-//        DispatchQueue.main.async {
-//            self.getTopMostViewController()?.add(self)
-//        }
+
         
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
