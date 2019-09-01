@@ -24,6 +24,8 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
 
         self.collectionView.register(UINib.init(nibName: "MenuView", bundle: Bundle(for: MenuCollectionViewCell.self)), forCellWithReuseIdentifier: "MenuCell")
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,7 +36,20 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
             self.collectionView.reloadData()
         }
         
+        self.initFloatingButtonPosition()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func rotated() {
+        self.initFloatingButtonPosition()
+    }
+    
+    private func initFloatingButtonPosition() {
         self.menuWidth = self.akgButton.bounds.size.width + (CGFloat(50*self.menus.count))
+        
         let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: self.menuWidth!, height: 64)
         self.view.frame = akgButtonFrame
     }
