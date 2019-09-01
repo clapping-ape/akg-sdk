@@ -35,10 +35,9 @@
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PBq-uO-qr5">
-                    <rect key="frame" x="52" y="59" width="320" height="44"/>
+                    <rect key="frame" x="52" y="59" width="317" height="44"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="320" id="TMM-ix-8Wx"/>
                         <constraint firstAttribute="height" constant="44" id="xaW-p7-lHs"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6b3-gs-C4e">
@@ -53,7 +52,7 @@
                     </connections>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjB-OD-r8d">
-                    <rect key="frame" x="358" y="39" width="30" height="20"/>
+                    <rect key="frame" x="355" y="39" width="30" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="UV2-Jg-k4T"/>
                         <constraint firstAttribute="height" constant="20" id="kFH-H6-q9f"/>
@@ -68,6 +67,7 @@
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lu9-Hc-tUD" secondAttribute="bottom" constant="8" id="1QP-Bx-oyH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PBq-uO-qr5" secondAttribute="trailing" constant="16" id="AJD-Oi-mab"/>
                 <constraint firstItem="PBq-uO-qr5" firstAttribute="leading" secondItem="lu9-Hc-tUD" secondAttribute="trailing" id="JO4-ff-dhp"/>
                 <constraint firstItem="PBq-uO-qr5" firstAttribute="bottom" secondItem="lu9-Hc-tUD" secondAttribute="bottom" id="NXL-DV-lxF"/>
                 <constraint firstItem="lu9-Hc-tUD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="UTZ-Do-cng"/>

@@ -24,21 +24,25 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
 
         self.collectionView.register(UINib.init(nibName: "MenuView", bundle: Bundle(for: MenuCollectionViewCell.self)), forCellWithReuseIdentifier: "MenuCell")
         
-//        if DataManager.sharedInstance.getAuthProvider() == "guest" {
-//            self.menus = ["btnFb", "btnEula", "btnContactUs", "btnSdkVersion", "btnLogOut", "btnBindAccount"]
-//            self.titles = ["FB Fanpage", "Eula", "Contact Us", "SDK Version", "Log out", "Bind Account"]
-//
-//            self.collectionView.reloadData()
-//        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if DataManager.sharedInstance.getAuthProvider() == "guest" {
+            self.menus = ["btnFb", "btnEula", "btnContactUs", "btnSdkVersion", "btnLogOut", "btnBindAccount"]
+            self.titles = ["FB Fanpage", "Eula", "Contact Us", "SDK Version", "Log out", "Bind Account"]
+            self.collectionView.reloadData()
+        }
+        
+        self.menuWidth = self.akgButton.bounds.size.width + (CGFloat(50*self.menus.count))
+        let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: self.menuWidth!, height: 64)
+        self.view.frame = akgButtonFrame
     }
     
     init() {
         super.init(nibName: "FloatingButtonViewController", bundle: Bundle(for: FloatingButtonViewController.self))
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
         
-        self.menuWidth = (self.akgButton.bounds.size.width + self.collectionView.bounds.size.width)+32
-        let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: self.menuWidth!, height: 64)
-        self.view.frame = akgButtonFrame
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -60,7 +64,7 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
             self.closeButton.isHidden = true
             self.showAKGMenu = true
             
-            let akgButtonFrame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.akgButton.bounds.size.width, height: self.view.frame.size.height)
+            let akgButtonFrame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: 68, height: self.view.frame.size.height)
             self.view.frame = akgButtonFrame
         }
     }
@@ -110,33 +114,32 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0: // Info Account
-            
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! MenuCollectionViewCell
+
+        if cell.titleLabel.text == "Info Account" {
             let accountView = InfoAccountViewController()
             self.getTopMostViewController()?.add(accountView)
-
-            break
-        case 1: // FB Fanpage
-
-            break
-        case 2: // Eula
+        }
+        
+        if cell.titleLabel.text == "FB Fanpage" {
             
-
-            break
-        case 3: // Contact Us
+        }
+        
+        if cell.titleLabel.text == "Eula" {
             
+        }
+        
+        if cell.titleLabel.text == "Contact Us" {
             let popupView = PopUpViewController()
             
             popupView.titleLabel.text = "Contact Us"
             popupView.contentLabel.text = "Contact us to our email admin@akggames.com"
             
             self.getTopMostViewController()?.add(popupView)
-            
-
-            break
-        case 4: // SDK Version
-            
+        }
+        
+        if cell.titleLabel.text == "SDK Version" {
             let popupView = PopUpViewController()
             popupView.titleLabel.text = "SDK VERSION"
             
@@ -147,23 +150,18 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
             popupView.contentLabel.text = "Your SDK’s Version is \(version)"
             
             self.getTopMostViewController()?.add(popupView)
-            
-            break
-        case 5: // Logout
-            
+        }
+        
+        if cell.titleLabel.text == "Log out" {
             let logoutView = LogoutViewController()
             self.getTopMostViewController()?.add(logoutView)
-
-            break
-        case 6: // Bind Account
-            
+        }
+        
+        if cell.titleLabel.text == "Bind Account" {
             let bindView = BindAccountViewController()
             self.getTopMostViewController()?.add(bindView)
-            
-            break
-        default:
-            return
         }
+
     }
     
     /*
