@@ -11,6 +11,7 @@ import GoogleSignIn
 import FBSDKLoginKit
 
 class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDelegate, GIDSignInDelegate {
+    
 
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var googlePlayButton: UIButton!
@@ -103,6 +104,10 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
     
     internal func bindAccountSuccess() {
         self.remove()
+    }
+    
+    internal func changePasswordSuccess() {
+        
     }
     
     internal func setErrorMessageFromAPI(errorMessage: String) {

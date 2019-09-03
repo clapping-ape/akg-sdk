@@ -17,7 +17,8 @@ class APIManager {
     
     func loginAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
         
-        NetworkRequest.sharedInstance.postAPI(
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
             route: Constant.RouteLogin,
             withAuthorization: false,
             params: param,
@@ -36,7 +37,8 @@ class APIManager {
     
     func socialMediaLoginAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
         
-        NetworkRequest.sharedInstance.postAPI(
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
             route: Constant.RouteSocMedLogin,
             withAuthorization: false,
             params: param,
@@ -55,8 +57,11 @@ class APIManager {
     
     func currentUserAPI(callBack: @escaping (User) -> Void, message: @escaping (String) -> Void) {
         
-        NetworkRequest.sharedInstance.getAPI(
+        NetworkRequest.sharedInstance.callAPI(
+            method: "GET",
             route: Constant.RouteCurrentUser,
+            withAuthorization: true,
+            params: nil,
             successBlock: { (responseObject: [String : Any]) in
                 
                 let user = User.init(data: responseObject)
@@ -70,7 +75,8 @@ class APIManager {
     
     func guestLoginAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
         
-        NetworkRequest.sharedInstance.postAPI(
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
             route: Constant.RouteGuestLogin,
             withAuthorization: false,
             params: param,
@@ -89,7 +95,8 @@ class APIManager {
     
     func sendOTPAPI(param:[String:Any]!, callBack: @escaping (Meta) -> Void, message: @escaping (String) -> Void) {
         
-        NetworkRequest.sharedInstance.postAPI(
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
             route: Constant.RouteSendOTP,
             withAuthorization: false,
             params: param,
@@ -106,7 +113,8 @@ class APIManager {
     
     func checkOTPAPI(param:[String:Any]!, callBack: @escaping (Meta) -> Void, message: @escaping (String) -> Void) {
         
-        NetworkRequest.sharedInstance.postAPI(
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
             route: Constant.RouteCheckOTP,
             withAuthorization: false,
             params: param,
@@ -123,7 +131,8 @@ class APIManager {
     
     func signUpAPI(param:[String:Any]!, callBack: @escaping (Meta) -> Void, message: @escaping (String) -> Void) {
         
-        NetworkRequest.sharedInstance.postAPI(
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
             route: Constant.RouteSignUp,
             withAuthorization: false,
             params: param,
@@ -145,7 +154,8 @@ class APIManager {
     
     func updatePasswordAPI(param:[String:Any]!, callBack: @escaping (Meta) -> Void, message: @escaping (String) -> Void) {
         
-        NetworkRequest.sharedInstance.postAPI(
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
             route: Constant.RouteUpdatePassword,
             withAuthorization: false,
             params: param,
@@ -160,9 +170,28 @@ class APIManager {
         
     }
     
+    func changePasswordAPI(param:[String:Any]!, callBack: @escaping (Meta) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.callAPI(
+            method: "PUT",
+            route: Constant.RouteChangePassword,
+            withAuthorization: true,
+            params: param,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                let meta = Meta.init(data: responseObject)
+                callBack(meta)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
     func bindAccountAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
         
-        NetworkRequest.sharedInstance.postAPI(
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
             route: Constant.RouteBindAccount,
             withAuthorization: true,
             params: param,

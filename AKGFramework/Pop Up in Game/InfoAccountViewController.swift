@@ -12,6 +12,7 @@ class InfoAccountViewController: BaseViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var uidTextField: UITextField!
+    @IBOutlet weak var changePasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,13 @@ class InfoAccountViewController: BaseViewController {
             
             self.basicAlertView(title: "", message: message, successBlock: {})
         }
+        
+        if DataManager.sharedInstance.getAuthProvider() == "akg" {
+            self.changePasswordButton.isHidden = false
+        }else {
+            self.changePasswordButton.isHidden = true
+        }
+        
     }
     
     init() {
@@ -45,4 +53,9 @@ class InfoAccountViewController: BaseViewController {
         self.remove()
     }
 
+    @IBAction func changePasswordButton(_ sender: Any) {
+        
+        self.getTopMostViewController()?.add(ChangePasswordViewController())
+    }
+    
 }

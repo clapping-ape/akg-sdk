@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhoneLoginViewController: BaseViewController, LoginView {
+class PhoneLoginViewController: BaseViewController, LoginView, UITextFieldDelegate {
 
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -20,6 +20,7 @@ class PhoneLoginViewController: BaseViewController, LoginView {
         super.viewDidLoad()
 
         LoginPresenter.sharedInstance.attachView(view: self)
+        self.passwordTextField.delegate = self
     }
     
     init() {
@@ -31,14 +32,14 @@ class PhoneLoginViewController: BaseViewController, LoginView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    // MARK: - IBActions
-    @IBAction func backgroundTapGesture(_ sender: Any) {
-        self.phoneTextField.resignFirstResponder()
-        self.passwordTextField.resignFirstResponder()
+    
+    // MARK: - TextField Delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.loginFunc()
+        return true
     }
     
-    @IBAction func phoneButton(_ sender: Any) {
+    private func loginFunc() {
         if self.phoneTextField.text == "" {
             self.basicAlertView(title: "", message: "Phone can't be blank.", successBlock: {})
         }
@@ -50,14 +51,24 @@ class PhoneLoginViewController: BaseViewController, LoginView {
             LoginPresenter.sharedInstance.postLoginAPI(
                 param:
                 ["phone_number":"0\(self.phoneTextField.text!)",
-                "password": self.passwordTextField.text!,
-                "auth_provider": self.authProvider!,
-                "game_provider": DataManager.sharedInstance.getProvider(),
-                "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
-                "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
-                "operating_system": Constant.OperatingSystem
+                    "password": self.passwordTextField.text!,
+                    "auth_provider": self.authProvider!,
+                    "game_provider": DataManager.sharedInstance.getProvider(),
+                    "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
+                    "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
+                    "operating_system": Constant.OperatingSystem
                 ])
         }
+    }
+
+    // MARK: - IBActions
+    @IBAction func backgroundTapGesture(_ sender: Any) {
+        self.phoneTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+    }
+    
+    @IBAction func phoneButton(_ sender: Any) {
+        self.loginFunc()
     }
     
     @IBAction func registerButton(_ sender: Any) {

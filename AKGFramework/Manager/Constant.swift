@@ -24,6 +24,7 @@ struct Constant {
         static let CheckOTP = "/auth/signup/check_otp"
         static let SignUp = "/auth/signup"
         static let UpdatePassword = "/auth/update_password"
+        static let ChangePassword = "/auth/change_password"
         static let BindAccount = "/account/binding"
     }
     
@@ -43,6 +44,7 @@ struct Constant {
     static let RouteCheckOTP = Routes.CheckOTP
     static let RouteSignUp = Routes.SignUp
     static let RouteUpdatePassword = Routes.UpdatePassword
+    static let RouteChangePassword = Routes.ChangePassword
     static let RouteBindAccount = Routes.BindAccount
     
 }

@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoAccountViewController" customModule="AKGFramework" customModuleProvider="target">
             <connections>
+                <outlet property="changePasswordButton" destination="5uB-72-kju" id="nA1-0J-c1j"/>
                 <outlet property="uidTextField" destination="wCO-vZ-zWs" id="Nxr-qC-M2R"/>
                 <outlet property="userNameTextField" destination="aIB-i7-8Q2" id="Ckk-Pt-Qdd"/>
                 <outlet property="view" destination="VoQ-Tq-Xrk" id="eBG-1j-hGw"/>
@@ -94,6 +95,16 @@
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-72-kju">
+                            <rect key="frame" x="206" y="177" width="80" height="25"/>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="10"/>
+                            <state key="normal" title="Change Password">
+                                <color key="titleColor" red="0.2156862745" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="changePasswordButton:" destination="-1" eventType="touchUpInside" id="sRf-Pd-Y8M"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -117,8 +128,10 @@
                         <constraint firstAttribute="trailing" secondItem="68G-7l-sXj" secondAttribute="trailing" constant="32" id="Yo8-Zr-3AC"/>
                         <constraint firstItem="q9Q-eJ-l59" firstAttribute="leading" secondItem="dB5-RF-qeh" secondAttribute="leading" id="do8-TW-HuM"/>
                         <constraint firstItem="qRc-2n-Stm" firstAttribute="leading" secondItem="Ap3-Pg-jZN" secondAttribute="leading" id="e8q-Cz-Vw5"/>
+                        <constraint firstItem="5uB-72-kju" firstAttribute="top" secondItem="wCO-vZ-zWs" secondAttribute="bottom" constant="4" id="kJG-px-J3c"/>
                         <constraint firstItem="aIB-i7-8Q2" firstAttribute="leading" secondItem="dB5-RF-qeh" secondAttribute="trailing" constant="25" id="mv6-OM-BF1"/>
                         <constraint firstAttribute="width" constant="302" id="ruB-i7-wzz"/>
+                        <constraint firstItem="5uB-72-kju" firstAttribute="trailing" secondItem="wCO-vZ-zWs" secondAttribute="trailing" id="xrY-L9-Hrc"/>
                         <constraint firstAttribute="trailing" secondItem="qRc-2n-Stm" secondAttribute="trailing" id="z9X-w8-aVn"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>

@@ -49,6 +49,8 @@
 		9BB612F82317D57F00F26762 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB612F72317D57F00F26762 /* User.swift */; };
 		9BB612FA2317D5B100F26762 /* UserAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB612F92317D5B100F26762 /* UserAttributes.swift */; };
 		9BB612FC2317EA1700F26762 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB612FB2317EA1700F26762 /* AccountPresenter.swift */; };
+		9BE01195231E473400060B19 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE01193231E473400060B19 /* ChangePasswordViewController.swift */; };
+		9BE01196231E473400060B19 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE01194231E473400060B19 /* ChangePasswordViewController.xib */; };
 		9BE667C222FCB48A002F61A2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C122FCB48A002F61A2 /* Login.swift */; };
 		9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C522FCB6B8002F61A2 /* UtilityManager.swift */; };
 		9BE667C822FCB70B002F61A2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C722FCB70B002F61A2 /* DataManager.swift */; };
@@ -145,6 +147,8 @@
 		9BB612F72317D57F00F26762 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9BB612F92317D5B100F26762 /* UserAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAttributes.swift; sourceTree = "<group>"; };
 		9BB612FB2317EA1700F26762 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
+		9BE01193231E473400060B19 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		9BE01194231E473400060B19 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		9BE667C122FCB48A002F61A2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		9BE667C522FCB6B8002F61A2 /* UtilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityManager.swift; sourceTree = "<group>"; };
 		9BE667C722FCB70B002F61A2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -383,6 +387,8 @@
 				9BB612EE2317BA4C00F26762 /* InfoAccountViewController.swift */,
 				9BB612F42317C36000F26762 /* BindAccountViewController.xib */,
 				9BB612F32317C36000F26762 /* BindAccountViewController.swift */,
+				9BE01194231E473400060B19 /* ChangePasswordViewController.xib */,
+				9BE01193231E473400060B19 /* ChangePasswordViewController.swift */,
 				9BB612FB2317EA1700F26762 /* AccountPresenter.swift */,
 			);
 			path = "Pop Up in Game";
@@ -613,6 +619,7 @@
 				9B94C652230D6214009BAB3C /* PopUpViewController.xib in Resources */,
 				9B54066B23040B2900A28F30 /* GoogleSignIn.bundle in Resources */,
 				9BFE116E230D71EE00379A36 /* LogoutViewController.xib in Resources */,
+				9BE01196231E473400060B19 /* ChangePasswordViewController.xib in Resources */,
 				9B745493230550E100DBFD77 /* ForgotPasswordViewController.xib in Resources */,
 				9BB612F62317C36000F26762 /* BindAccountViewController.xib in Resources */,
 			);
@@ -632,6 +639,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE01195231E473400060B19 /* ChangePasswordViewController.swift in Sources */,
 				9BE667D622FCBE47002F61A2 /* RegistrationPasswordViewController.swift in Sources */,
 				9B43497A2306B4C600A19E6B /* AKGFrameworkManager.swift in Sources */,
 				9B4CCB5F22EB12F4003A465C /* LoginViewController.swift in Sources */,

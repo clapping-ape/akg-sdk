@@ -12,6 +12,7 @@ protocol AccountView: NSObjectProtocol {
     func startLoading()
     func finishLoading()
     func bindAccountSuccess()
+    func changePasswordSuccess()
     func setErrorMessageFromAPI(errorMessage: String)
 }
 
@@ -40,6 +41,23 @@ internal class AccountPresenter {
             
             self?.accountView?.finishLoading()
             self?.accountView?.bindAccountSuccess()
+            
+            
+        }) { (message) in
+            
+            self.accountView?.finishLoading()
+            self.accountView?.setErrorMessageFromAPI(errorMessage: message)
+        }
+        
+    }
+    
+    func postResetPasswordAPI(param: [String:Any]!) {
+        self.accountView?.startLoading()
+        
+        APIManager.sharedInstance.changePasswordAPI(param: param!, callBack: { [weak self](meta) in
+            
+            self?.accountView?.finishLoading()
+            self?.accountView?.changePasswordSuccess()
             
             
         }) { (message) in
