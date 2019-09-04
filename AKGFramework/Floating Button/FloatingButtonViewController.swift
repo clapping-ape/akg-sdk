@@ -97,30 +97,30 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
         
         self.getTopMostViewController()?.view.bringSubviewToFront(self.view)
-//        let translation = sender.translation(in: self.view)
+        let translation = sender.translation(in: self.view)
         
-        if sender.state == .began {
-            startPosition = self.view.center
-        } else if sender.state == .changed {
-            let translation = sender.translation(in: self.view)
-            guard let start = self.startPosition else {
-                return
-            }
-
-//            let newCenter = CGPoint(x: start.x + translation.x, y: start.y + translation.y)
-            
-            let normX = max(min(translation.x / 150, 1), -1)
-            let deltaX = 50 * sin(normX) // add custom function here
-            let normY = max(min(translation.y / 150, 1), -1)
-            let deltaY = 50 * sin(normY) // add custom function here
-            let newCenter = CGPoint(x: start.x + min(deltaX, 50), y: start.y + min(deltaY, 50))
-            
-            self.view.center = newCenter
-        } else {
-            startPosition = nil
-        }
+//        if sender.state == .began {
+//            startPosition = self.view.center
+//        } else if sender.state == .changed {
+//            let translation = sender.translation(in: self.view)
+//            guard let start = self.startPosition else {
+//                return
+//            }
+//
+////            let newCenter = CGPoint(x: start.x + translation.x, y: start.y + translation.y)
+//
+//            let normX = max(min(translation.x / 150, 1), -1)
+//            let deltaX = 50 * sin(normX) // add custom function here
+//            let normY = max(min(translation.y / 150, 1), -1)
+//            let deltaY = 50 * sin(normY) // add custom function here
+//            let newCenter = CGPoint(x: start.x + min(deltaX, 50), y: start.y + min(deltaY, 50))
+//
+//            self.view.center = newCenter
+//        } else {
+//            startPosition = nil
+//        }
         
-//        self.view.center = CGPoint(x: self.view.center.x + translation.x, y: self.view.center.y + translation.y)
+        self.view.center = CGPoint(x: self.view.center.x + translation.x, y: self.view.center.y + translation.y)
         sender.setTranslation(CGPoint.zero, in: self.view)
     }
     
