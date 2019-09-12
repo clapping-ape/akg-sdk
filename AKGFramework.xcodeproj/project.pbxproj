@@ -12,6 +12,8 @@
 		9B0D518923086F41008BA060 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0D518823086F41008BA060 /* MenuView.xib */; };
 		9B0D518B23087179008BA060 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D518A23087179008BA060 /* MenuCollectionViewCell.swift */; };
 		9B0D518D23087755008BA060 /* AKGFontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D518C23087755008BA060 /* AKGFontManager.swift */; };
+		9B0F6359232A2F7000A4BA2C /* VerificationBindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F6357232A2F7000A4BA2C /* VerificationBindAccountViewController.swift */; };
+		9B0F635A232A2F7000A4BA2C /* VerificationBindAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0F6358232A2F7000A4BA2C /* VerificationBindAccountViewController.xib */; };
 		9B43497A2306B4C600A19E6B /* AKGFrameworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */; };
 		9B4349912306DFF300A19E6B /* AKGDelegateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */; };
 		9B4CCB1722EADDA6003A465C /* AKGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CCB0D22EADDA6003A465C /* AKGFramework.framework */; };
@@ -37,9 +39,12 @@
 		9B7454982305542000DBFD77 /* OTPForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */; };
 		9B7454992305542000DBFD77 /* OTPForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */; };
 		9B74549B2305610000DBFD77 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */; };
+		9B77C4FF231FCDA0006646CD /* ContinueLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C4FD231FCDA0006646CD /* ContinueLoginViewController.swift */; };
+		9B77C500231FCDA0006646CD /* ContinueLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B77C4FE231FCDA0006646CD /* ContinueLoginViewController.xib */; };
 		9B8BD0A523150C08000A28A8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8BD0A123150C07000A28A8 /* Bolts.framework */; };
 		9B8BD0A623150C08000A28A8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8BD0A323150C07000A28A8 /* FBSDKLoginKit.framework */; };
 		9B8BD0A723150C08000A28A8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8BD0A423150C08000A28A8 /* FBSDKCoreKit.framework */; };
+		9B8DCC38232A6A2000313E05 /* InAppPurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8DCC37232A6A2000313E05 /* InAppPurchaseHandler.swift */; };
 		9B94C651230D6214009BAB3C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94C64F230D6214009BAB3C /* PopUpViewController.swift */; };
 		9B94C652230D6214009BAB3C /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B94C650230D6214009BAB3C /* PopUpViewController.xib */; };
 		9BB612F02317BA4C00F26762 /* InfoAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB612EE2317BA4C00F26762 /* InfoAccountViewController.swift */; };
@@ -49,6 +54,9 @@
 		9BB612F82317D57F00F26762 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB612F72317D57F00F26762 /* User.swift */; };
 		9BB612FA2317D5B100F26762 /* UserAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB612F92317D5B100F26762 /* UserAttributes.swift */; };
 		9BB612FC2317EA1700F26762 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB612FB2317EA1700F26762 /* AccountPresenter.swift */; };
+		9BBB88CA2322410C00458EB5 /* OTPBindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB88C82322410C00458EB5 /* OTPBindAccountViewController.swift */; };
+		9BBB88CB2322410C00458EB5 /* OTPBindAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB88C92322410C00458EB5 /* OTPBindAccountViewController.xib */; };
+		9BBB88CD2322432600458EB5 /* BindAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB88CC2322432600458EB5 /* BindAccountPresenter.swift */; };
 		9BE01195231E473400060B19 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE01193231E473400060B19 /* ChangePasswordViewController.swift */; };
 		9BE01196231E473400060B19 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE01194231E473400060B19 /* ChangePasswordViewController.xib */; };
 		9BE667C222FCB48A002F61A2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE667C122FCB48A002F61A2 /* Login.swift */; };
@@ -106,6 +114,8 @@
 		9B0D518823086F41008BA060 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		9B0D518A23087179008BA060 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		9B0D518C23087755008BA060 /* AKGFontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGFontManager.swift; sourceTree = "<group>"; };
+		9B0F6357232A2F7000A4BA2C /* VerificationBindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationBindAccountViewController.swift; sourceTree = "<group>"; };
+		9B0F6358232A2F7000A4BA2C /* VerificationBindAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationBindAccountViewController.xib; sourceTree = "<group>"; };
 		9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGFrameworkManager.swift; sourceTree = "<group>"; };
 		9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGDelegateManager.swift; sourceTree = "<group>"; };
 		9B4CCB0D22EADDA6003A465C /* AKGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AKGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,9 +145,12 @@
 		9B7454962305542000DBFD77 /* OTPForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9B7454972305542000DBFD77 /* OTPForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		9B74549A2305610000DBFD77 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		9B77C4FD231FCDA0006646CD /* ContinueLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueLoginViewController.swift; sourceTree = "<group>"; };
+		9B77C4FE231FCDA0006646CD /* ContinueLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContinueLoginViewController.xib; sourceTree = "<group>"; };
 		9B8BD0A123150C07000A28A8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		9B8BD0A323150C07000A28A8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		9B8BD0A423150C08000A28A8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		9B8DCC37232A6A2000313E05 /* InAppPurchaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseHandler.swift; sourceTree = "<group>"; };
 		9B94C64F230D6214009BAB3C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		9B94C650230D6214009BAB3C /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		9BB612EE2317BA4C00F26762 /* InfoAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAccountViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +160,9 @@
 		9BB612F72317D57F00F26762 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9BB612F92317D5B100F26762 /* UserAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAttributes.swift; sourceTree = "<group>"; };
 		9BB612FB2317EA1700F26762 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
+		9BBB88C82322410C00458EB5 /* OTPBindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPBindAccountViewController.swift; sourceTree = "<group>"; };
+		9BBB88C92322410C00458EB5 /* OTPBindAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPBindAccountViewController.xib; sourceTree = "<group>"; };
+		9BBB88CC2322432600458EB5 /* BindAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindAccountPresenter.swift; sourceTree = "<group>"; };
 		9BE01193231E473400060B19 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		9BE01194231E473400060B19 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		9BE667C122FCB48A002F61A2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -258,6 +274,8 @@
 		9B4CCB0F22EADDA6003A465C /* AKGFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9B77C4FB231FCD53006646CD /* Continue Login */,
+				9BBB88C4232240D600458EB5 /* Binding Account */,
 				9B94C64D230D61FA009BAB3C /* Pop Up in Game */,
 				9B4CCB2922EAE673003A465C /* Home Login */,
 				9BFC6F4322FC9BD000308D7F /* Phone Login */,
@@ -376,6 +394,15 @@
 			path = Password;
 			sourceTree = "<group>";
 		};
+		9B77C4FB231FCD53006646CD /* Continue Login */ = {
+			isa = PBXGroup;
+			children = (
+				9B77C4FE231FCDA0006646CD /* ContinueLoginViewController.xib */,
+				9B77C4FD231FCDA0006646CD /* ContinueLoginViewController.swift */,
+			);
+			path = "Continue Login";
+			sourceTree = "<group>";
+		};
 		9B94C64D230D61FA009BAB3C /* Pop Up in Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,13 +412,25 @@
 				9BFE116B230D71EE00379A36 /* LogoutViewController.swift */,
 				9BB612EF2317BA4C00F26762 /* InfoAccountViewController.xib */,
 				9BB612EE2317BA4C00F26762 /* InfoAccountViewController.swift */,
-				9BB612F42317C36000F26762 /* BindAccountViewController.xib */,
-				9BB612F32317C36000F26762 /* BindAccountViewController.swift */,
 				9BE01194231E473400060B19 /* ChangePasswordViewController.xib */,
 				9BE01193231E473400060B19 /* ChangePasswordViewController.swift */,
 				9BB612FB2317EA1700F26762 /* AccountPresenter.swift */,
 			);
 			path = "Pop Up in Game";
+			sourceTree = "<group>";
+		};
+		9BBB88C4232240D600458EB5 /* Binding Account */ = {
+			isa = PBXGroup;
+			children = (
+				9BB612F42317C36000F26762 /* BindAccountViewController.xib */,
+				9BB612F32317C36000F26762 /* BindAccountViewController.swift */,
+				9BBB88C92322410C00458EB5 /* OTPBindAccountViewController.xib */,
+				9BBB88C82322410C00458EB5 /* OTPBindAccountViewController.swift */,
+				9B0F6358232A2F7000A4BA2C /* VerificationBindAccountViewController.xib */,
+				9B0F6357232A2F7000A4BA2C /* VerificationBindAccountViewController.swift */,
+				9BBB88CC2322432600458EB5 /* BindAccountPresenter.swift */,
+			);
+			path = "Binding Account";
 			sourceTree = "<group>";
 		};
 		9BEC536222FD1E19005F2000 /* OTP */ = {
@@ -444,6 +483,7 @@
 				9BFC6F3E22FC909900308D7F /* APIManager.swift */,
 				9BE667C522FCB6B8002F61A2 /* UtilityManager.swift */,
 				9BE667C722FCB70B002F61A2 /* DataManager.swift */,
+				9B8DCC37232A6A2000313E05 /* InAppPurchaseHandler.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -611,9 +651,11 @@
 				9B4CCB6022EB12F4003A465C /* LoginViewController.xib in Resources */,
 				9B7454992305542000DBFD77 /* OTPForgotPasswordViewController.xib in Resources */,
 				9BFC6EED22FC003F00308D7F /* Proxima Nova Extrabold.otf in Resources */,
+				9B0F635A232A2F7000A4BA2C /* VerificationBindAccountViewController.xib in Resources */,
 				9BE667D722FCBE47002F61A2 /* RegistrationPasswordViewController.xib in Resources */,
 				9BFC6F6722FCA7F700308D7F /* RegistrationViewController.xib in Resources */,
 				9BFC6EEA22FC003F00308D7F /* ProximaNova-Regular.otf in Resources */,
+				9B77C500231FCDA0006646CD /* ContinueLoginViewController.xib in Resources */,
 				9BFC6F4722FC9BF500308D7F /* PhoneLoginViewController.xib in Resources */,
 				9B0D518923086F41008BA060 /* MenuView.xib in Resources */,
 				9B94C652230D6214009BAB3C /* PopUpViewController.xib in Resources */,
@@ -621,6 +663,7 @@
 				9BFE116E230D71EE00379A36 /* LogoutViewController.xib in Resources */,
 				9BE01196231E473400060B19 /* ChangePasswordViewController.xib in Resources */,
 				9B745493230550E100DBFD77 /* ForgotPasswordViewController.xib in Resources */,
+				9BBB88CB2322410C00458EB5 /* OTPBindAccountViewController.xib in Resources */,
 				9BB612F62317C36000F26762 /* BindAccountViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,8 +701,12 @@
 				9BB612F02317BA4C00F26762 /* InfoAccountViewController.swift in Sources */,
 				9BFC6F4622FC9BF500308D7F /* PhoneLoginViewController.swift in Sources */,
 				9BFC6F2122FC0F5800308D7F /* LoadingViewController.swift in Sources */,
+				9B77C4FF231FCDA0006646CD /* ContinueLoginViewController.swift in Sources */,
+				9BBB88CA2322410C00458EB5 /* OTPBindAccountViewController.swift in Sources */,
 				9BFE116D230D71EE00379A36 /* LogoutViewController.swift in Sources */,
+				9B8DCC38232A6A2000313E05 /* InAppPurchaseHandler.swift in Sources */,
 				9BEC536722FD1E5E005F2000 /* SuccessViewController.swift in Sources */,
+				9B0F6359232A2F7000A4BA2C /* VerificationBindAccountViewController.swift in Sources */,
 				9BE667D322FCBC69002F61A2 /* RegisterPresenter.swift in Sources */,
 				9BE667C622FCB6B8002F61A2 /* UtilityManager.swift in Sources */,
 				9BB612FC2317EA1700F26762 /* AccountPresenter.swift in Sources */,
@@ -672,6 +719,7 @@
 				9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */,
 				9BB612FA2317D5B100F26762 /* UserAttributes.swift in Sources */,
 				9BFC6F2E22FC216900308D7F /* LoginPresenter.swift in Sources */,
+				9BBB88CD2322432600458EB5 /* BindAccountPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

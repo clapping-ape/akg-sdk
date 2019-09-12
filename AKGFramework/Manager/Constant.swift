@@ -26,6 +26,7 @@ struct Constant {
         static let UpdatePassword = "/auth/update_password"
         static let ChangePassword = "/auth/change_password"
         static let BindAccount = "/account/binding"
+        static let PhoneBinding = "/account/phone/binding"
     }
     
     struct Notification {
@@ -46,5 +47,6 @@ struct Constant {
     static let RouteUpdatePassword = Routes.UpdatePassword
     static let RouteChangePassword = Routes.ChangePassword
     static let RouteBindAccount = Routes.BindAccount
+    static let RoutePhoneBinding = Routes.PhoneBinding
     
 }

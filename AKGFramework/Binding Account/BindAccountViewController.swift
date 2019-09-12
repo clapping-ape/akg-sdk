@@ -17,6 +17,8 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
     @IBOutlet weak var googlePlayButton: UIButton!
     @IBOutlet weak var phoneButton: UIButton!
     
+    private var authProvider: String! = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,7 +43,8 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
-        self.callBindAccount(token: user.authentication.idToken!, provider: "google")
+        self.authProvider = "google"
+        self.callBindAccount(token: user.authentication.idToken!, provider: self.authProvider)
     }
     
     private func signIn(signIn: GIDSignIn!,
@@ -58,11 +61,13 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
     
     // MARK: - IBActions
     @IBAction func facebookButton(_ sender: Any) {
+        
         FBSDKLoginManager.init().logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result: FBSDKLoginManagerLoginResult!, error: Error!) in
             
             if FBSDKAccessToken.current() != nil {
                 
-                self.callBindAccount(token: FBSDKAccessToken.current()!.tokenString!, provider: "facebook")
+                self.authProvider = "facebook"
+                self.callBindAccount(token: FBSDKAccessToken.current()!.tokenString!, provider: self.authProvider)
             }
             
         }
@@ -73,9 +78,8 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
     }
     
     @IBAction func phoneButton(_ sender: Any) {
-        
         self.remove()
-        self.getTopMostViewController()?.add(PhoneLoginViewController())
+        self.getTopMostViewController()?.add(OTPBindAccountViewController())
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -103,6 +107,8 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
     }
     
     internal func bindAccountSuccess() {
+        
+        DataManager.sharedInstance.setAuthProvider(provider: self.authProvider!)
         self.remove()
     }
     

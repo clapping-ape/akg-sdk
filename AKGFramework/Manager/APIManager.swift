@@ -205,4 +205,22 @@ class APIManager {
         }
         
     }
+    
+    func phoneBindingAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
+            route: Constant.RoutePhoneBinding,
+            withAuthorization: true,
+            params: param,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                let login = Login.init(data: responseObject)
+                callBack(login)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
 }

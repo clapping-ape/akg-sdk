@@ -30,8 +30,7 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    func initView() {
         if DataManager.sharedInstance.getAuthProvider() == "guest" {
             self.menus = ["btnFb", "btnEula", "btnContactUs", "btnSdkVersion", "btnLogOut", "btnBindAccount"]
             self.titles = ["FB Fanpage", "Eula", "Contact Us", "SDK Version", "Log out", "Bind Account"]
@@ -43,6 +42,12 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
         }
         self.collectionView.reloadData()
         self.initFloatingButtonPosition()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.initView()
     }
     
     deinit {

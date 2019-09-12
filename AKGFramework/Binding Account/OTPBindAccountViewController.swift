@@ -1,14 +1,14 @@
 //
-//  RegistrationViewController.swift
+//  OTPBindAccountViewController.swift
 //  AKGFramework
 //
-//  Created by Lutfi Azhar on 09/08/19.
+//  Created by Lutfi Azhar on 06/09/19.
 //  Copyright © 2019 Lutfi Azhar. All rights reserved.
 //
 
 import UIKit
 
-class RegistrationViewController: BaseViewController, RegisterView {
+class OTPBindAccountViewController: BaseViewController, BindAccountView {
     
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var otpTextField: UITextField!
@@ -17,16 +17,15 @@ class RegistrationViewController: BaseViewController, RegisterView {
     @IBOutlet weak var resendButton: UIButton!
     
     var otpSendStatus: Bool = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        RegisterPresenter.sharedInstance.attachView(view: self)
+        BindAccountPresenter.sharedInstance.attachView(view: self)
     }
     
     init() {
-        super.init(nibName: "RegistrationViewController", bundle: Bundle(for: RegistrationViewController.self))
-        
+        super.init(nibName: "OTPBindAccountViewController", bundle: Bundle(for: OTPBindAccountViewController.self))
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         
     }
@@ -40,21 +39,21 @@ class RegistrationViewController: BaseViewController, RegisterView {
         self.phoneTextField.resignFirstResponder()
         self.otpTextField.resignFirstResponder()
     }
-
+    
     @IBAction func backButton(_ sender: Any) {
         self.remove()
-        self.getTopMostViewController()?.add(PhoneLoginViewController())
+        self.getTopMostViewController()?.add(BindAccountViewController())
     }
     
     @IBAction func nextButton(_ sender: Any) {
         if self.otpSendStatus == false {
             if self.phoneTextField.text != "" {
                 
-                RegisterPresenter.sharedInstance.postSendOTPAPI(param: [
+                BindAccountPresenter.sharedInstance.postSendOTPAPI(param: [
                     "phone_number": "0\(self.phoneTextField.text!)",
                     "auth_provider": "akg",
                     "game_provider": DataManager.sharedInstance.getProvider(),
-                    "otp_type": "registration"])
+                    "otp_type": "phone_binding"])
             }else{
                 
                 self.basicAlertView(title: "", message: "Phone Number can't be blank.", successBlock: {})
@@ -62,11 +61,11 @@ class RegistrationViewController: BaseViewController, RegisterView {
         }else{
             if self.otpTextField.text != "" {
                 
-                RegisterPresenter.sharedInstance.postCheckOTPAPI(param: [
+                BindAccountPresenter.sharedInstance.postCheckOTPAPI(param: [
                     "phone_number": "0\(self.phoneTextField.text!)",
                     "auth_provider": "akg",
                     "game_provider": DataManager.sharedInstance.getProvider(),
-                    "otp_type": "registration",
+                    "otp_type": "phone_binding",
                     "otp_code": self.otpTextField.text!])
             }else{
                 
@@ -77,11 +76,11 @@ class RegistrationViewController: BaseViewController, RegisterView {
     
     @IBAction func resendButton(_ sender: Any) {
         
-        RegisterPresenter.sharedInstance.postSendOTPAPI(param: [
+        BindAccountPresenter.sharedInstance.postSendOTPAPI(param: [
             "phone_number": "0\(self.phoneTextField.text!)",
             "auth_provider": "akg",
             "game_provider": DataManager.sharedInstance.getProvider(),
-            "otp_type": "registration"])
+            "otp_type": "phone_binding"])
     }
     
     // MARK: - Presenter Delegate
@@ -103,14 +102,14 @@ class RegistrationViewController: BaseViewController, RegisterView {
     }
     
     internal func checkOTPSuccess() {
-        let registrationView = RegistrationPasswordViewController()
+        let registrationView = VerificationBindAccountViewController()
         registrationView.phoneNumber = self.phoneTextField.text!
         
         self.remove()
         self.getTopMostViewController()?.add(registrationView)
     }
     
-    internal func signUpSuccess() {
+    internal func bindAccountSuccess() {
         
     }
     
