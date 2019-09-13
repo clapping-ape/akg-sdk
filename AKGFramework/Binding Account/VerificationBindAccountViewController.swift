@@ -15,6 +15,8 @@ class VerificationBindAccountViewController: BaseViewController, BindAccountView
     
     var phoneNumber: String = ""
     
+    var callbackBindAccountWithPhone:(() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -80,6 +82,7 @@ class VerificationBindAccountViewController: BaseViewController, BindAccountView
         DataManager.sharedInstance.setAuthProvider(provider: "akg")
         self.basicAlertView(title: "", message: "Phone Binding success.") {
             self.remove()
+            self.callbackBindAccountWithPhone!()
         }
     }
     

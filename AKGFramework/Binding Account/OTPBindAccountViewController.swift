@@ -17,6 +17,8 @@ class OTPBindAccountViewController: BaseViewController, BindAccountView {
     @IBOutlet weak var resendButton: UIButton!
     
     var otpSendStatus: Bool = false
+    
+    var callbackBindAccountWithPhone:(() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,8 +107,14 @@ class OTPBindAccountViewController: BaseViewController, BindAccountView {
         let registrationView = VerificationBindAccountViewController()
         registrationView.phoneNumber = self.phoneTextField.text!
         
+        registrationView.callbackBindAccountWithPhone = { () -> Void in
+            
+            self.callbackBindAccountWithPhone!()
+        }
+        
         self.remove()
         self.getTopMostViewController()?.add(registrationView)
+        
     }
     
     internal func bindAccountSuccess() {

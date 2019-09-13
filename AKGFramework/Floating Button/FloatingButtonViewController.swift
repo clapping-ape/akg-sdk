@@ -207,6 +207,11 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
         
         if cell.titleLabel.text == "Bind Account" {
             let bindView = BindAccountViewController()
+            bindView.callbackBindAccountWithPhone = { () -> Void in
+                
+                self.initView()
+                
+            }
             self.getTopMostViewController()?.add(bindView)
         }
 

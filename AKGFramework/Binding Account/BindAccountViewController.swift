@@ -19,6 +19,8 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
     
     private var authProvider: String! = ""
     
+    var callbackBindAccountWithPhone:(() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,6 +70,7 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
                 
                 self.authProvider = "facebook"
                 self.callBindAccount(token: FBSDKAccessToken.current()!.tokenString!, provider: self.authProvider)
+                
             }
             
         }
@@ -78,8 +81,16 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
     }
     
     @IBAction func phoneButton(_ sender: Any) {
+        
+        let registrationView = OTPBindAccountViewController()
+        registrationView.callbackBindAccountWithPhone = { () -> Void in
+            
+            self.callbackBindAccountWithPhone!()
+            
+        }
+        
         self.remove()
-        self.getTopMostViewController()?.add(OTPBindAccountViewController())
+        self.getTopMostViewController()?.add(registrationView)
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -109,6 +120,7 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
     internal func bindAccountSuccess() {
         
         DataManager.sharedInstance.setAuthProvider(provider: self.authProvider!)
+        self.callbackBindAccountWithPhone!()
         self.remove()
     }
     
