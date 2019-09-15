@@ -10,7 +10,7 @@ spec.social_media_url = "https://akggames.com"
 spec.platform = :ios, "10.0"
 spec.requires_arc = true
 spec.source = { git: "https://github.com/lutfi99/akgiosframework.git", tag: "#{spec.version}"}
-spec.source_files = "**/*.{h,m,framework}"
+spec.source_files = "AKGFramework"
 spec.swift_version = "5"
 spec.frameworks = "GoogleSignIn", "GoogleSignInDependencies", "Bolts", "FBSDKCoreKit", "FBSDKLoginKit", "AdjustSdk"
 end
