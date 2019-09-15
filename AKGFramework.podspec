@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "AKGFramework"
-  spec.version = "1.0.0"
+  spec.version = "1.0.1"
   spec.summary = "AKG iOS Game Framework"
   spec.homepage = "https://akggames.com"
   spec.license = { type: "MIT", file: "LICENSE" }
