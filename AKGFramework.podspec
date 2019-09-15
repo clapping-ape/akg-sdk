@@ -9,6 +9,6 @@ spec.social_media_url = "https://akggames.com"
 
 spec.platform = :ios, "10.0"
 spec.requires_arc = true
-spec.source = { git: "https://github.com/lutfi99/akgiosframework.git", tag: "{spec.version}", submodules: true }
+spec.source = { git: "https://github.com/lutfi99/akgiosframework.git", tag: "#{spec.version}", submodules: true }
 spec.source_files = "AKGFramework/**/*.{h,swift}"
 end
