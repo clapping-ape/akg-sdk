@@ -41,7 +41,7 @@ extension NetworkRequest {
         print("URL: ", Constant.BaseURL+route)
         print("Body: ", params ?? "")
         
-        let task = session.dataTask(with: request, completionHandler: { [weak self] (data: Data?, response: URLResponse?, error: Error?) -> Void in
+        let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             guard let data = data else {
                 successBlock([:])
                 failureBlock(error?.localizedDescription ?? "Error: No response data from server.")
