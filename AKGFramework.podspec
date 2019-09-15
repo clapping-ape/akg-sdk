@@ -12,5 +12,5 @@ Pod::Spec.new do |spec|
   spec.source = { git: 'https://github.com/lutfi99/akgiosframework.git', tag: '#{spec.version}'}
   spec.source_files = 'AKGFramework'
   spec.swift_version = '5'
-  spec.weak_frameworks = 'GoogleSignIn', 'GoogleSignInDependencies', 'Bolts', 'FBSDKCoreKit', 'FBSDKLoginKit', 'AdjustSdk'
+  # spec.weak_frameworks = 'GoogleSignIn', 'GoogleSignInDependencies', 'Bolts', 'FBSDKCoreKit', 'FBSDKLoginKit', 'AdjustSdk'
 end
