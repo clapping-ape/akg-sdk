@@ -13,5 +13,4 @@ spec.source = { git: "https://github.com/lutfi99/akgiosframework.git", tag: "#{s
 spec.source_files = "**/*.{h,m,framework}"
 spec.swift_version = "5"
 spec.frameworks = "GoogleSignIn", "GoogleSignInDependencies", "Bolts", "FBSDKCoreKit", "FBSDKLoginKit", "AdjustSdk"
-spec.ios.vendored_frameworks = "AKGFramework.framework"
 end
