@@ -70,7 +70,6 @@ public class AKGFrameworkManager {
 //            paymentVC.delegate = self
             viewController.present(paymentVC, animated: true, completion: nil)
             
-            
         }else {
             let alert = UIAlertController(title: "Sorry", message: "Apple Pay currently not available.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {
