@@ -42,7 +42,11 @@ public class AKGFrameworkManager {
         InAppPurchaseHandler.sharedInstance.setProductIds(ids: ["com.clappingape.akg1"])
         
         InAppPurchaseHandler.sharedInstance.fetchAvailableProducts { (products) in
-            print("IAP PRODUCTS: ", products)
+            
+            InAppPurchaseHandler.sharedInstance.purchase(product: products.first!, completion: { (alertType, skProduct, transaction) in
+                print("PRODUCTS: ", skProduct)
+                print("TRANSACTION: ", transaction)
+            })
         }
     }
     

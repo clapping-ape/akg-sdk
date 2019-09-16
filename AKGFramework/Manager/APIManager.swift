@@ -15,6 +15,19 @@ class APIManager {
     private init() {}
     static let sharedInstance = APIManager()
     
+    func trackEventWithName(name: String!) {
+        let configAdjust = DataManager.sharedInstance.getAdjustConfig()
+        let adjustEventList = configAdjust.events
+        for event in adjustEventList! {
+            if event.name! == name {
+                
+                Adjust.trackEvent(ADJEvent.init(eventToken: event.token!))
+                
+            }
+        }
+        
+    }
+    
     func loginAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
         
         NetworkRequest.sharedInstance.callAPI(
@@ -24,7 +37,7 @@ class APIManager {
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
-                Adjust.trackEvent(ADJEvent.init(eventToken: "gxl8cb"))
+                self.trackEventWithName(name: "login")
                 
                 let login = Login.init(data: responseObject)
                 callBack(login)
@@ -44,7 +57,7 @@ class APIManager {
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
-                Adjust.trackEvent(ADJEvent.init(eventToken: "gxl8cb"))
+                self.trackEventWithName(name: "login")
                 
                 let login = Login.init(data: responseObject)
                 callBack(login)
@@ -82,7 +95,7 @@ class APIManager {
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
-                Adjust.trackEvent(ADJEvent.init(eventToken: "gxl8cb"))
+                self.trackEventWithName(name: "login")
                 
                 let login = Login.init(data: responseObject)
                 callBack(login)
@@ -138,14 +151,14 @@ class APIManager {
             params: param,
             successBlock: { (responseObject: [String : Any]) in
                 
-                Adjust.trackEvent(ADJEvent.init(eventToken: "7gzpmk"))
+                self.trackEventWithName(name: "register_success")
                 
                 let meta = Meta.init(data: responseObject)
                 callBack(meta)
                 
         }) { (errorMessage: String) in
             
-            Adjust.trackEvent(ADJEvent.init(eventToken: "nr3ny5"))
+            self.trackEventWithName(name: "register_failed")
             
             message(errorMessage)
         }
@@ -217,6 +230,47 @@ class APIManager {
                 
                 let login = Login.init(data: responseObject)
                 callBack(login)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
+    func paymentAPI(param:[String:Any]!, callBack: @escaping (Login) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.callAPI(
+            method: "POST",
+            route: Constant.RoutePayment,
+            withAuthorization: true,
+            params: param,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                let login = Login.init(data: responseObject)
+                callBack(login)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
+    func sdkConfigAPI(callBack: @escaping (ConfigAdjust?) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.callAPI(
+            method: "GET",
+            route: Constant.RouteSDKConfig+DataManager.sharedInstance.getProvider(),
+            withAuthorization: true,
+            params: nil,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                let adjustData = responseObject["adjust"] as? [String:Any] ?? nil
+                if adjustData != nil {
+                    let adjust = ConfigAdjust.init(data: adjustData!)
+                    callBack(adjust)
+                }else{
+                    callBack(nil)
+                }
                 
         }) { (errorMessage: String) in
             message(errorMessage)

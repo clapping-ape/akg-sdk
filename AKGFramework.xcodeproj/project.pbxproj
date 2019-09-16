@@ -67,6 +67,8 @@
 		9BE667D722FCBE47002F61A2 /* RegistrationPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE667D522FCBE47002F61A2 /* RegistrationPasswordViewController.xib */; };
 		9BEC536722FD1E5E005F2000 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC536522FD1E5E005F2000 /* SuccessViewController.swift */; };
 		9BEC536822FD1E5E005F2000 /* SuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BEC536622FD1E5E005F2000 /* SuccessViewController.xib */; };
+		9BFBBAA6232F92AC00366A7E /* ConfigEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBBAA5232F92AC00366A7E /* ConfigEvent.swift */; };
+		9BFBBAA9232F931300366A7E /* ConfigAdjust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFBBAA8232F931300366A7E /* ConfigAdjust.swift */; };
 		9BFC6EDE22FBFF0600308D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */; };
 		9BFC6EE822FC003F00308D7F /* Proxima Nova Alt Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE022FC003F00308D7F /* Proxima Nova Alt Bold.otf */; };
 		9BFC6EE922FC003F00308D7F /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC6EE122FC003F00308D7F /* Proxima Nova Alt Light.otf */; };
@@ -173,6 +175,8 @@
 		9BE667D522FCBE47002F61A2 /* RegistrationPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationPasswordViewController.xib; sourceTree = "<group>"; };
 		9BEC536522FD1E5E005F2000 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		9BEC536622FD1E5E005F2000 /* SuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessViewController.xib; sourceTree = "<group>"; };
+		9BFBBAA5232F92AC00366A7E /* ConfigEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigEvent.swift; sourceTree = "<group>"; };
+		9BFBBAA8232F931300366A7E /* ConfigAdjust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigAdjust.swift; sourceTree = "<group>"; };
 		9BFC6EDD22FBFF0600308D7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BFC6EE022FC003F00308D7F /* Proxima Nova Alt Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Bold.otf"; sourceTree = "<group>"; };
 		9BFC6EE122FC003F00308D7F /* Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
@@ -505,6 +509,8 @@
 				9BE667C122FCB48A002F61A2 /* Login.swift */,
 				9BB612F72317D57F00F26762 /* User.swift */,
 				9BB612F92317D5B100F26762 /* UserAttributes.swift */,
+				9BFBBAA5232F92AC00366A7E /* ConfigEvent.swift */,
+				9BFBBAA8232F931300366A7E /* ConfigAdjust.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -684,6 +690,7 @@
 			files = (
 				9BE01195231E473400060B19 /* ChangePasswordViewController.swift in Sources */,
 				9BE667D622FCBE47002F61A2 /* RegistrationPasswordViewController.swift in Sources */,
+				9BFBBAA9232F931300366A7E /* ConfigAdjust.swift in Sources */,
 				9B43497A2306B4C600A19E6B /* AKGFrameworkManager.swift in Sources */,
 				9B4CCB5F22EB12F4003A465C /* LoginViewController.swift in Sources */,
 				9B0D5181230861A4008BA060 /* FloatingButtonViewController.swift in Sources */,
@@ -703,6 +710,7 @@
 				9BFC6F2122FC0F5800308D7F /* LoadingViewController.swift in Sources */,
 				9B77C4FF231FCDA0006646CD /* ContinueLoginViewController.swift in Sources */,
 				9BBB88CA2322410C00458EB5 /* OTPBindAccountViewController.swift in Sources */,
+				9BFBBAA6232F92AC00366A7E /* ConfigEvent.swift in Sources */,
 				9BFE116D230D71EE00379A36 /* LogoutViewController.swift in Sources */,
 				9B8DCC38232A6A2000313E05 /* InAppPurchaseHandler.swift in Sources */,
 				9BEC536722FD1E5E005F2000 /* SuccessViewController.swift in Sources */,

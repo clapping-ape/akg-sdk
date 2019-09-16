@@ -29,7 +29,19 @@ public class AKGDelegateManager: NSObject {
         self.applicationDelegate = delegate
         DataManager.sharedInstance.setProvider(provider: provider)
         
-        let adjustConfig = ADJConfig.init(appToken: "y1t3z228xxj4", environment: ADJEnvironmentSandbox)
-        Adjust.appDidLaunch(adjustConfig)
+        self.configAdjust()
+    }
+    
+    private func configAdjust() {
+        APIManager.sharedInstance.sdkConfigAPI(callBack: { (adjust) in
+            if adjust != nil {
+                DataManager.sharedInstance.setAdjustConfig(config: adjust!)
+                
+                let adjustConfig = ADJConfig.init(appToken: (adjust?.app_token!)!, environment: ADJEnvironmentSandbox)
+                Adjust.appDidLaunch(adjustConfig)
+            }
+        }) { (message) in
+            
+        }
     }
 }

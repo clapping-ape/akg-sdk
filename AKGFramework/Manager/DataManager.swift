@@ -47,4 +47,15 @@ class DataManager {
         return UserDefaults.standard.value(forKey: "AUTH_PROVIDER_USERDEFAULTS") as? String ?? ""
     }
     
+    func setAdjustConfig(config: ConfigAdjust) {
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: config)
+        UserDefaults.standard.set(encodedData, forKey: "ADJUST_CONFIG_USERDEFAULTS")
+    }
+    
+    func getAdjustConfig() -> ConfigAdjust {
+        let data = UserDefaults.standard.data(forKey: "ADJUST_CONFIG_USERDEFAULTS")
+        let adjust = NSKeyedUnarchiver.unarchiveObject(with: data!) as? ConfigAdjust
+        return adjust!
+    }
+    
 }
