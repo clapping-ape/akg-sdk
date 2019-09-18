@@ -39,6 +39,7 @@ extension NetworkRequest {
         }
         
         print("URL: ", Constant.BaseURL+route)
+        print("Auth Token: ", DataManager.sharedInstance.getAuthToken())
         print("Body: ", params ?? "")
         
         let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
@@ -59,8 +60,11 @@ extension NetworkRequest {
             if let meta = json["meta"] as? [String:Any]? ?? [:] {
                 if let status = meta["status"] as? Bool? ?? false {
                     if status {
-                        if let data = json["data"] as? [String:Any]? {
-                            successBlock(data ?? [:])
+                        let data = json["data"]
+                        if ((data as? [String:Any]?) != nil) {
+                            successBlock(data as! [String : Any])
+                        }else if ((data as? Array<Any>?) != nil) {
+                            successBlock(json)
                         }else{
                             successBlock([:])
                         }

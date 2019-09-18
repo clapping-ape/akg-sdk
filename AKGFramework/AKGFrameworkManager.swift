@@ -37,9 +37,20 @@ public class AKGFrameworkManager {
         viewController.add(FloatingButtonViewController())
     }
     
-    public func payWithInAppPurchase(viewController: UIViewController!) {
+    public func getProductList(products: @escaping ([Product]) -> Void, error: @escaping (String) -> Void) {
         
-        InAppPurchaseHandler.sharedInstance.setProductIds(ids: ["com.clappingape.akg1"])
+        APIManager.sharedInstance.productListAPI(callBack: { (product) in
+            products(product)
+            
+        }) { (message) in
+            error(message)
+        }
+        
+    }
+    
+    public func payWithInAppPurchase(product: Product!) {
+        
+        InAppPurchaseHandler.sharedInstance.setProductIds(ids: [product.sku!])
         
         InAppPurchaseHandler.sharedInstance.fetchAvailableProducts { (products) in
             
@@ -93,4 +104,5 @@ public class AKGFrameworkManager {
 //    @available(iOS 11.0, *)
 //    public func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
 //    }
+
 }

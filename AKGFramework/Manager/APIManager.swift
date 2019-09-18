@@ -20,9 +20,8 @@ class APIManager {
         let adjustEventList = configAdjust.events
         for event in adjustEventList! {
             if event.name! == name {
-                
                 Adjust.trackEvent(ADJEvent.init(eventToken: event.token!))
-                
+                break
             }
         }
         
@@ -271,6 +270,31 @@ class APIManager {
                 }else{
                     callBack(nil)
                 }
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
+    func productListAPI(callBack: @escaping ([Product]) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.callAPI(
+            method: "GET",
+            route: Constant.RouteProductList+DataManager.sharedInstance.getProvider(),
+            withAuthorization: true,
+            params: nil,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                var productCallback: [Product] = []
+                let productList = responseObject["data"] as? Array<Any> ?? []
+                
+                for product in productList {
+                    let productObj = Product.init(data: product as! [String : Any])
+                    productCallback.append(productObj)
+                }
+                
+                callBack(productCallback)
                 
         }) { (errorMessage: String) in
             message(errorMessage)

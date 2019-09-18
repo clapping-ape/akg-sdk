@@ -138,6 +138,10 @@ extension InAppPurchaseHandler: SKProductsRequestDelegate, SKPaymentTransactionO
                     if let complition = self.purchaseProductComplition {
                         complition(InAppPurchaseHandlerAlertType.purchased, self.productToPurchase, trans)
                         
+                        let receiptFileURL = Bundle.main.appStoreReceiptURL
+                        let receiptData = try? Data(contentsOf: receiptFileURL!)
+                        let receiptString = receiptData?.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+                        
                         APIManager.sharedInstance.paymentAPI(param: ["purchase_token":trans.transactionIdentifier!,
                                                                      "platform": "ios",
                                                                      "date": Int(NSDate().timeIntervalSince1970),
@@ -147,30 +151,28 @@ extension InAppPurchaseHandler: SKProductsRequestDelegate, SKPaymentTransactionO
                                                                      "package_name": "com.clappingape.akg",
                                                                      "sku": self.productToPurchase!.productIdentifier,
                                                                      "application_name": "AKG Host",
-                                                                     "application_version": "1.0.0"
+                                                                     "application_version": "1.0.0",
+                                                                     "receipt_data": receiptString!
                             ], callBack: { (login) in
-                                
+
                                 let configAdjust = DataManager.sharedInstance.getAdjustConfig()
                                 let adjustEventList = configAdjust.events
                                 for event in adjustEventList! {
                                     if event.name! == "payment_success" {
-                                        
                                         let event = ADJEvent.init(eventToken: event.token!)
                                         event?.setRevenue(Double(truncating: self.productToPurchase!.price), currency: "IDR")
                                         Adjust.trackEvent(event)
-                                        
-                                        
+                                        break
                                     }
                                 }
-                                
+
                         }) { (message) in
                             let configAdjust = DataManager.sharedInstance.getAdjustConfig()
                             let adjustEventList = configAdjust.events
                             for event in adjustEventList! {
                                 if event.name! == "payment_failed" {
-                                    
                                     Adjust.trackEvent(ADJEvent.init(eventToken: event.token!))
-                                    
+                                    break
                                 }
                             }
                         }
