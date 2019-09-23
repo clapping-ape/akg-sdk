@@ -10,10 +10,14 @@ import UIKit
 
 class ContinueLoginViewController: BaseViewController {
 
+    private var countDown = 5
+    @IBOutlet weak var countDownButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCountDown), userInfo: nil, repeats: true)
+
     }
     
     init() {
@@ -27,7 +31,24 @@ class ContinueLoginViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    @objc func updateCountDown() {
+        if(countDown > 0) {
+            self.countDownButton.setTitle("Continue in \(countDown)s", for: .normal)
+            countDown = countDown - 1
+        } else {
+            self.remove()
+        }
+    }
 
+    @IBAction func countDownButton(_ sender: Any) {
+        self.remove()
+    }
+    
+    @IBAction func chooseAccountButton(_ sender: Any) {
+        self.remove()
+        self.getTopMostViewController()?.add(LoginViewController())
+    }
+    
     /*
     // MARK: - Navigation
 

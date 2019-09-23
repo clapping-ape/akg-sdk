@@ -301,4 +301,30 @@ class APIManager {
         }
         
     }
+    
+    func bannersAPI(callBack: @escaping ([Banner]) -> Void, message: @escaping (String) -> Void) {
+        
+        NetworkRequest.sharedInstance.callAPI(
+            method: "GET",
+            route: Constant.RouteBanners+DataManager.sharedInstance.getProvider(),
+            withAuthorization: false,
+            params: nil,
+            successBlock: { (responseObject: [String : Any]) in
+                
+                var bannerCallback: [Banner] = []
+                let bannerList = responseObject["data"] as? Array<Any> ?? []
+                
+                for banner in bannerList {
+                    let bannerObj = Banner.init(data: banner as! [String : Any])
+                    bannerCallback.append(bannerObj)
+                }
+                
+                callBack(bannerCallback)
+                
+        }) { (errorMessage: String) in
+            message(errorMessage)
+        }
+        
+    }
+    
 }

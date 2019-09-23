@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContinueLoginViewController" customModule="AKGFramework" customModuleProvider="target">
             <connections>
+                <outlet property="countDownButton" destination="jLp-p1-pNF" id="GKI-n5-iCe"/>
                 <outlet property="view" destination="avr-8q-M8w" id="HL9-GF-mJv"/>
             </connections>
         </placeholder>
@@ -29,13 +30,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQW-r4-DZZ">
-                    <rect key="frame" x="56" y="302" width="302" height="302"/>
+                    <rect key="frame" x="56" y="258" width="302" height="302"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgHome" translatesAutoresizingMaskIntoConstraints="NO" id="OIj-DK-vqW">
                             <rect key="frame" x="0.0" y="0.0" width="302" height="302"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome +62812577719," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zet-ML-zI0">
-                            <rect key="frame" x="32" y="104" width="101.5" height="11"/>
+                            <rect key="frame" x="32.000000000000007" y="104" width="101.66666666666669" height="11"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="9"/>
                             <color key="textColor" red="0.5450980392" green="0.5568627451" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -54,7 +55,7 @@
                                 <constraint firstAttribute="height" constant="30" id="K3n-3r-3st"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
-                            <state key="normal" title="Continue in 1s">
+                            <state key="normal">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
@@ -63,6 +64,9 @@
                                     <integer key="value" value="15"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="countDownButton:" destination="-1" eventType="touchUpInside" id="Jos-It-YiZ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQt-zC-D4s">
                             <rect key="frame" x="32" y="202" width="238" height="30"/>
@@ -71,7 +75,7 @@
                                 <constraint firstAttribute="height" constant="30" id="n01-bK-lhc"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
-                            <state key="normal" title="Sign in with Google Play">
+                            <state key="normal" title="Choose Account">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
@@ -80,6 +84,9 @@
                                     <integer key="value" value="15"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="chooseAccountButton:" destination="-1" eventType="touchUpInside" id="XLt-JN-Xsl"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with another account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amc-kS-rFh">
                             <rect key="frame" x="99" y="184" width="104" height="10"/>
@@ -88,21 +95,21 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcA-cE-v7X">
-                            <rect key="frame" x="32" y="188.5" width="59" height="1"/>
+                            <rect key="frame" x="32" y="188.66666666666669" width="59" height="1"/>
                             <color key="backgroundColor" red="0.6705882353" green="0.67450980390000004" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="td4-4f-AGP"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3K-lt-PRg">
-                            <rect key="frame" x="211" y="188.5" width="59" height="1"/>
+                            <rect key="frame" x="211" y="188.66666666666669" width="59" height="1"/>
                             <color key="backgroundColor" red="0.6705882353" green="0.67450980390000004" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Kpt-XT-RwI"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UID : 20182874108b3147839" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGz-IH-7S7">
-                            <rect key="frame" x="32" y="119" width="119.5" height="11"/>
+                            <rect key="frame" x="32.000000000000007" y="119" width="119.66666666666669" height="11"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="9"/>
                             <color key="textColor" red="0.5450980392" green="0.5568627451" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -147,7 +154,7 @@
             </subviews>
             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="eQW-r4-DZZ" firstAttribute="centerY" secondItem="0MV-ZD-pNZ" secondAttribute="centerY" id="n6y-Tm-ktG"/>
+                <constraint firstItem="eQW-r4-DZZ" firstAttribute="centerY" secondItem="0MV-ZD-pNZ" secondAttribute="centerY" constant="-44" id="n6y-Tm-ktG"/>
                 <constraint firstItem="eQW-r4-DZZ" firstAttribute="centerX" secondItem="0MV-ZD-pNZ" secondAttribute="centerX" id="wH6-ps-a66"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="0MV-ZD-pNZ"/>

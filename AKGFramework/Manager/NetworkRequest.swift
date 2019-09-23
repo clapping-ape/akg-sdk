@@ -13,6 +13,7 @@ class NetworkRequest {
     
     private init() {}
     static let sharedInstance = NetworkRequest()
+    let imageCache = NSCache<NSString, UIImage>()
     
     typealias SuccessHandlerObject = (_ responseObject: [String: Any]) -> Void
     typealias SuccessHandlerArray = (_ responseObject: Array<Any>) -> Void
@@ -43,11 +44,13 @@ extension NetworkRequest {
         print("Body: ", params ?? "")
         
         let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            
             guard let data = data else {
                 successBlock([:])
                 failureBlock(error?.localizedDescription ?? "Error: No response data from server.")
                 return
             }
+            
             guard let json = try? (JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]) else {
                 successBlock([:])
                 failureBlock(error?.localizedDescription ?? "Error: Response object is not json format.")
@@ -85,4 +88,36 @@ extension NetworkRequest {
         })
         task.resume()
     }
+    
+    func getImageURL(StringURL: String, successBlock: @escaping (_ responseObject: UIImage) -> Void, failureBlock:@escaping FailHandler) {
+        
+        let imageURL = URL(string: StringURL)
+        
+        if let cachedImage = self.imageCache.object(forKey: imageURL!.absoluteString as NSString) {
+            successBlock(cachedImage)
+            
+        }else {
+            
+            let task = URLSession.shared.dataTask(with: imageURL!) { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+                
+                guard let data = data else {
+                    failureBlock(error?.localizedDescription ?? "Error: No response data from server.")
+                    return
+                }
+                
+                if error == nil {
+                    let loadedImage = UIImage(data: data)
+                    self.imageCache.setObject(loadedImage!, forKey: imageURL!.absoluteString as NSString)
+                    successBlock(loadedImage!)
+                }else{
+                    failureBlock(error!.localizedDescription)
+                }
+                
+            }
+            task.resume()
+            
+        }
+        
+    }
+    
 }

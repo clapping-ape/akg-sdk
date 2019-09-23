@@ -14,6 +14,11 @@
 		9B0D518D23087755008BA060 /* AKGFontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D518C23087755008BA060 /* AKGFontManager.swift */; };
 		9B0F6359232A2F7000A4BA2C /* VerificationBindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F6357232A2F7000A4BA2C /* VerificationBindAccountViewController.swift */; };
 		9B0F635A232A2F7000A4BA2C /* VerificationBindAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0F6358232A2F7000A4BA2C /* VerificationBindAccountViewController.xib */; };
+		9B1031EA2338C20B001D72C4 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1031E82338C20B001D72C4 /* BannerViewController.swift */; };
+		9B1031EB2338C20B001D72C4 /* BannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1031E92338C20B001D72C4 /* BannerViewController.xib */; };
+		9B1031F02338C3B3001D72C4 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1031EE2338C3B3001D72C4 /* BannerCollectionViewCell.swift */; };
+		9B1031F12338C3B3001D72C4 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1031EF2338C3B3001D72C4 /* BannerCollectionViewCell.xib */; };
+		9B1031F32338CB42001D72C4 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1031F22338CB42001D72C4 /* Banner.swift */; };
 		9B43497A2306B4C600A19E6B /* AKGFrameworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */; };
 		9B4349912306DFF300A19E6B /* AKGDelegateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */; };
 		9B4CCB1722EADDA6003A465C /* AKGFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4CCB0D22EADDA6003A465C /* AKGFramework.framework */; };
@@ -119,6 +124,11 @@
 		9B0D518C23087755008BA060 /* AKGFontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGFontManager.swift; sourceTree = "<group>"; };
 		9B0F6357232A2F7000A4BA2C /* VerificationBindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationBindAccountViewController.swift; sourceTree = "<group>"; };
 		9B0F6358232A2F7000A4BA2C /* VerificationBindAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationBindAccountViewController.xib; sourceTree = "<group>"; };
+		9B1031E82338C20B001D72C4 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		9B1031E92338C20B001D72C4 /* BannerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerViewController.xib; sourceTree = "<group>"; };
+		9B1031EE2338C3B3001D72C4 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B1031EF2338C3B3001D72C4 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		9B1031F22338CB42001D72C4 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		9B4349792306B4C600A19E6B /* AKGFrameworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGFrameworkManager.swift; sourceTree = "<group>"; };
 		9B4349902306DFF300A19E6B /* AKGDelegateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKGDelegateManager.swift; sourceTree = "<group>"; };
 		9B4CCB0D22EADDA6003A465C /* AKGFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AKGFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +266,17 @@
 			path = "Floating Button";
 			sourceTree = "<group>";
 		};
+		9B1031E62338C1F3001D72C4 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				9B1031E92338C20B001D72C4 /* BannerViewController.xib */,
+				9B1031E82338C20B001D72C4 /* BannerViewController.swift */,
+				9B1031EF2338C3B3001D72C4 /* BannerCollectionViewCell.xib */,
+				9B1031EE2338C3B3001D72C4 /* BannerCollectionViewCell.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
 		9B4CCB0322EADDA6003A465C = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +301,7 @@
 		9B4CCB0F22EADDA6003A465C /* AKGFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9B1031E62338C1F3001D72C4 /* Banner */,
 				9B77C4FB231FCD53006646CD /* Continue Login */,
 				9BBB88C4232240D600458EB5 /* Binding Account */,
 				9B94C64D230D61FA009BAB3C /* Pop Up in Game */,
@@ -514,6 +536,7 @@
 				9BFBBAA5232F92AC00366A7E /* ConfigEvent.swift */,
 				9BFBBAA8232F931300366A7E /* ConfigAdjust.swift */,
 				9B7DF2CF2330BF2700510CFB /* Product.swift */,
+				9B1031F22338CB42001D72C4 /* Banner.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -649,6 +672,8 @@
 				9B4CCB2822EAE1FD003A465C /* AKGFramework.podspec in Resources */,
 				9BFC6EEC22FC003F00308D7F /* Proxima Nova Bold.otf in Resources */,
 				9BB612F12317BA4C00F26762 /* InfoAccountViewController.xib in Resources */,
+				9B1031EB2338C20B001D72C4 /* BannerViewController.xib in Resources */,
+				9B1031F12338C3B3001D72C4 /* BannerCollectionViewCell.xib in Resources */,
 				9BFC6EDE22FBFF0600308D7F /* Assets.xcassets in Resources */,
 				9BFC6EE922FC003F00308D7F /* Proxima Nova Alt Light.otf in Resources */,
 				9BFC6EEF22FC003F00308D7F /* Proxima Nova Thin.otf in Resources */,
@@ -697,6 +722,7 @@
 				9B43497A2306B4C600A19E6B /* AKGFrameworkManager.swift in Sources */,
 				9B4CCB5F22EB12F4003A465C /* LoginViewController.swift in Sources */,
 				9B0D5181230861A4008BA060 /* FloatingButtonViewController.swift in Sources */,
+				9B1031EA2338C20B001D72C4 /* BannerViewController.swift in Sources */,
 				9BFC6F3D22FC8FAC00308D7F /* Constant.swift in Sources */,
 				9B4CCB2F22EAEB35003A465C /* BaseView.swift in Sources */,
 				9BE667C822FCB70B002F61A2 /* DataManager.swift in Sources */,
@@ -715,6 +741,7 @@
 				9B77C4FF231FCDA0006646CD /* ContinueLoginViewController.swift in Sources */,
 				9BBB88CA2322410C00458EB5 /* OTPBindAccountViewController.swift in Sources */,
 				9BFBBAA6232F92AC00366A7E /* ConfigEvent.swift in Sources */,
+				9B1031F02338C3B3001D72C4 /* BannerCollectionViewCell.swift in Sources */,
 				9BFE116D230D71EE00379A36 /* LogoutViewController.swift in Sources */,
 				9B8DCC38232A6A2000313E05 /* InAppPurchaseHandler.swift in Sources */,
 				9BEC536722FD1E5E005F2000 /* SuccessViewController.swift in Sources */,
@@ -726,6 +753,7 @@
 				9BB612F52317C36000F26762 /* BindAccountViewController.swift in Sources */,
 				9B74549B2305610000DBFD77 /* ForgotPasswordPresenter.swift in Sources */,
 				9B0D518D23087755008BA060 /* AKGFontManager.swift in Sources */,
+				9B1031F32338CB42001D72C4 /* Banner.swift in Sources */,
 				9B4349912306DFF300A19E6B /* AKGDelegateManager.swift in Sources */,
 				9BFC6F3322FC2EB200308D7F /* Meta.swift in Sources */,
 				9BFC6F3B22FC7EC000308D7F /* NetworkRequest.swift in Sources */,
@@ -806,7 +834,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -864,7 +892,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -958,6 +986,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7GMW42N3T;
 				INFOPLIST_FILE = AKGFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -976,6 +1005,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7GMW42N3T;
 				INFOPLIST_FILE = AKGFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

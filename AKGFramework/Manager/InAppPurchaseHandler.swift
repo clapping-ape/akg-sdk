@@ -136,6 +136,7 @@ extension InAppPurchaseHandler: SKProductsRequestDelegate, SKPaymentTransactionO
                     log("Product purchase done")
                     SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
                     if let complition = self.purchaseProductComplition {
+                        
                         complition(InAppPurchaseHandlerAlertType.purchased, self.productToPurchase, trans)
                         
                         let receiptFileURL = Bundle.main.appStoreReceiptURL
@@ -143,7 +144,7 @@ extension InAppPurchaseHandler: SKProductsRequestDelegate, SKPaymentTransactionO
                         let receiptString = receiptData?.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
                         
                         APIManager.sharedInstance.paymentAPI(param: ["purchase_token":trans.transactionIdentifier!,
-                                                                     "platform": "ios",
+                                                                     "platform": Constant.OperatingSystem,
                                                                      "date": Int(NSDate().timeIntervalSince1970),
                                                                      "username": "",
                                                                      "channel": "Apple Pay",

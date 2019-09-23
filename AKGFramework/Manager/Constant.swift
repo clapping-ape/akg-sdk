@@ -30,6 +30,7 @@ struct Constant {
         static let Payment = "/order/transactions"
         static let SDKConfig = "/sdk_configuration/ios/"
         static let ProductList = "/game_products/ios/"
+        static let Banners = "/banners/ios/"
     }
     
     struct Notification {
@@ -54,5 +55,6 @@ struct Constant {
     static let RoutePayment = Routes.Payment
     static let RouteSDKConfig = Routes.SDKConfig
     static let RouteProductList = Routes.ProductList
+    static let RouteBanners = Routes.Banners
     
 }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BannerViewController" customModule="AKGFramework" customModuleProvider="target">
+            <connections>
+                <outlet property="bannerCollectionView" destination="IQi-fx-2Pn" id="Mdy-1W-voh"/>
+                <outlet property="view" destination="OVy-rI-AFX" id="EhC-PQ-4Yd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OVy-rI-AFX">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IQi-fx-2Pn">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Nhh-SK-Tgi">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fYL-oi-mWa"/>
+                        <outlet property="delegate" destination="-1" id="tIV-Wl-YW5"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4h-j6-HDV">
+                    <rect key="frame" x="354" y="52" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="0JP-bx-HkR"/>
+                        <constraint firstAttribute="width" constant="44" id="rSm-xE-hbq"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="btnX"/>
+                    <connections>
+                        <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="Xm0-kc-DJC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="IQi-fx-2Pn" firstAttribute="leading" secondItem="JwE-Ee-kDo" secondAttribute="leading" id="OJX-S7-YrC"/>
+                <constraint firstItem="JwE-Ee-kDo" firstAttribute="trailing" secondItem="B4h-j6-HDV" secondAttribute="trailing" constant="16" id="Oio-n9-a6J"/>
+                <constraint firstItem="JwE-Ee-kDo" firstAttribute="bottom" secondItem="IQi-fx-2Pn" secondAttribute="bottom" id="Xhb-hG-xxl"/>
+                <constraint firstItem="IQi-fx-2Pn" firstAttribute="top" secondItem="JwE-Ee-kDo" secondAttribute="top" id="qhN-TQ-xkx"/>
+                <constraint firstItem="B4h-j6-HDV" firstAttribute="top" secondItem="JwE-Ee-kDo" secondAttribute="top" constant="8" id="sZY-Ux-xCv"/>
+                <constraint firstItem="JwE-Ee-kDo" firstAttribute="trailing" secondItem="IQi-fx-2Pn" secondAttribute="trailing" id="sfg-JB-UGE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="JwE-Ee-kDo"/>
+            <point key="canvasLocation" x="100.00000000000001" y="154.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btnX" width="15" height="15"/>
+    </resources>
+</document>

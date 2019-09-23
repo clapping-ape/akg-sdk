@@ -33,6 +33,14 @@ public class AKGFrameworkManager {
         viewController.add(LoginViewController())
     }
     
+    public func showSecondLoginView(viewController: UIViewController!) {
+        viewController.add(ContinueLoginViewController())
+    }
+    
+    public func showBannerView(viewController: UIViewController!) {
+        viewController.add(BannerViewController())
+    }
+    
     public func showFloatingAKGButton(viewController: UIViewController!) {
         viewController.add(FloatingButtonViewController())
     }

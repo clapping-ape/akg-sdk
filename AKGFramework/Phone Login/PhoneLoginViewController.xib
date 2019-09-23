@@ -29,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPN-e9-3qR">
-                    <rect key="frame" x="56" y="302" width="302" height="302"/>
+                    <rect key="frame" x="56" y="253" width="302" height="302"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="mhN-mA-GFI">
                             <rect key="frame" x="0.0" y="0.0" width="302" height="302"/>
@@ -178,7 +178,7 @@
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="LPN-e9-3qR" firstAttribute="centerX" secondItem="04e-nJ-bip" secondAttribute="centerX" id="XQm-6B-gRI"/>
-                <constraint firstItem="LPN-e9-3qR" firstAttribute="centerY" secondItem="04e-nJ-bip" secondAttribute="centerY" id="ulF-5O-BgP"/>
+                <constraint firstItem="LPN-e9-3qR" firstAttribute="centerY" secondItem="lxl-pD-7ER" secondAttribute="centerY" constant="-44" id="ulF-5O-BgP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="04e-nJ-bip"/>
             <connections>

@@ -31,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jr5-Wg-I2l">
-                    <rect key="frame" x="56" y="302" width="302" height="302"/>
+                    <rect key="frame" x="56" y="258" width="302" height="302"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="kvi-wR-iAc">
                             <rect key="frame" x="0.0" y="0.0" width="302" height="302"/>
@@ -189,7 +189,7 @@
             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="Jr5-Wg-I2l" firstAttribute="centerY" secondItem="Bhx-hG-qgM" secondAttribute="centerY" id="LIq-ah-XUa"/>
+                <constraint firstItem="Jr5-Wg-I2l" firstAttribute="centerY" secondItem="Bhx-hG-qgM" secondAttribute="centerY" constant="-44" id="LIq-ah-XUa"/>
                 <constraint firstItem="Jr5-Wg-I2l" firstAttribute="centerX" secondItem="Bhx-hG-qgM" secondAttribute="centerX" id="P96-yf-gZH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Bhx-hG-qgM"/>

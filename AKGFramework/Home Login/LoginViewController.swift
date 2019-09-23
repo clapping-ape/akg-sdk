@@ -11,14 +11,15 @@ import GoogleSignIn
 import FBSDKLoginKit
 
 public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDelegate, GIDSignInDelegate {
-    
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var googlePlayButton: UIButton!
     @IBOutlet weak var guestButton: UIButton!
     @IBOutlet weak var phoneButton: UIButton!
     
     private var authProvider: String! = ""
+    
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,25 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
         
         LoginPresenter.sharedInstance.attachView(view: self)
         
+        
+        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft {
+            print("ORIENT: landscape left")
+        } else if UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+            print("ORIENT: landscape right")
+        } else if UIDevice.current.orientation == UIDeviceOrientation.portrait {
+            print("ORIENT: portrait")
+        } else if UIDevice.current.orientation == UIDeviceOrientation.portraitUpsideDown {
+            print("ORIENT: portrait down")
+        }
+        
+        if UIDevice.current.orientation.isLandscape {
+            print("ORIENT: landscape left")
+        }
+        
+        if UIDevice.current.orientation.isPortrait {
+            print("ORIENT: portrait")
+        }
+        
     }
 
     public init() {
@@ -37,6 +57,25 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
         super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
 
+        
+//        self.containerView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        let margins = view.layoutMarginsGuide
+//        NSLayoutConstraint.activate([
+//            self.containerView.centerYAnchor.constraint(equalTo: margins.centerYAnchor)
+//            ])
+//
+//        if #available(iOS 11, *) {
+//            let guide = view.safeAreaLayoutGuide
+//            NSLayoutConstraint.activate([
+//                self.containerView.centerYAnchor.constraint(equalToSystemSpacingBelow: guide.centerYAnchor, multiplier: 1.0)
+//                ])
+//
+//        } else {
+//            let standardSpacing: CGFloat = -44
+//            NSLayoutConstraint.activate([
+//                self.containerView.centerYAnchor.constraint(equalTo: self.containerView.centerYAnchor, constant: standardSpacing)])
+//        }
         
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
@@ -98,11 +137,7 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
                      "operating_system": Constant.OperatingSystem
                     ])
             }
-            
-            
-            
         }
-        
     }
     
     @IBAction func googlePlayButton(_ sender: Any) {
@@ -127,6 +162,13 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
         self.getTopMostViewController()?.add(PhoneLoginViewController())
     }
     
+    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+        } else {
+            print("Portrait")
+        }
+    }
     
     // MARK: - Presenter Delegate
     internal func startLoading() {

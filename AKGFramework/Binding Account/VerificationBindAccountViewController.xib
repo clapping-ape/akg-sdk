@@ -31,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0J-0r-5mI">
-                    <rect key="frame" x="56" y="302" width="302" height="302"/>
+                    <rect key="frame" x="56" y="258" width="302" height="302"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgBox" translatesAutoresizingMaskIntoConstraints="NO" id="C8G-Kg-FgN">
                             <rect key="frame" x="0.0" y="0.0" width="302" height="302"/>
@@ -126,7 +126,7 @@
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="A0J-0r-5mI" firstAttribute="centerX" secondItem="1T5-MS-OU0" secondAttribute="centerX" id="X2I-HO-CbP"/>
-                <constraint firstItem="A0J-0r-5mI" firstAttribute="centerY" secondItem="1T5-MS-OU0" secondAttribute="centerY" id="sW2-6K-6EF"/>
+                <constraint firstItem="A0J-0r-5mI" firstAttribute="centerY" secondItem="1T5-MS-OU0" secondAttribute="centerY" constant="-44" id="sW2-6K-6EF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="1T5-MS-OU0"/>
             <connections>

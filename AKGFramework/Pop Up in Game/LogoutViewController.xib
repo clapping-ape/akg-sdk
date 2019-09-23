@@ -31,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyR-eI-Dvw">
-                    <rect key="frame" x="56" y="302" width="302" height="302"/>
+                    <rect key="frame" x="56" y="258" width="302" height="302"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgBox" translatesAutoresizingMaskIntoConstraints="NO" id="DGa-K6-A9q">
                             <rect key="frame" x="0.0" y="0.0" width="302" height="302"/>
@@ -131,7 +131,7 @@
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="SyR-eI-Dvw" firstAttribute="centerX" secondItem="Tk5-5B-FiH" secondAttribute="centerX" id="oiZ-ut-hV3"/>
-                <constraint firstItem="SyR-eI-Dvw" firstAttribute="centerY" secondItem="Tk5-5B-FiH" secondAttribute="centerY" id="omP-ox-RKx"/>
+                <constraint firstItem="SyR-eI-Dvw" firstAttribute="centerY" secondItem="Tk5-5B-FiH" secondAttribute="centerY" constant="-44" id="omP-ox-RKx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Tk5-5B-FiH"/>
             <point key="canvasLocation" x="100.00000000000001" y="154.6875"/>
