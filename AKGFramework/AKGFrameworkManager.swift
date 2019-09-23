@@ -34,7 +34,9 @@ public class AKGFrameworkManager {
     }
     
     public func showSecondLoginView(viewController: UIViewController!) {
-        viewController.add(ContinueLoginViewController())
+        if DataManager.sharedInstance.isLogin() {
+            viewController.add(ContinueLoginViewController())
+        }
     }
     
     public func showBannerView(viewController: UIViewController!) {

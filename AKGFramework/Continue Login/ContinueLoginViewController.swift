@@ -45,8 +45,9 @@ class ContinueLoginViewController: BaseViewController {
     }
     
     @IBAction func chooseAccountButton(_ sender: Any) {
+        DataManager.sharedInstance.clearAllSession()
+        AKGFrameworkManager.sharedInstance.akgDelegate?.akgUserDidLoggedOut!()
         self.remove()
-        self.getTopMostViewController()?.add(LoginViewController())
     }
     
     /*
