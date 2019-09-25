@@ -31,32 +31,12 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
         
         LoginPresenter.sharedInstance.attachView(view: self)
         
-        
-        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft {
-            print("ORIENT: landscape left")
-        } else if UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
-            print("ORIENT: landscape right")
-        } else if UIDevice.current.orientation == UIDeviceOrientation.portrait {
-            print("ORIENT: portrait")
-        } else if UIDevice.current.orientation == UIDeviceOrientation.portraitUpsideDown {
-            print("ORIENT: portrait down")
-        }
-        
-        if UIDevice.current.orientation.isLandscape {
-            print("ORIENT: landscape left")
-        }
-        
-        if UIDevice.current.orientation.isPortrait {
-            print("ORIENT: portrait")
-        }
-        
     }
 
     public init() {
         
         super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-
         
 //        self.containerView.translatesAutoresizingMaskIntoConstraints = false
 //
@@ -160,14 +140,6 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
 
         self.remove()
         self.getTopMostViewController()?.add(PhoneLoginViewController())
-    }
-    
-    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        if UIDevice.current.orientation.isLandscape {
-            print("Landscape")
-        } else {
-            print("Portrait")
-        }
     }
     
     // MARK: - Presenter Delegate

@@ -67,7 +67,7 @@ class RegistrationPasswordViewController: BaseViewController, RegisterView {
                     "phone_number": "0\(self.phoneNumber!)",
                     "password": self.passwordTextField.text!,
                     "auth_provider": "akg",
-                    "game_provider": "mobile-legends",
+                    "game_provider": DataManager.sharedInstance.getProvider(),
                     "device_id": UtilityManager.sharedInstance.deviceIdentifier(),
                     "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
                     "operating_system": "iOS"])

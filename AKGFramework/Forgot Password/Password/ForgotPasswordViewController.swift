@@ -67,7 +67,7 @@ class ForgotPasswordViewController: BaseViewController, ForgotPasswordView {
                     "phone_number": "0\(self.phoneNumber!)",
                     "password": self.passwordTextField.text!,
                     "auth_provider": "akg",
-                    "game_provider": "mobile-legends"])
+                    "game_provider": DataManager.sharedInstance.getProvider()])
                 
             }
         }

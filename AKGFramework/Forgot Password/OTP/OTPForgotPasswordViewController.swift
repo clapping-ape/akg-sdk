@@ -53,7 +53,7 @@ class OTPForgotPasswordViewController: BaseViewController, ForgotPasswordView {
                 ForgotPasswordPresenter.sharedInstance.postSendOTPAPI(param: [
                     "phone_number": "0\(self.phoneTextField.text!)",
                     "auth_provider": "akg",
-                    "game_provider": "mobile-legends",
+                    "game_provider": DataManager.sharedInstance.getProvider(),
                     "otp_type": "forgot_password"])
             }else{
                 
@@ -65,7 +65,7 @@ class OTPForgotPasswordViewController: BaseViewController, ForgotPasswordView {
                 ForgotPasswordPresenter.sharedInstance.postCheckOTPAPI(param: [
                     "phone_number": "0\(self.phoneTextField.text!)",
                     "auth_provider": "akg",
-                    "game_provider": "mobile-legends",
+                    "game_provider": DataManager.sharedInstance.getProvider(),
                     "otp_type": "forgot_password",
                     "otp_code": self.otpTextField.text!])
             }else{
@@ -80,7 +80,7 @@ class OTPForgotPasswordViewController: BaseViewController, ForgotPasswordView {
         ForgotPasswordPresenter.sharedInstance.postSendOTPAPI(param: [
             "phone_number": "0\(self.phoneTextField.text!)",
             "auth_provider": "akg",
-            "game_provider": "mobile-legends",
+            "game_provider": DataManager.sharedInstance.getProvider(),
             "otp_type": "forgot_password"])
     }
     
