@@ -15,14 +15,8 @@ public class BaseViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        if UIDevice.current.orientation.isLandscape {
-            print("ORIENT: landscape")
-//            self.view.frame = CGRect.init(x: 0, y: 0, width: self.view.bounds.size.height, height: self.view.bounds.size.width)
-        }
-        else {
-            print("ORIENT: portrait")
-            
-        }
+        self.view.frame = CGRect.init(x: 0, y: 0, width: (self.getTopMostViewController()?.view.bounds.size.width)!, height: (self.getTopMostViewController()?.view.bounds.size.height)!)
+        
     }
     
     public func getTopMostViewController() -> UIViewController? {

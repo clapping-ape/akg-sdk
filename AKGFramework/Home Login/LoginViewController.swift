@@ -16,7 +16,6 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var googlePlayButton: UIButton!
     @IBOutlet weak var guestButton: UIButton!
-    @IBOutlet weak var phoneButton: UIButton!
     
     private var authProvider: String! = ""
     
@@ -26,8 +25,7 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
         
         self.facebookButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 32, bottom: 4, right: 4)
         self.googlePlayButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 32, bottom: 4, right: 4)
-        self.guestButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
-        self.phoneButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
+        self.guestButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 16, bottom: 4, right: 4)
         
         LoginPresenter.sharedInstance.attachView(view: self)
         
@@ -134,12 +132,6 @@ public class LoginViewController: BaseViewController, LoginView, GIDSignInUIDele
              "phone_model": UtilityManager.sharedInstance.getDeviceModel(),
              "operating_system": Constant.OperatingSystem
             ])
-    }
-    
-    @IBAction func phoneButton(_ sender: Any) {
-
-        self.remove()
-        self.getTopMostViewController()?.add(PhoneLoginViewController())
     }
     
     // MARK: - Presenter Delegate

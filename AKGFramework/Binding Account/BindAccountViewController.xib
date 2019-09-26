@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,6 @@
             <connections>
                 <outlet property="facebookButton" destination="0Tj-zl-pCw" id="H82-fT-h5H"/>
                 <outlet property="googlePlayButton" destination="z4v-I5-ntZ" id="Pnc-sn-cgG"/>
-                <outlet property="phoneButton" destination="iU1-0k-Tra" id="ZIt-kq-YzO"/>
                 <outlet property="view" destination="VUh-Iz-UnO" id="NgU-ci-U9G"/>
             </connections>
         </placeholder>
@@ -29,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR7-GJ-HVJ">
-                    <rect key="frame" x="56" y="258" width="302" height="302"/>
+                    <rect key="frame" x="56" y="302" width="302" height="302"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgBox" translatesAutoresizingMaskIntoConstraints="NO" id="hi0-RH-yCS">
                             <rect key="frame" x="0.0" y="0.0" width="302" height="302"/>
@@ -110,31 +107,8 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU1-0k-Tra">
-                            <rect key="frame" x="32" y="202" width="115" height="30"/>
-                            <color key="backgroundColor" red="0.27450980390000002" green="0.6588235294" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="0ds-3o-gWv"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="10"/>
-                            <state key="normal" title="Phone Login">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="15"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="phoneButton:" destination="-1" eventType="touchUpInside" id="i9n-Im-cjR"/>
-                            </connections>
-                        </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPhone" translatesAutoresizingMaskIntoConstraints="NO" id="urv-Ec-FGh">
-                            <rect key="frame" x="40" y="206" width="26" height="22"/>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf7-no-X32">
-                            <rect key="frame" x="155" y="202" width="115" height="30"/>
+                            <rect key="frame" x="32" y="202" width="238" height="30"/>
                             <color key="backgroundColor" red="0.81960784310000001" green="0.1647058824" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="Tmq-Gy-Kql"/>
@@ -159,33 +133,26 @@
                         <constraint firstItem="N6h-Pr-jo3" firstAttribute="top" secondItem="fR7-GJ-HVJ" secondAttribute="top" constant="48" id="1LA-8b-oDe"/>
                         <constraint firstAttribute="width" secondItem="fR7-GJ-HVJ" secondAttribute="height" multiplier="1:1" id="1Mv-DD-Atk"/>
                         <constraint firstItem="6nR-C1-f8D" firstAttribute="top" secondItem="z4v-I5-ntZ" secondAttribute="bottom" constant="8" id="1RV-IO-ruH"/>
-                        <constraint firstItem="urv-Ec-FGh" firstAttribute="top" secondItem="iU1-0k-Tra" secondAttribute="top" constant="4" id="2O8-uO-cAy"/>
                         <constraint firstItem="uEo-XD-ccN" firstAttribute="leading" secondItem="0Tj-zl-pCw" secondAttribute="leading" constant="16" id="2XB-hH-KvS"/>
                         <constraint firstItem="PGj-4c-RNU" firstAttribute="centerY" secondItem="N6h-Pr-jo3" secondAttribute="centerY" id="36R-AG-8fy"/>
                         <constraint firstAttribute="width" constant="302" id="3As-As-yt1"/>
                         <constraint firstItem="N6h-Pr-jo3" firstAttribute="leading" secondItem="fR7-GJ-HVJ" secondAttribute="leading" constant="32" id="3mb-rO-oW3"/>
-                        <constraint firstItem="urv-Ec-FGh" firstAttribute="width" secondItem="urv-Ec-FGh" secondAttribute="height" multiplier="1:1" constant="4" id="9Cf-VQ-O1z"/>
                         <constraint firstItem="Jf7-no-X32" firstAttribute="top" secondItem="6nR-C1-f8D" secondAttribute="bottom" constant="8" id="9XV-Rf-gaX"/>
                         <constraint firstItem="0Tj-zl-pCw" firstAttribute="top" secondItem="8q6-H8-q91" secondAttribute="bottom" constant="16" id="AYO-HD-Lmk"/>
                         <constraint firstItem="uEo-XD-ccN" firstAttribute="bottom" secondItem="0Tj-zl-pCw" secondAttribute="bottom" constant="-4" id="BBq-zY-4Rf"/>
+                        <constraint firstItem="Jf7-no-X32" firstAttribute="leading" secondItem="z4v-I5-ntZ" secondAttribute="leading" id="BxI-xD-XP1"/>
                         <constraint firstItem="6nR-C1-f8D" firstAttribute="leading" secondItem="8q6-H8-q91" secondAttribute="leading" id="C1l-2p-sbA"/>
                         <constraint firstItem="Jf7-no-X32" firstAttribute="trailing" secondItem="z4v-I5-ntZ" secondAttribute="trailing" id="EO3-2X-qGY"/>
-                        <constraint firstItem="iU1-0k-Tra" firstAttribute="leading" secondItem="z4v-I5-ntZ" secondAttribute="leading" id="Hf7-bY-iwR"/>
                         <constraint firstItem="PGj-4c-RNU" firstAttribute="leading" secondItem="N6h-Pr-jo3" secondAttribute="trailing" constant="8" id="Hno-3p-HkD"/>
                         <constraint firstItem="jIY-Pg-efB" firstAttribute="bottom" secondItem="z4v-I5-ntZ" secondAttribute="bottom" constant="-4" id="NN6-b7-r36"/>
                         <constraint firstItem="8q6-H8-q91" firstAttribute="top" secondItem="PGj-4c-RNU" secondAttribute="bottom" constant="8" id="Ntj-rP-wpc"/>
                         <constraint firstItem="jIY-Pg-efB" firstAttribute="width" secondItem="jIY-Pg-efB" secondAttribute="height" multiplier="1:1" constant="4" id="Oej-9a-Wfd"/>
                         <constraint firstItem="z4v-I5-ntZ" firstAttribute="top" secondItem="0Tj-zl-pCw" secondAttribute="bottom" constant="12" id="S8z-d2-Zqi"/>
                         <constraint firstItem="z4v-I5-ntZ" firstAttribute="leading" secondItem="fR7-GJ-HVJ" secondAttribute="leading" constant="32" id="SAo-Ri-tEZ"/>
-                        <constraint firstItem="urv-Ec-FGh" firstAttribute="bottom" secondItem="iU1-0k-Tra" secondAttribute="bottom" constant="-4" id="Shs-eV-FDz"/>
-                        <constraint firstItem="urv-Ec-FGh" firstAttribute="leading" secondItem="iU1-0k-Tra" secondAttribute="leading" constant="8" id="Te0-ce-2zC"/>
                         <constraint firstItem="uEo-XD-ccN" firstAttribute="width" secondItem="uEo-XD-ccN" secondAttribute="height" multiplier="1:1" constant="4" id="UiC-Ix-Ps2"/>
-                        <constraint firstItem="Jf7-no-X32" firstAttribute="width" secondItem="iU1-0k-Tra" secondAttribute="width" id="VjZ-PO-9EZ"/>
                         <constraint firstItem="uEo-XD-ccN" firstAttribute="top" secondItem="0Tj-zl-pCw" secondAttribute="top" constant="4" id="WSJ-1t-sI4"/>
                         <constraint firstItem="0Tj-zl-pCw" firstAttribute="leading" secondItem="fR7-GJ-HVJ" secondAttribute="leading" constant="32" id="bTM-K2-F9L"/>
                         <constraint firstItem="jIY-Pg-efB" firstAttribute="top" secondItem="z4v-I5-ntZ" secondAttribute="top" constant="4" id="dup-Ta-VRN"/>
-                        <constraint firstItem="Jf7-no-X32" firstAttribute="leading" secondItem="iU1-0k-Tra" secondAttribute="trailing" constant="8" id="iXa-Jo-WEl"/>
-                        <constraint firstItem="iU1-0k-Tra" firstAttribute="top" secondItem="6nR-C1-f8D" secondAttribute="bottom" constant="8" id="m6G-q8-CP2"/>
                         <constraint firstItem="8q6-H8-q91" firstAttribute="leading" secondItem="N6h-Pr-jo3" secondAttribute="leading" id="mkj-Vp-rse"/>
                         <constraint firstAttribute="trailing" secondItem="z4v-I5-ntZ" secondAttribute="trailing" constant="32" id="oEJ-cF-fAg"/>
                         <constraint firstAttribute="trailing" secondItem="0Tj-zl-pCw" secondAttribute="trailing" constant="32" id="osd-8Z-f2V"/>
@@ -203,7 +170,7 @@
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="fR7-GJ-HVJ" firstAttribute="centerX" secondItem="LLl-aQ-mr1" secondAttribute="centerX" id="Hbc-Ug-faN"/>
-                <constraint firstItem="fR7-GJ-HVJ" firstAttribute="centerY" secondItem="LLl-aQ-mr1" secondAttribute="centerY" constant="-44" id="ut0-yJ-ET7"/>
+                <constraint firstItem="fR7-GJ-HVJ" firstAttribute="centerY" secondItem="LLl-aQ-mr1" secondAttribute="centerY" id="ut0-yJ-ET7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="LLl-aQ-mr1"/>
             <point key="canvasLocation" x="100.00000000000001" y="154.6875"/>
@@ -214,6 +181,5 @@
         <image name="icBtnFb" width="19" height="19"/>
         <image name="icBtnGoogle" width="21" height="21"/>
         <image name="icOrang" width="15" height="16"/>
-        <image name="icPhone" width="19" height="18"/>
     </resources>
 </document>

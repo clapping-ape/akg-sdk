@@ -15,7 +15,6 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
 
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var googlePlayButton: UIButton!
-    @IBOutlet weak var phoneButton: UIButton!
     
     private var authProvider: String! = ""
     
@@ -26,7 +25,6 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
 
         self.facebookButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 32, bottom: 4, right: 4)
         self.googlePlayButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 32, bottom: 4, right: 4)
-        self.phoneButton.titleEdgeInsets = UIEdgeInsets.init(top: 4, left: 28, bottom: 4, right: 4)
         
         AccountPresenter.sharedInstance.attachView(view: self)
     }
@@ -80,18 +78,6 @@ class BindAccountViewController: BaseViewController, AccountView, GIDSignInUIDel
         GIDSignIn.sharedInstance().signIn()
     }
     
-    @IBAction func phoneButton(_ sender: Any) {
-        
-        let registrationView = OTPBindAccountViewController()
-        registrationView.callbackBindAccountWithPhone = { () -> Void in
-            
-            self.callbackBindAccountWithPhone!()
-            
-        }
-        
-        self.remove()
-        self.getTopMostViewController()?.add(registrationView)
-    }
     
     @IBAction func backButton(_ sender: Any) {
         self.remove()

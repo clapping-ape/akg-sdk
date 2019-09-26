@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0J-0r-5mI">
-                    <rect key="frame" x="56" y="258" width="302" height="302"/>
+                    <rect key="frame" x="56" y="302" width="302" height="302"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgBox" translatesAutoresizingMaskIntoConstraints="NO" id="C8G-Kg-FgN">
                             <rect key="frame" x="0.0" y="0.0" width="302" height="302"/>
@@ -57,7 +55,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="am7-ys-7cX">
-                            <rect key="frame" x="32" y="164" width="238" height="30"/>
+                            <rect key="frame" x="32" y="172" width="238" height="30"/>
                             <color key="backgroundColor" red="0.2156862745" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="6Td-3G-XAd"/>
@@ -77,14 +75,12 @@
                             </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXL-Lg-p8L">
-                            <rect key="frame" x="32" y="80" width="238" height="30"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="32" y="80" width="238" height="34"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verify Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ooC-q9-Ead">
-                            <rect key="frame" x="32" y="118" width="238" height="30"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="32" y="122" width="238" height="34"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
@@ -126,7 +122,7 @@
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="A0J-0r-5mI" firstAttribute="centerX" secondItem="1T5-MS-OU0" secondAttribute="centerX" id="X2I-HO-CbP"/>
-                <constraint firstItem="A0J-0r-5mI" firstAttribute="centerY" secondItem="1T5-MS-OU0" secondAttribute="centerY" constant="-44" id="sW2-6K-6EF"/>
+                <constraint firstItem="A0J-0r-5mI" firstAttribute="centerY" secondItem="1T5-MS-OU0" secondAttribute="centerY" id="sW2-6K-6EF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="1T5-MS-OU0"/>
             <connections>

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,14 +32,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Heu-xf-ChP">
-                    <rect key="frame" x="56" y="258" width="302" height="302"/>
+                    <rect key="frame" x="56" y="302" width="302" height="302"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgBox" translatesAutoresizingMaskIntoConstraints="NO" id="d9U-4s-e5c">
                             <rect key="frame" x="0.0" y="0.0" width="302" height="302"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+62" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R82-RR-ljm">
-                            <rect key="frame" x="32" y="92" width="64" height="30"/>
+                            <rect key="frame" x="32" y="92" width="64" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="64" id="1Hs-fb-lRB"/>
                             </constraints>
@@ -69,13 +67,12 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-nP-Xqs">
-                            <rect key="frame" x="108" y="92" width="178" height="30"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="108" y="92" width="178" height="34"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYk-uK-ja5">
-                            <rect key="frame" x="163" y="203" width="123" height="30"/>
+                            <rect key="frame" x="163" y="211" width="123" height="30"/>
                             <color key="backgroundColor" red="0.2156862745" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="XjU-rU-z64"/>
@@ -95,19 +92,18 @@
                             </connections>
                         </button>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send OTP’s Code" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8d-wF-blo">
-                            <rect key="frame" x="32" y="140" width="62" height="10"/>
+                            <rect key="frame" x="32" y="146" width="62" height="10"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="8"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OTP's Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HVq-cy-lXr">
-                            <rect key="frame" x="108" y="130" width="178" height="30"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="108" y="134" width="178" height="34"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byk-x6-yUZ">
-                            <rect key="frame" x="198" y="164" width="88" height="25"/>
+                            <rect key="frame" x="198" y="172" width="88" height="25"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="10"/>
                             <state key="normal" title="Resend OTP’s Code">
                                 <color key="titleColor" red="0.2156862745" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,7 +113,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5g-HE-8eN">
-                            <rect key="frame" x="32" y="203" width="123" height="30"/>
+                            <rect key="frame" x="32" y="211" width="123" height="30"/>
                             <color key="backgroundColor" red="0.81960784310000001" green="0.1647058824" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="lrz-Kz-w4h"/>
@@ -182,7 +178,7 @@
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="Heu-xf-ChP" firstAttribute="centerX" secondItem="7ZA-5k-wl1" secondAttribute="centerX" id="Sts-fz-syi"/>
-                <constraint firstItem="Heu-xf-ChP" firstAttribute="centerY" secondItem="7ZA-5k-wl1" secondAttribute="centerY" constant="-44" id="qxP-MQ-JbN"/>
+                <constraint firstItem="Heu-xf-ChP" firstAttribute="centerY" secondItem="7ZA-5k-wl1" secondAttribute="centerY" id="qxP-MQ-JbN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="7ZA-5k-wl1"/>
             <connections>
