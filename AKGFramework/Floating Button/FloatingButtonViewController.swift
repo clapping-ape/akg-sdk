@@ -11,10 +11,10 @@ import UIKit
 class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var akgButton: UIButton!
-    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     private var showAKGMenu = false
     private var menuWidth: CGFloat!
+    private var tempX: CGFloat!
     
     private var menus = ["btnVerifyAccount", "btnFb", "btnEula", "btnContactUs", "btnSdkVersion", "btnLogOut", "btnBindAccount"]
     private var titles = ["Info Account", "FB Fanpage", "Eula", "Contact Us", "SDK Version", "Log out", "Bind Account"]
@@ -60,6 +60,7 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     
     private func initFloatingButtonPosition() {
         self.menuWidth = self.akgButton.bounds.size.width + (CGFloat(50*self.menus.count))
+        self.tempX = self.view.frame.origin.x
         
         let akgButtonFrame = CGRect(x: 16, y: UIScreen.main.bounds.height-100, width: self.menuWidth!, height: 64)
         self.view.frame = akgButtonFrame
@@ -79,15 +80,24 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
     // MARK: - IBActions
     @IBAction func akgButton(_ sender: Any) {
         if self.showAKGMenu {
+            self.tempX = self.view.frame.origin.x
+            
+            if (self.view.frame.origin.x > ((self.getTopMostViewController()?.view.frame.width)! - self.menuWidth!) ) {
+                
+                self.view.frame.origin.x = ((self.getTopMostViewController()?.view.frame.width)! - self.menuWidth!)
+            }
+            
             self.collectionView.isHidden = false
-            self.closeButton.isHidden = false
             self.showAKGMenu = false
             
             let akgButtonFrame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.menuWidth!, height: self.view.frame.size.height)
             self.view.frame = akgButtonFrame
+            
         }else{
+            
+            self.view.frame.origin.x = self.tempX
+            
             self.collectionView.isHidden = true
-            self.closeButton.isHidden = true
             self.showAKGMenu = true
             
             let akgButtonFrame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: 68, height: self.view.frame.size.height)
@@ -95,15 +105,10 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
         }
     }
     
-    @IBAction func closeButton(_ sender: Any) {
-        self.remove()
-    }
-    
     @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
         
         self.getTopMostViewController()?.view.bringSubviewToFront(self.view)
         let translation = sender.translation(in: self.view)
-        
         
         if (self.view.frame.origin.x + translation.x >= 0) &&
             (self.view.frame.origin.y + translation.y >= 0) &&
@@ -113,6 +118,7 @@ class FloatingButtonViewController: BaseViewController, UICollectionViewDelegate
         {
 
             self.view.center = CGPoint(x: self.view.center.x + translation.x, y: self.view.center.y + translation.y)
+            self.tempX = self.view.frame.origin.x
         }
 
         sender.setTranslation(CGPoint.zero, in: self.view)
